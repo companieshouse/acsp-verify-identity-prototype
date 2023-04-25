@@ -5,10 +5,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  {% include "includes/back-link.html" %}
-  {% include "includes/user-bar.html" %}
-
-
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
