@@ -7,14 +7,13 @@
 
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
-@import ".tmp/sass/extensions";
 
 // Patterns that aren't in Frontend
-@import "patterns/contents-list";
-@import "patterns/mainstream-guide";
-@import "patterns/pagination";
-@import "patterns/related-items";
-@import "patterns/task-list";
+
+//@import "patterns/mainstream-guide";
+//@import "patterns/pagination";
+//@import "patterns/related-items";
+//@import "patterns/task-list";
 
 //Defining new account menu style
 @import "components/account-menu";
