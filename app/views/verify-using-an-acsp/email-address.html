@@ -22,11 +22,9 @@
 
         {{ govukInput({
           label: {
-            text: "Email address"
+            text: ""
           },
-          hint: {
-            text: "We’ll use this to send the identity reference number. The identity reference number will be required for future filings."
-          },
+ 
           id: "email",
           name: "email",
           type: "email",
@@ -34,6 +32,17 @@
           spellcheck: false
         }) }}
 
+      <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What we'll use this email address for
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>If the email address is linked to an existing Companies House account, we’ll use this to send the identity code. The identity code will be required for future filings.</p>
+      <p>If it's not, we'll send the identity code to the person's home address. We'll also set up a Companies House account and email them a link to sign in.</p>
+  </div>
+</details>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 

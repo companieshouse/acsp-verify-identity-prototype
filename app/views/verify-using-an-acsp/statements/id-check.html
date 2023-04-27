@@ -18,7 +18,7 @@ Confirm the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         <span class="govuk-caption-l">
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span>
-        <h1 class="govuk-heading-l">Identity verification declaration</h1>
+        <h1 class="govuk-heading-l">Confirm you have verified their identity</h1>
        
         {{ govukCheckboxes({
           idPrefix: "id-check",
@@ -33,7 +33,7 @@ Confirm the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           items: [
             {
               value: "agree",
-              text: "I confirm that the identity verification checks have been carried out to meet the Good Practice Guide 45 (GPG45) medium standard.",
+              text: "I confirm that I have carried out identity verification checks for [name] that meet the Good Practice Guide 45 (GPG45) medium confidence level.",
               checked: checked("id-check-done", "agree")
             }
           ]

@@ -8,9 +8,8 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {% set buttonHref = "Your reference number <br><strong>632384-159592-473918<strong>" %}
       {{ govukPanel({
-        titleText: "Authorised Corporate Service Provider (ACSP) accepted",
+        titleText: "Register an ACSP: application accepted",
         html: buttonHref
       }) }}
       <table class="govuk-table">
@@ -29,12 +28,17 @@
           </tr>
         </tbody>
       </table>
+
+
+      <p class="govuk-body">Your application to register [company or sole trader’s name] as an Authorised Corporate Service Provider (ACSP) has been accepted.</p>
+
       <h2 class="govuk-heading-m">What happens next</h2>
-      <p class="govuk-body"> You can <a href="../verify-using-an-acsp/sign-in" class="govuk-link govuk-link--no-visited-state"> sign in to Companies House</a> to: </p>
+      <p class="govuk-body">You can <a href="../verify-using-an-acsp/sign-in" class="govuk-link govuk-link--no-visited-state"> sign in to your Companies House account</a> to: </p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>manage the people within your Authorised Corporate Service Provider (ACSP).</li>
-        <li>update Companies House about indivudals you have completed identity checks on.</li>
-        <li>update your Authorised Corporate Service Provider (ACSP) details. </li>
+        <li>add or remove people who work for the ACSP</li>
+        <li>update the ACSP details</li>
+        <li>verify the identity of people for the Companies House register</li>
+        <li>form companies or registrable partnerships, or to file on their behalf</li>
       </ul>
       <h3 class="govuk-heading-m">Feedback</h3>
       <p class="govuk-body">This is a new service. Help us improve it by completing our <a href="" class="govuk-link govuk-link--no-visited-state">quick survey</a>.</p>
