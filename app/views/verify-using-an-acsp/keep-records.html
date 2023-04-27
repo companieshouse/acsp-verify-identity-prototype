@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/verify-using-an-acsp/statements/authority-to-file" method="post">
+
+        <span class="govuk-caption-l">
+          {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+        </span> 
+        
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        <h1 class="govuk-heading-l">Keep records of the documents used to prove their identity</h1>
+
+        <p class="govuk-body govuk-!-font-weight-regular">You need to securely store all the documents and evidence used to check their identity. You need to store them for up to 4 years. </p>
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
