@@ -19,25 +19,22 @@ Confirm the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span>
         <h1 class="govuk-heading-l">Confirm you have verified their identity</h1>
-       
-        {{ govukCheckboxes({
-          idPrefix: "id-check",
-          name: "id-check",
-          fieldset: {
-            legend: {
-              text: "Declaration",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--m"
-            }
-          },
-          items: [
-            {
-              value: "agree",
-              text: "I confirm that I have carried out identity verification checks for [name] that meet the Good Practice Guide 45 (GPG45) medium confidence level.",
-              checked: checked("id-check-done", "agree")
-            }
-          ]
-        }) }}
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="id-check-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Declaration
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="id-check" name="waid-checkste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="id-check">
+                  I confirm that I have carried out identity verification checks for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} that meet the Good Practice Guide 45 (GPG45) medium confidence level."
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
