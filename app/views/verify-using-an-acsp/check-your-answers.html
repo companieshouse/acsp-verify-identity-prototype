@@ -78,7 +78,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date documents were checked
+            Date identity checks were completed
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
@@ -123,9 +123,9 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
       <p class="govuk-body"><a href="/verify-using-an-acsp/name" class="govuk-link">Add another person</a></p>
 
-      {{ govukInsetText({
+   <!--   {{ govukInsetText({
         text: 'We will not show any information you provide on the public register.'
-      }) }}
+      }) }}-->
 
     
       <form action="/payment" method="post" novalidate>
