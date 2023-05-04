@@ -12,7 +12,6 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-
       <form class="form" action="/verify-using-an-acsp/confirmation" method="post">
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
@@ -39,7 +38,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            12 8 1970
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -69,6 +68,20 @@ Check your answers before sending your application – {{ serviceName }} – GOV
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date documents were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
