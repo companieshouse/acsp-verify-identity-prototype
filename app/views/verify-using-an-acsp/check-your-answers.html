@@ -13,7 +13,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
 
-      <form class="form" action="/verify-using-an-acsp/payment" method="post">
+      <form class="form" action="/verify-using-an-acsp/confirmation" method="post">
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
 
@@ -110,16 +110,8 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
       <p class="govuk-body"><a href="/verify-using-an-acsp/name" class="govuk-link">Add another person</a></p>
 
-
-
-
-
-
-
       {{ govukInsetText({
-        html: '
-
-            <p>We will not show any information you provide on the public register. </p>'
+        text: 'We will not show any information you provide on the public register.'
       }) }}
 
     
@@ -128,7 +120,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
+          Confirm and send
         </button>
 
       </form>
