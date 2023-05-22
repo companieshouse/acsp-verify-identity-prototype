@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Register an ACSP: application approved",
+        html: buttonHref
+      }) }}
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Company number</th>
+            <td class="govuk-table__cell">00445790</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Company name</th>
+            <td class="govuk-table__cell"> MORRIS ACCOUNTING LTD </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Name </th>
+            <td class="govuk-table__cell">James Morris </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p class="govuk-body">We have approved your application and registered MORRIS ACCOUNTING LTD as an Authorised Corporate Service Provider (ACSP).</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">You can <a href="sign-in" class="govuk-link govuk-link--no-visited-state"> sign in to your Companies House account</a> to: </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>add or remove people who work for the ACSP</li>
+        <li>update the ACSP details</li>
+        <li>tell us you have verified someone’s identity</li>
+        <li>form companies or registrable partnerships, or to file on their behalf</li>
+      </ul>
+      <h3 class="govuk-heading-m">Feedback</h3>
+      <p class="govuk-body">This is a new service. Help us improve it by completing our <a href="" class="govuk-link govuk-link--no-visited-state">quick survey</a>.</p>
+      <h2 class="govuk-heading-m">Contact us</h2>
+      <p class="govuk-body">If you have a question about your submission, you can contact us.</p>
+      <h3 class="govuk-heading-s">Telephone</h3>
+      <ul class="govuk-list">
+        <li>0303 1234 500</li>
+        <li>Monday to Friday, 8:30am to 6pm</li>
+      </ul>
+      <p class="govuk-body">
+        <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a>
+      </p>
+
+      <h3 class="govuk-heading-s">Email</h3>
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="https://www.gov.uk/call-charges">enquiries@companieshouse.gov.uk</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}

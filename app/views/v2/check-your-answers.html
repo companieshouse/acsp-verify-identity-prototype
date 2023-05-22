@@ -12,12 +12,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-
-      <form class="form" action="../payment" method="post">
+      <form class="form" action="confirmation" method="post">
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
 
-      <h2 class="govuk-heading-m">Your details</h2>
+      <h2 class="govuk-heading-m">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}} Details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -25,7 +24,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Name
           </dt>
           <dd class="govuk-summary-list__value">
-            James Morris
+            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -36,10 +35,100 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Statement
+            Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            I confirm that I am the relevant officer for this organisation.
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            70 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
+            
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date identity checks were completed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity documents that were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Current signed passport <br> 
+            Utility bill
+
+           
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Authority to file declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I confirm that the I have the authority to file on behalf of this person.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity verification declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I confirm that JAMES ACCOUNTING LTD has carried out identity verification checks for on that meet the Companies House identity verification standard.<br> <br>
+
+            JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes.
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -51,113 +140,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
       </dl>
 
 
+      <p class="govuk-body"><a href="/verify-using-an-acsp/name" class="govuk-link">Add another person</a></p>
 
-      <h2 class="govuk-heading-m">Company details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            JAMES ACCOUNTING LTD
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            ACSP address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            72 Guild Street
-            <br>London
-            <br>SE23 6FH
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> contact information</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Legal form
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Private Company Limited by Shares
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> Legal form of the ACSP</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-      <h2 class="govuk-heading-m">Anti-Money Laundering (AML) details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            AML professional supervisory body
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Association of Chartered Certified Accountants
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> AML professional supervisory body</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            AML registration number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            87654321
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> AML registration number</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-
-    <!--   {{ govukCheckboxes({
-        idPrefix: "diligence",
-        name: "diligence",
-        fieldset: {
-          legend: {
-            text: "Declaration ",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--m"
-          }
-        },
-        items: [
-          {
-            value: "agree",
-            text: "I confirm that the ...  "
-          }
-        ]
-      }) }} -->
-
-
-      {{ govukInsetText({
-        html: '
-            <h2 class="govuk-heading-m">What information we’ll show on the public register</h2>
-            <p>We will not show any information you provide on the public register. </p>'
-      }) }}
+   <!--   {{ govukInsetText({
+        text: 'We will not show any information you provide on the public register.'
+      }) }}-->
 
     
       <form action="/payment" method="post" novalidate>
@@ -165,7 +152,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         <input type="hidden" name="answers-checked" value="true">
 
         <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
+          Confirm and send
         </button>
 
       </form>

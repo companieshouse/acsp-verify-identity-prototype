@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+<!--  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div> -->
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="name" method="post">
+
+      <h1 class="govuk-heading-l">
+        Tell Companies House you have verified someone’s identity  
+      </h1>
+
+      <p class="govuk-body">Use this service to tell us about a person whose identity you have verified.</p>
+
+
+
+      <h2 class="govuk-heading-m">What you'll need</h2>  
+
+      <p class="govuk-body">You’ll need the person’s: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>professional or honorary title (if relevant)</li>
+          <li>full name</li>
+          <li>date of birth</li>
+          <li>home address</li>
+          <li>email address</li>
+        </ul>
+      <p>You’ll also need to tell us which documents you checked to verify their identity and the date you completed the checks.</p>
+
+
+
+      {{ govukButton({
+        text: "Start now",
+        isStartButton: true
+      }) }}
+
+      <h2 class="govuk-heading-m">Before you start</h2>  
+
+      <p class="govuk-body">You must verify the identity of the person you are telling us about. The checks you carry out to verify someone’s identity must meet the Companies House identity verification standard.</p>
+   
+       <!-- match supervisor  -->
+
+       <!-- Bill -->
+
+    
+
+      <!-- UK -->
+
+    </div>
+
+ <!-- <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div> -->
+
+  </form>
+  </div>
+{% endblock %}
