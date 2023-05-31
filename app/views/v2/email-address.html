@@ -18,7 +18,9 @@
       <form class="form" action="date-identity-checks" method="post">
 
         <span class="govuk-caption-xl"> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</span>
-        <h1 class="govuk-heading-l">What is their email address?</h1>
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">What is their email address?</h1>
+            <div class="govuk-hint govuk-!-margin-bottom-6">
+This must belong to the person whose identity you are verifying.    </div>
 
         {{ govukInput({
           label: {
@@ -32,18 +34,11 @@
           spellcheck: false
         }) }}
 
-      <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      What we'll use this email address for
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>If the email address is linked to an existing Companies House account, we’ll use this to send the person's identity code. The identity code will be needed to make a filing for this person. </p>
-      <p>If it's not, we'll send the identity code to the person's home address. We'll also set up a Companies House account and email them a link to sign in.</p>
-  </div>
-</details>
+<div class="govuk-inset-text">
+ <p>If the email address is already linked to a Companies House account, we’ll use this to send the person’s identity code. If not, we’ll send the identity code to their home address. </p>
 
+  <p>The identity code is personal information and we can only send it to the person it belongs to. </p>
+</div>
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
