@@ -17,29 +17,56 @@
 
       <form class="form" action="date-identity-checks" method="post">
 
-        <span class="govuk-caption-xl"> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</span>
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">What is their email address?</h1>
-            <div class="govuk-hint govuk-!-margin-bottom-6">
-This must belong to the person whose identity you are verifying.    </div>
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s  identity code</h1>
 
-        {{ govukInput({
-          label: {
-            text: ""
-          },
- 
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false
-        }) }}
+        <div class="govuk-hint govuk-!-margin-top-4">The identity code is .. The identity code is personal information and we can only send it to the person it belongs to.</div>
 
-<div class="govuk-inset-text">
- <p>If the email address is already linked to a Companies House account, we’ll use this to send the person’s identity code. If not, we’ll send the identity code to their home address. </p>
+        <div class="govuk-form-group govuk-!-margin-top-6">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                How would you prefer to be contacted?
+              </h1>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select one option.
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="how-to-send-code" type="radio" value="emailcode" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Email it to {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="code-by-email">
+                    Email
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="address" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Post to their home address
 
-</div>
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+                  <ul class="govuk-list govuk-!-margin-top-4">
+                    <li>70 Wentloog Road</li>
+                    <li>Rumney</li>
+                    <li>Cardiff</li>
+                    <li>Wales</li>
+                    <li>CF3 3EA</li>
+                  </ul>
 
+                </label>
+              </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
       </form>
 
     </div>
