@@ -17,15 +17,17 @@
 
       <form class="form" action="date-identity-checks" method="post">
 
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s  identity code</h1>
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s  Companies House personal code</h1>
 
-        <p class="govuk-body govuk-!-padding-top-5"> The identity code is .. The identity code is personal information and we can only send it to the person it belongs to.</p>
+        <p class="govuk-body govuk-!-padding-top-5">A Companies House personal code connects a person’s verified identity to their Companies House records.</p>
+
+        <p class="govuk-body">This code is unique to the person and must be kept securely. We can only send the code to the person it belongs to. </p>
 
         <div class="govuk-form-group govuk-!-margin-top-6">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                How would you prefer to be contacted?
+                How should we send {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s personal code?
               </h1>
             </legend>
             <div id="contact-hint" class="govuk-hint">
@@ -41,7 +43,7 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="code-by-email">
-                    Email
+                    What is their email address?
                   </label>
                   <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
                 </div>
@@ -49,7 +51,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="address" data-aria-controls="conditional-contact-2">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Post to their home address
+                  Post to their home address:
 
                   <ul class="govuk-list govuk-!-margin-top-4">
                     <li>70 Wentloog Road</li>
