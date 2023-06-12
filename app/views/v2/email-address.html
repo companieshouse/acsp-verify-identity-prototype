@@ -27,7 +27,7 @@
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
-                How should we send {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s personal code?
+                Does {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} have an email address?
               </h1>
             </legend>
             <div id="contact-hint" class="govuk-hint">
@@ -37,7 +37,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact" name="how-to-send-code" type="radio" value="emailcode" data-aria-controls="conditional-contact">
                 <label class="govuk-label govuk-radios__label" for="contact">
-                  Email it to {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+                  Yes
                 </label>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
@@ -51,16 +51,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="address" data-aria-controls="conditional-contact-2">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Post to their home address:
-
-                  <ul class="govuk-list govuk-!-margin-top-4">
-                    <li>70 Wentloog Road</li>
-                    <li>Rumney</li>
-                    <li>Cardiff</li>
-                    <li>Wales</li>
-                    <li>CF3 3EA</li>
-                  </ul>
-
+                  No
                 </label>
               </div>
               </div>
