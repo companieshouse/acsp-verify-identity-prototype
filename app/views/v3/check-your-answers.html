@@ -126,27 +126,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
       </dl>
 
 
-      {{ govukRadios({
-        name: "add-another-person",
-        classes: "govuk-radios--inline",
-        fieldset: {
-          legend: {
-            text: "Do you need to add another person whose identity you’ve verified?",
-            isPageHeading: false,
-            classes: "govuk-fieldset__legend--m"
-          }
-        },
-        items: [
-          {
-            value: "yes",
-            text: "Yes"
-          },
-          {
-            value: "no",
-            text: "No"
-          }
-        ]
-      }) }}
+
+
+
+
+
 
 
      <!-- <p class="govuk-body"><a href="/verify-using-an-acsp/name" class="govuk-link">Add another person whose identity you’ve verified </a></p> -->
@@ -155,16 +139,24 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         text: 'We will not show any information you provide on the public register.'
       }) }}-->
 
-    
-      <form action="/payment" method="post" novalidate>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Confirm and send",
+          href:"confirmation"
+        }) }}
+      
+        {{ govukButton({
+          text: "Add another person",
+          classes: "govuk-button--secondary",
+          href:"name"
+        }) }}
+      </div>
 
-        <input type="hidden" name="answers-checked" value="true">
+  
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Confirm and send
-        </button>
 
-      </form>
+
+     
 
     </div>
   </div>
