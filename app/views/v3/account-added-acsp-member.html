@@ -27,80 +27,96 @@
             <div class="govuk-grid-column-three-quarters govuk-!-padding-top-3">
       
           
-
-            {{ govukSummaryList({
-              card: {
-                title: {
-                  text: "James Morris"
-                },
-                actions: {
-                  items: [
-                    {
-                      href: "account-remove-acsp-member",
-                      text: "Remove member",
-                      visuallyHiddenText: "of University of Gloucestershire"
-                    }
-                  ]
-                }
-              },
-              rows: [
-                {
-                  key: {
-                    text: "Email address"
-                  },
-                  value: {
-                    html: "james.morris@example.com"
-                  },
-                
-                  actions: {
-                    items: [
-                      {
-                        href: "",
-                        text: "Change",
-                        visuallyHiddenText: "nationality"
-                      }
-                    ]
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "James Morris"
                   }
-                }
-              ]
-            }) }}
-
-            {{ govukSummaryList({
-              card: {
-                title: {
-                  text: "Kate Williams"
                 },
-                actions: {
-                  items: [
-                    {
-                      href: "account-remove-acsp-member",
-                      text: "Remove member",
-                      visuallyHiddenText: "of University of Gloucestershire"
-                    }
-                  ]
-                }
-              },
-              rows: [
+                rows: [
                 {
                   key: {
-                    text: "Email address"
+                    text: "Role"
                   },
                   value: {
-                    html: "k.williams@example.com"
+                    html: "<strong class='govuk-tag govuk-tag--blue'>Admin</strong>"
+                  }
+                },
+                  {
+                    key: {
+                      text: "Email address"
+                    },
+                    value: {
+                      html: "james.morris@example.com"
+                    },
+                  
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change email address"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "Kate Williams"
                   },
-                
                   actions: {
                     items: [
                       {
                         href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "nationality"
+                        text: "Remove member",
+                        visuallyHiddenText: "of JAMES ACCOUNTING LTD"
                       }
                     ]
                   }
-                }
-              ]
-            }) }}
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "Role"
+                    },
+                    value: {
+                      html: "<strong class='govuk-tag govuk-tag--turquoise'>Standard user</strong>"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change role type"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Email"
+                    },
+                    value: {
+                      html: "k.williams@example.com"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change email address"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+      
             </div>
             </div>
 

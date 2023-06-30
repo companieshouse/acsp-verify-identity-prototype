@@ -12,8 +12,8 @@
   <div class="govuk-grid-row">
 
      <div class="govuk-grid-column-two-thirds">
-       <!-- <span class="govuk-caption-l">Add</span> -->
-          <h1 class="govuk-heading-l">What are their details? </h1> 
+       <span class="govuk-caption-l">Morris Accounting Ltd</span>
+          <h1 class="govuk-heading-l">Add a member</h1> 
 
           {{ govukInput({
             label: {
@@ -39,10 +39,42 @@
             spellcheck: false
           }) }}
 
+          {{ govukRadios({
+            name: "role",
+            fieldset: {
+              legend: {
+                text: "What is their role?",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
+              }
+            },
+            items: [
+              {
+                value: "admin",
+                text: "Admin",
+                hint: {
+                  text: "Can access services for an organisation and manage its members."
+                }
+              },
+              {
+                value: "standard-user",
+                text: "Standard user",
+                hint: {
+                  text: "Can access services for an organisation."
+                }
+              }
+            ]
+          }) }}
+
+
            {{ govukButton({
               text: "Continue",
               href:"account-add-check-acsp-members"
             }) }}
+
+
+
+
 
 </div>
 </div>
