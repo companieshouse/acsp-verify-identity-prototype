@@ -15,14 +15,21 @@
 
       <h1 class="govuk-heading-l">Remove Kate Williams</h1>
 
-      <p class="govuk-body">If you remove Kate Williams, this means they will no longer be able to ...</p>
+      <p class="govuk-body">If you remove Kate Williams, this means they will no longer be able to file online for JAMES ACCOUNTING LTD. We'll email Kate Williams to let them know you have removed them as a member of JAMES ACCOUNTING LTD.</p>
 
-
-          {{ govukButton({
-            text: "Remove",
-            classes: "govuk-button--warning",
-            href:"account-acsp-members"
-          }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Remove",
+          classes: "govuk-button--warning",
+          href:"account-acsp-members"
+        }) }}
+      
+        {{ govukButton({
+          text: "Cancel",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
+          
 
      </div>
 </div>
