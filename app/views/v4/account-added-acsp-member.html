@@ -1,8 +1,5 @@
-<!-- WebFiling view of ACSP account -->
-<!-- {% extends "layouts/layout-account-signout-your-companies-jill.html" %}
-{% extends "layouts/main.html" %} --> 
-
-{% extends "layouts/layout-chs-signed-out.html" %}
+{% extends "layouts/layout-account-signout-your-companies-jill.html" %}
+{% extends "layouts/main.html" %}
 
 {% block pageTitle %}
   Your companies
@@ -19,9 +16,10 @@
           <h1 class="govuk-heading-l">Manage members</h1>
 
            {{ govukButton({
-              text: "Add a new member",
+              text: "Add a new person",
               href:"account-add-acsp-members"
             }) }}
+
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -29,42 +27,96 @@
             <div class="govuk-grid-column-three-quarters govuk-!-padding-top-3">
       
           
-
-            {{ govukSummaryList({
-              card: {
-                title: {
-                  text: "James Morris"
-                }
-              },
-              rows: [
-              {
-                key: {
-                  text: "Role"
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "James Morris"
+                  }
                 },
-                value: {
-                  html: "<strong class='govuk-tag govuk-tag--blue'>Admin</strong>"
-                }
-              },
+                rows: [
                 {
                   key: {
-                    text: "Email address"
+                    text: "Role"
                   },
                   value: {
-                    html: "james.morris@example.com"
+                    html: "<strong class='govuk-tag govuk-tag--blue'>Admin</strong>"
+                  }
+                },
+                  {
+                    key: {
+                      text: "Email address"
+                    },
+                    value: {
+                      html: "james.morris@example.com"
+                    },
+                  
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change email address"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+              {{ govukSummaryList({
+                card: {
+                  title: {
+                    text: "Kate Williams"
                   },
-                
                   actions: {
                     items: [
                       {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "Change email address"
+                        href: "account-remove-acsp-member",
+                        text: "Remove member",
+                        visuallyHiddenText: "of JAMES ACCOUNTING LTD"
                       }
                     ]
                   }
-                }
-              ]
-            }) }}
+                },
+                rows: [
+                  {
+                    key: {
+                      text: "Role"
+                    },
+                    value: {
+                      html: "<strong class='govuk-tag govuk-tag--turquoise'>Standard user</strong>"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change role type"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Email"
+                    },
+                    value: {
+                      html: "k.williams@example.com"
+                    },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change email address"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }) }}
+
+      
             </div>
             </div>
 
