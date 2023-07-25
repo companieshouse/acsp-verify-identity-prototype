@@ -14,21 +14,137 @@ Register an ACSP: application approved
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
    
-      <h1 class="govuk-heading-l">You have been added as a member of a Companies House authorised agent </h1>
+      <h1 class="govuk-heading-l">MORRIS ACCOUNTING LTD has verified your identity</h1>
       
-      <p class="govuk-body">James Morris has added you as a member of JAMES ACCOUNTING LTD.</p>
+    <div class="highlight-box">
+
+      <p class="govuk-body">Your Companies House personal code is: <strong>2F3P8MZ6</strong></p>
+
+      <p class="govuk-body">Keep your code safe.</p>
 
 
-      <p class="govuk-body"><a href="sign-in">Sign in or create a Companies House account</a> to: </p>
+      </div>
 
-      <ul class="govuk-list govuk-list--bullet">
-  <li>form companies and registrable partnerships for clients
-  </li>
-  <li>file on behalf of clients
-  </li>
-  <li>verify someone's identity
-  </li>
-</ul>
+      <h2 class="govuk-heading-m govuk-!-margin-top-7">What a Companies House personal code is</h2>
+
+
+      <p class="govuk-body">Your Companies House personal code connects your verified identity to our records. This is so that we know the correct person is linked to the personal details we have on file.</p>
+
+
+      <p class="govuk-body">Keep your code secure, as you would with other unique codes such as your Unique Taxpayer Reference (UTR) for HMRC. Only share the code with people you trust to file on your behalf.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">You will need to use your personal code to connect your verified identity to your Companies House appointments. </p>
+
+     <h2 class="govuk-heading-m">Your details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            70 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
+            
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date identity checks were completed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity documents that were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Current signed passport <br> 
+            Utility bill
+
+           
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity verification declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            I confirm that JAMES ACCOUNTING LTD has carried out identity verification checks for on that meet the Companies House identity verification standard.<br> <br>
+
+            JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
 
 <!--<p class="govuk-body">If you do not sign in or create an account within 7 days, we will remove you from the authorised agent account.</p> -->
       
