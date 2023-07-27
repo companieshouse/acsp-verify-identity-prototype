@@ -13,41 +13,34 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="documents-checked-2" method="post">
+      <form class="form" action="keep-records" method="post">
 
         <span class="govuk-caption-l">
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span> 
+        
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
         <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
 
+        <!--(only if it has not been used as proof of name)-->
+
           {{ govukCheckboxes({
-            name: "group-1",
+            name: "group-2",
             fieldset: {
               legend: {
-                text: "Group 1: Primary identity documents",
+                text: "Group 2: Trusted government documents",
                 isPageHeading: false,
                 classes: "govuk-fieldset__legend--m"
               }
             },
             hint: {
-              text: "Select all that apply."
+              html: "Select all that apply."
             },
             items: [
               {
-                value: "passport",
-                text: "Current signed passport"
-              },
-              {
-                value: "brp",
-                text: "Biometric residence permit (BRP) "
-              },
-              {
                 value: "",
-                text: "Current photocard driving licence",
-                hint: {
-                  text: "This can be a full or provisional licence."
-                }
+                text: "Current UK driving licence photocard"
               },
               {
                 value: "",
@@ -58,10 +51,19 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
               },
               {
                 value: "",
-                text: "Adoption certificate",
-                hint: {
-                  text: ""
-                }
+                text: "Marriage/civil partnership certificate"
+              },
+              {
+                value: "",
+                text: "Immigration document, visa, or work permit"
+              },
+              {
+                value: "",
+                text: "HM Forces ID card"
+              },
+              {
+                value: "",
+                text: "Firearms or shotgun certificate"
               },
               {
                 divider: "or"
@@ -71,7 +73,6 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
                 text: "None of these",
                 behaviour: "exclusive"
               }
- 
             ]
           }) }}
 
