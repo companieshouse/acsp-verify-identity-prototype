@@ -13,7 +13,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="documents-checked-6" method="post">
+      <form class="form" action="documents-checked-7" method="post">
 
         <span class="govuk-caption-l">
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
@@ -21,10 +21,10 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         
 
         {{ govukRadios({
-          name: "docs-address",
+          name: "address-issues",
           fieldset: {
             legend: {
-              text: "Does at least one of the documents show their current address?",
+              text: "Is their address unusual?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
