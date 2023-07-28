@@ -4,3 +4,12 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block bodyEnd %}
+<!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+{% for scriptUrl in extensionConfig.scripts %}
+  <script src="{{scriptUrl}}"></script>
+{% endfor %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
