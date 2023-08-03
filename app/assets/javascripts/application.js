@@ -15,14 +15,14 @@ $(document).ready(function () {
   $("input[name='group-1']").on('change', function () {
   if ($(this).val() === "none") {
     selectedDocuments=0;
-   // alert("none")
+  //  alert("none")
   }
   else if ($(this).prop('checked') === false) {
     selectedDocuments--;
-//    alert(selectedDocuments);
+  //alert(selectedDocuments);
   } else {
     selectedDocuments++;
- //   alert(selectedDocuments);
+   // alert(selectedDocuments);
   }
     var input = document.getElementById('hiddenInput');
     input.value = selectedDocuments.toString();
@@ -42,18 +42,48 @@ $(document).ready(function () {
 
   $("input[name='group-2']").on('change', function () {
   if ($(this).val() === "none") {
-    group2Doc=0;
-   // alert("none")
+    group2Docs=0;
+  //  alert("none")
   }
   else if ($(this).prop('checked') === false) {
-    group2Doc--;
-//    alert(group2Docs);
+    group2Docs--;
+   // alert(group2Docs);
   } else {
-    group2Doc++;
- //   alert(group2Docs);
+    group2Docs++;
+   // alert(group2Docs);
   }
     var input = document.getElementById('hiddenInput');
     input.value = group2Docs.toString();
+})
+})
+
+
+//group 3
+
+var group3Docs = 0;
+
+
+$(document).ready(function () {
+  window.GOVUKFrontend.initAll()
+  // Add JavaScript here
+
+  $("input[name='group-3']").on('change', function () {
+  if ($(this).val() === "none") {
+    group3Docs=0;
+  //  alert(group3Docs);
+
+  }
+  else if ($(this).prop('checked') === false) {
+    group3Docs--;
+ //   alert(group3Docs);
+
+  } else {
+    group3Docs++;
+ //   alert(group3Docs);
+
+  }
+    var input = document.getElementById('hiddenInput');
+    input.value = group3Docs.toString();
 })
 })
 

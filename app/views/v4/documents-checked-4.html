@@ -21,21 +21,11 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-        <!--Taken out for now:
-          
-          Irish Passport Card (Cannot be used with an Irish passport\
-        
-                      {
-                value: "",
-                text: "Letter from head teacher or college principal - for 16 to 19 year olds in full time education - only used in exceptional circumstances if other documents cannot be provided"
-              },
-            
-            -->
 
         <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
 
           {{ govukCheckboxes({
-            name: "documents-checked-address",
+            name: "group-3",
             fieldset: {
               legend: {
                 text: "Group 3: Financial and social history documents",
@@ -149,6 +139,9 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
               }
             ]
           }) }}
+
+
+          <input type="hidden" name="group3Docs" id="hiddenInput" />
 
 
           {{ govukButton({

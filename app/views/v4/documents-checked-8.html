@@ -19,15 +19,31 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span> 
 
-        <h1 class="govuk-heading-l">Need to check previous address history for the past 5 years</h1>
+        {{ govukRadios({
+          name: "address-history",
+          fieldset: {
+            legend: {
+              text: "Have you checked the address history from the past 5 years?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
 
-        <p class="govuk-body">We need a complete address history going back a full 5 years prior to the date they are verifying the identity.</p>
-
-
-        
-
-      
-
+    
           {{ govukButton({
             text: "Continue"
           }) }}
