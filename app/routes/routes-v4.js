@@ -153,7 +153,7 @@ router.post('/v4/documents-checked-11', function (req, res) {
     * Route 3
     */
    if ((req.session.data['birthCert'] == "no")){   
-    res.redirect('OUTkjskfjskljhi')
+    res.redirect('documents-checked-10')
     }   
     else{
             if ((req.session.data['group2Docs'] >= "4") ) {
@@ -173,7 +173,7 @@ router.post('/v4/documents-checked-11', function (req, res) {
                 res.redirect('documents-checked-7')
             }   
             else{
-                res.redirect('OUTkjskfjskljhi')
+                res.redirect('documents-checked-10')
 
                 }
     }
@@ -187,7 +187,7 @@ router.post('/v4/documents-checked-11', function (req, res) {
 router.post('/v4/documents-checked-6', function (req, res) {
 
 
-     //If it is the relevant officer, ask to confirm the statement. 
+
     if (req.session.data['docs-address'] === 'yes') {
         
         res.redirect('documents-checked-7')
@@ -204,7 +204,7 @@ router.post('/v4/documents-checked-6', function (req, res) {
 router.post('/v4/documents-checked-12', function (req, res) {
 
 
-    //If it is the relevant officer, ask to confirm the statement. 
+
    if (req.session.data['address-DOB'] === 'yes') {
        
        res.redirect('documents-checked-7')
@@ -225,7 +225,7 @@ router.post('/v4/documents-checked-12', function (req, res) {
 router.post('/v4/documents-checked-7', function (req, res) {
 
 
-     //If it is the relevant officer, ask to confirm the statement. 
+
      if (req.session.data['address-issues'] === 'yes') {
         res.redirect('documents-checked-8')
         
@@ -233,7 +233,7 @@ router.post('/v4/documents-checked-7', function (req, res) {
     // Otherwise take them to a stop screen
     else{
 
-        res.redirect('documents-checked-9')
+        res.redirect('keep-records')
 
 
     }
@@ -246,14 +246,20 @@ router.post('/v4/documents-checked-7', function (req, res) {
  */
 router.post('/v4/documents-checked-8', function (req, res) {
     
-    res.redirect('documents-checked-9')
+    res.redirect('keep-records')
 
 }) 
 
 
 
+/*
+ * Documents do not meet GPG45 medium standard - Continue to service (review if this should be a stop screen)
+ */
+router.post('/v4/documents-checked-10', function (req, res) {
+    
+    res.redirect('keep-records')
 
-
+}) 
 
 
 
