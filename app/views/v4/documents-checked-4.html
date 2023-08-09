@@ -22,7 +22,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
 
-        <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
+        <h1 class="govuk-heading-l">Which documents from group 3 did you check to verify their identity?</h1>
 
           {{ govukCheckboxes({
             name: "group-3",
@@ -34,77 +34,77 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
               }
             },
             hint: {
-              text: "Select all that apply."
+              text: "The documents must be different to the ones you checked from groups 1 and 2. Select all that apply."
             },
             items: [
               {
                 value: "",
                 text: "Mortgage statement",
                  hint: {
-                  text: "UK. Issued in last 12 months"
+                  text: "From the UK and issued in last 12 months"
                 }
               },
               {
                 value: "",
                 text: "Bank or building society statement",
                 hint: {
-                  text: "UK and Channel Islands. Issued in last 3 months"
+                  text: "From the UK or Channel Islands and issued in last 3 months"
                 }
               },
               {
                 value: "",
                 text: "Bank or building society statement",
                 hint: {
-                  text: "Countries outside the UK. Issued in last 3 months - branch must be in the country where the applicant lives and works."
+                  text: "From countries outside the UK and issued in last 3 months. The branch must be in the country where the person lives and works."
                 }
               },
               {
                 value: "",
                 text: "Credit card statement",
                 hint: {
-                  text: "Issued in last 3 months."
+                  text: "From the UK and issued in last 3 months."
                 }
               },
               {
                 value: "",
                 text: "Financial statement, for example pension or endowment",
                 hint: {
-                  text: "Issued in last 12 months."
+                  text: "From the UK and issued in last 12 months."
                 }
               },
               {
                 value: "",
                 text: "P45 or P60 statement",
                 hint: {
-                  text: "Issued in last 12 months."
+                  text: "From the UK or Channel Islands. Issued in last 12 months."
                 }
               },
               {
                 value: "",
                 text: "Council Tax statement",
                 hint: {
-                  text: "Issued in last 12 months."
+                  text: "From the UK or Channel Islands. Issued in last 12 months."
                 }
               },
               {
                 value: "",
                 text: "Utility bill",
                 hint: {
-                  text: "UK - not mobile telephone bill.	Issued in last 3 months"
+                  text: "From the UK and issued in the last 3 months."
                 }
               },
               {
                 value: "",
-                text: "Benefit statement, for example Child Benefit, pension",
+                text: "Benefit statement, for example Child Benefit, or pension",
                 hint: {
-                  text: "Issued in last 3 months."
+                  text: "From the UK and issued in last 3 months."
                 }
               },
               {
                 value: "",
-                text: "Central or local government, government agency, or local council document giving entitlement, for example from the Department for Work and Pensions, the Employment Service, HMRC",
+                text: "Central or local government, government agency, or local council document giving entitlement",
                 hint: {
-                  text: "UK and Channel Islands. Issued in last 3 months."
+                  text: "From the UK or Channel Islands. Issued in last 3 months."
                 }
               },
               {

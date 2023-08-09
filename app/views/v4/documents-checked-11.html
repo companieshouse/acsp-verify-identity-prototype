@@ -23,10 +23,13 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           name: "birthCert",
           fieldset: {
             legend: {
-              text: "Do you have a birth certificate issued after the time of birth (UK, Isle of Man and Channel Islands)?",
+              text: "Do they have a birth certificate issued after the time of birth?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
+          },
+          hint: {
+            text: "This can be from the UK, Isle of Man or the Channel Islands."
           },
           items: [
             {

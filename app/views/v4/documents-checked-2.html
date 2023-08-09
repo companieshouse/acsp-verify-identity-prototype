@@ -19,7 +19,9 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span> 
 
-        <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
+        <h1 class="govuk-heading-l">Which documents from group 1 did you check to verify their identity?</h1>
+  
+
 
           {{ govukCheckboxes({
             name: "group-1",
@@ -36,31 +38,37 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
             items: [
               {
                 value: "passport",
-                text: "Current signed passport"
+                text: "Passport", 
+                hint: {
+                  text: "Any current and valid passport."
+                }
               },
               {
                 value: "brp",
-                text: "Biometric residence permit (BRP) "
-              },
-              {
-                value: "",
-                text: "Current photocard driving licence",
+                text: "Biometric residence permit (BRP) ",
                 hint: {
-                  text: "This can be a full or provisional licence."
+                  text: "UK only."
                 }
               },
               {
                 value: "",
-                text: "Original birth certificate",
+                text: "Current photo driving licence (full or provisional)",
                 hint: {
-                  text: "This is a UK birth certificate that was issued within 12 months of the person’s date of birth. It includes certificates issued by UK authorities overseas, such as Embassies High Commissions and HM Forces."
+                  text: "UK, Isle of Man, Channel Islands or EU."
+                }
+              },
+              {
+                value: "",
+                text: "Birth certificate - issued within 12 months of birth",
+                hint: {
+                  text: "UK (including those issued by UK authorities overseas), Isle of Man, and Channel Islands. "
                 }
               },
               {
                 value: "",
                 text: "Adoption certificate",
                 hint: {
-                  text: ""
+                  text: "UK and Channel Islands."
                 }
               },
               {
