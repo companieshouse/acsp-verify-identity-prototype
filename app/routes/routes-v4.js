@@ -139,7 +139,7 @@ router.post('/v4/documents-checked-4', function (req, res) {
     }
     //check?
     else {
-        res.redirect('documents-checked-11')
+        res.redirect('documents-checked-10')
     }
 }) 
 
@@ -158,19 +158,19 @@ router.post('/v4/documents-checked-11', function (req, res) {
     else{
             if ((req.session.data['group2Docs'] >= "4") ) {
             
-                res.redirect('documents-checked-7')
+                res.redirect('documents-checked-8')
             }
             else if ((req.session.data['group2Docs'] == "1")  && (req.session.data['group3Docs'] >= "3")) {
                 
-                    res.redirect('documents-checked-7')
+                    res.redirect('documents-checked-8')
             }
             else if ((req.session.data['group2Docs'] == "2")  && (req.session.data['group3Docs'] >= "2")) {
                 
-                res.redirect('documents-checked-7')
+                res.redirect('documents-checked-8')
             }
             else if ((req.session.data['group2Docs'] == "3")  && (req.session.data['group3Docs'] >= "1")) {
                 
-                res.redirect('documents-checked-7')
+                res.redirect('documents-checked-8')
             }   
             else{
                 res.redirect('documents-checked-10')
@@ -190,11 +190,11 @@ router.post('/v4/documents-checked-6', function (req, res) {
 
     if (req.session.data['docs-address'] === 'yes') {
         
-        res.redirect('documents-checked-7')
+        res.redirect('documents-checked-8')
     }
     // Otherwise take them to a stop screen
     else{
-        res.redirect('documents-checked-11')
+        res.redirect('documents-checked-10')
     }
     
 
@@ -207,11 +207,11 @@ router.post('/v4/documents-checked-12', function (req, res) {
 
    if (req.session.data['address-DOB'] === 'yes') {
        
-       res.redirect('documents-checked-7')
+       res.redirect('documents-checked-8')
    }
    // Otherwise take them to a stop screen
    else{
-       res.redirect('documents-checked-11')
+       res.redirect('documents-checked-10')
    }
    
 
