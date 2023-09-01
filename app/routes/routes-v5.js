@@ -103,7 +103,7 @@ router.post('/v4/documents-checked-4', function (req, res) {
     /*
     * Route 1
     */
-    if (req.session.data['selectedDocs'] >= "3") {
+   /* if (req.session.data['selectedDocs'] >= "3") {
          res.redirect('documents-checked-6')
     }
     else if ((req.session.data['selectedDocs'] == "1") && (req.session.data['group2Docs'] >= "2")) {
@@ -124,11 +124,11 @@ router.post('/v4/documents-checked-4', function (req, res) {
     else if((req.session.data['selectedDocs'] == "1") && (req.session.data['group2Docs'] == "1") && (req.session.data['group3Docs'] >= "1")){
         res.redirect('documents-checked-6')
     }
-    
+    */
     /*
     * Route 2
     */
-    else if (req.session.data['group2Docs'] >= "3") {
+    /*else if (req.session.data['group2Docs'] >= "3") {
         res.redirect('documents-checked-12')
     }
     else if ((req.session.data['group2Docs'] == "1") && (req.session.data['group3Docs'] >= "2")) {
@@ -140,7 +140,10 @@ router.post('/v4/documents-checked-4', function (req, res) {
     //check?
     else {
         res.redirect('documents-checked-10')
-    }
+    } */
+
+    res.redirect('documents-checked-10')
+
 }) 
 
 
