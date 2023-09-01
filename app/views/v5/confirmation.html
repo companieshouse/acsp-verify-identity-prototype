@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Application complete – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Identity verified successfully</h1>
+       <!-- <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div> -->
+      </div>
+
+      <p>
+        Your reference is HDJ2123F. This is not the Companies House user ID for the person you have verified.</p>
+      <p> We have sent a confirmation email to james@jamesaccounting.com.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We'll email director@email.com with their Companies House user ID. This will be needed to make a filing with Companies House for this person.</p>
+
+      <h2 class="govuk-heading-m">If the person you've verified is a director (or equivalent)</h2>
+
+
+      <p>For existing directors, their user ID must be given when the next confirmation statement for their company is filed. We'll then update the Companies House register to show they have verified their identity.</p>
+
+      <p>For new directors, their user ID must be given when they are appointed as a director. </p>
+
+      <h2 class="govuk-heading-m">If the person you've verified is a person with significant control (PSC)</h2>
+
+    <p>Existing PSCs must file an update to give their user ID for each company they are a PSC for. They must do this no later than 14 days after the confirmation statement is due.</p> 
+    
+    <p>We'll then update the Companies House register to show they have verified their identity.</p>    
+
+    <p>When we are notified of a new PSC, we’ll send them a letter to tell them they need to verify their identity. The PSC will have 14 days to give their user ID after receiving this letter. </p>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

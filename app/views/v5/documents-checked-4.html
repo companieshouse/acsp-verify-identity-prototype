@@ -1,0 +1,156 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="documents-checked-4" method="post">
+
+        <span class="govuk-caption-l">
+          {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+        </span> 
+        
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+
+        <h1 class="govuk-heading-l">Which documents from group 3 did you check to verify their identity?</h1>
+
+          {{ govukCheckboxes({
+            name: "group-3",
+            fieldset: {
+              legend: {
+                text: "Group 3: Financial and social history documents",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            hint: {
+              text: "The documents must be different to those you checked from groups 1 and 2. Select all that apply."
+            },
+            items: [
+              {
+                value: "",
+                text: "Mortgage statement",
+                 hint: {
+                  text: "From the UK and issued in last 12 months"
+                }
+              },
+              {
+                value: "",
+                text: "Bank or building society statement",
+                hint: {
+                  text: "From the UK or Channel Islands and issued in last 3 months"
+                }
+              },
+              {
+                value: "",
+                text: "Bank or building society statement",
+                hint: {
+                  text: "From countries outside the UK and issued in last 3 months. The branch must be in the country where the person lives and works."
+                }
+              },
+              {
+                value: "",
+                text: "Credit card statement",
+                hint: {
+                  text: "From the UK and issued in last 3 months."
+                }
+              },
+              {
+                value: "",
+                text: "Financial statement, for example pension or endowment",
+                hint: {
+                  text: "From the UK and issued in last 12 months."
+                }
+              },
+              {
+                value: "",
+                text: "P45 or P60 statement",
+                hint: {
+                  text: "From the UK or Channel Islands. Issued in last 12 months."
+                }
+              },
+              {
+                value: "",
+                text: "Council Tax statement",
+                hint: {
+                  text: "From the UK or Channel Islands. Issued in last 12 months."
+                }
+              },
+              {
+                value: "",
+                text: "Utility bill",
+                hint: {
+                  text: "From the UK and issued in the last 3 months. Must not be a mobile telephone bill."
+                }
+              },
+              {
+                value: "",
+                text: "Benefit statement, for example Child Benefit, or pension",
+                hint: {
+                  text: "From the UK and issued in last 3 months."
+                }
+              },
+              {
+                value: "",
+                text: "Central or local government, government agency, or local council document giving entitlement",
+                hint: {
+                  text: "From the UK or Channel Islands. Issued in last 3 months."
+                }
+              },
+              {
+                value: "",
+                text: "EEA National ID card",
+                hint: {
+                  text: "Must still be valid"
+                }
+              },
+              {
+                value: "",
+                text: "Irish Passport Card",
+                hint: {
+                  text: "Must still be valid"
+                }
+              },
+              {
+                value: "",
+                text: "Cards carrying the PASS accreditation logo",
+                hint: {
+                  text: "From the UK, Isle of Man, or Channel Islands. Must still be valid."
+                }
+              },
+
+              {
+                divider: "or"
+              },
+              {
+                value: "none",
+                text: "None of these",
+                behaviour: "exclusive"
+              }
+            ]
+          }) }}
+
+
+          <input type="hidden" name="group3Docs" id="hiddenInput" />
+
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

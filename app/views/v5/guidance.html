@@ -1,0 +1,351 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start - Verify your identity 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Guidance</span>
+      <h1 class="govuk-heading-l">
+        Identity verification standard 
+      </h1>
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list column-half" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="#verify-screener">
+                What you must do to check someone's identity
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#routes">
+                Routes to check a person's identity
+              </a>
+            </li>
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+              <a href="#documents">
+                Identity documents to check
+              </a>
+            </li>
+
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+      
+      <p>Companies House identity verification standard outlines identity checks authorised agents can do to meet the medium confidence level from the <a href ="https://www.gov.uk/government/publications/identity-proofing-and-verification-of-an-individual/identity-profiles">Good Practice Guide (GPG) 45</a>.</p>
+
+      <p>Authorised agents will need to do identity checks that meet this standard if they want to verify the identity of people for the Companies House register.</p>
+      <h2 id="verify-screener" class="govuk-heading-m">
+        What you must do to check someone's identity
+      </h2>
+  
+      
+      <p>The person will need to give you a range of identity documents so you can verify their identity. </p>
+
+          <p> You can use one of <a href="#routes">3 routes to meet Companies House identity verification standard</a>. The documents you need to check will depend on the identity checking route you use. </p>
+          
+          <p>You must try to use route 1 first if your client can provide the documents needed for this. </p>
+
+            <p>The documents you check must: </p>
+      <ul class="govuk-list govuk-list--bullet">
+  <li>be valid, current and original documentation</li>
+  <li>not be a photocopy or scanned copy </li>
+  <li>not be printed from the internet, for example internet bank statements </li>
+  <li>be in the person’s current name </li>
+  <li>only be included once in the document count - for example, 2 banks statements from the same bank will not count as 2 separate documents </li>
+</ul>
+
+      <h3 class="govuk-heading-s">
+        Check their address history
+      </h3>
+      <p>The person you are verifying will need to give you their address history for the last 5 years. Where possible, you should ask to see documentation to confirm the address history. </p>
+
+      <h3 class="govuk-heading-s">
+        Check if they have changed their name
+      </h3>
+      <p>You must ask the person about any previous name changes. They will need to show you documentation to support any changes of name. </p>
+
+      <p>If they cannot show you proof of the name change, you should find out why and consider whether to verify their identity. </p>
+
+      <p>You can usually accept the documents which show the person’s name as a synonym. For example, a document might say the person’s name is Samantha on their passport, but Sam on their bank card. </p>
+
+
+      
+
+
+
+
+      <h3 class="govuk-heading-s">
+        How to check documents
+      </h3>
+
+      <p>Always look for signs of fraud when you check a person’s identity document. The National Document Fraud Unit (NDFU) has <a href="https://www.gov.uk/government/publications/recognising-fraudulent-identity-documents">guidance on examining identity documents</a> to spot basic forgeries. 
+
+      <p><a href="https://www.gov.uk/government/publications/dbs-identity-checking-guidelines/id-checking-guidelines-for-standardenhanced-dbs-check-applications-from-1-july-2021">Disclosure and Barring Service (DBS) ID checking guidelines</a> includes information on how to check identity documents, including: </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>driving licences</li>
+        <li>passports </li>
+        <li>birth certificates</li>
+        <li>EEA photo identity cards </li>
+        <li>HM Forces ID card </li>
+        <li>firearms licences </li>
+        <li>biometric residence permits</li>
+      </ul>
+ 
+     <!-- ***Checking with policy whether this is specific to route 2***
+     <h3 class="govuk-heading-s">
+        If you use an external validation service
+      </h3>
+
+      <p>You can use an external identity validation service as an alternative way of verifying someone’s identity. </p>
+
+      <p>You must confirm that the checks your supplier uses meet the medium confidence level from the Good Practice Guide (GPG) 45.  </p>
+      -->
+
+      <h2 id="routes" class="govuk-heading-m">
+        Routes to check a person’s identity 
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        Route 1
+        </h3>
+      <p>The person must be able to show:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>one document from group 1</li>
+              <li>2 different documents from either group 1, group 2, or group 3</li>
+            </ul>
+      <p>At least one of the documents must show the person's current address.</p>
+
+      <h3 class="govuk-heading-s">
+        Route 2
+        </h3>
+      <p>If the person doesn’t have any of the documents in group 1, then they must be able to show:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>one document from group 2</li>
+              <li>2 different documents from either group 2 or group 3</li>
+            </ul>
+      <p>At least one of the documents must show the person's current address and date of birth. </p>
+
+      <h3 class="govuk-heading-s">
+        Route 3
+        </h3>
+      <p>Route 3 can only be used if it’s impossible to process the application through routes 1 or 2.</p>
+
+      <p>For route 3, the person must be able to show:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a birth certificate issued after the time of birth (UK, Isle of Man and Channel Islands)</li>
+              <li>one document from group 2</li>
+              <li>3 different documents from group 2 or group 3</li>
+            </ul>
+      <p>At least one of the documents must show the person's current address.</p>
+                  
+
+
+      <h2 id="documents" class="govuk-heading-m">
+        Identity documents
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        Group 1: Primary identity documents
+        </h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Passport</td>
+      <td class="govuk-table__cell">Any current and valid passport</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Biometric residence permit</td>
+      <td class="govuk-table__cell">UK</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional)</td>
+      <td class="govuk-table__cell">UK, Isle of Man, Channel Islands and EU</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Birth certificate - issued within 12 months of birth</td>
+      <td class="govuk-table__cell">UK (including those issued by UK authorities overseas), Isle of Man, and Channel Islands</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Adoption certificate	</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      <h3 class="govuk-heading-s">
+        Group 2: Trusted government documents
+        </h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Current photo driving licence photocard (full or provisional)	</td>
+      <td class="govuk-table__cell">All countries outside the UK (excluding Isle of Man and Channel Islands)</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional), or paper driving licence issued before 1998</td>
+      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Birth certificate issued after time of birth</td>
+      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Marriage/civil partnership certificate</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Immigration document, visa, or work permit	</td>
+      <td class="govuk-table__cell">Issued by a country outside the UK</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">HM Forces ID card	</td>
+      <td class="govuk-table__cell">UK</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Firearms licence</td>
+      <td class="govuk-table__cell">UK, Isle of Man, Channel Islands and Isle of Man</td>
+    </tr>
+  </tbody>
+</table>
+
+      <h3 class="govuk-heading-s">
+        Group 3: Financial and social history documents 
+        </h3>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+            <th scope="col" class="govuk-table__header">Issue date and validity</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Mortgage statement</td>
+      <td class="govuk-table__cell">UK</td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
+      <td class="govuk-table__cell">Countries outside the UK</td>
+      <td class="govuk-table__cell">Issued in last 3 months - branch must be in the country where the person lives and works</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Bank or building society account opening confirmation letter</td>
+      <td class="govuk-table__cell">UK</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Credit card statement</td>
+      <td class="govuk-table__cell">UK</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Financial statement, for example pension or endowment</td>
+      <td class="govuk-table__cell">UK</td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">P45 or P60 statement</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Council Tax statement</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">UK - not mobile telephone bill</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Benefit statement, for example Child Benefit, pension</td>
+      <td class="govuk-table__cell">UK</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Central or local government, government agency, or local council document giving entitlement, for example from the Department for Work and Pensions, the Employment Service, HMRC</td>
+      <td class="govuk-table__cell">UK and Channel Islands</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">EEA National ID card</td>
+      <td class="govuk-table__cell"> </td>
+      <td class="govuk-table__cell">Must still be valid</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Irish Passport Card</td>
+      <td class="govuk-table__cell"> </td>
+      <td class="govuk-table__cell">Must still be valid</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Cards carrying the PASS accreditation logo</td>
+      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands </td>
+      <td class="govuk-table__cell">Must still be valid</td>
+    </tr>
+
+  </tbody>
+</table>
+
+{% endblock %}
