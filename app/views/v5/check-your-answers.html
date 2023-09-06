@@ -78,6 +78,20 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Mobile phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['telephone-number']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Date identity checks were completed
           </dt>
           <dd class="govuk-summary-list__value">
@@ -154,11 +168,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
           href:"confirmation"
         }) }}
       
-        {{ govukButton({
+      <!--  {{ govukButton({
           text: "Add another person",
           classes: "govuk-button--secondary",
           href:"name"
-        }) }}
+        }) }} -->
       </div>
 
   

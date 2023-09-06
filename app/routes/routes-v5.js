@@ -97,7 +97,7 @@ router.post('/v5/documents-checked-3', function (req, res) {
 /*
  * Group 3
  */
-router.post('/v4/documents-checked-4', function (req, res) {
+router.post('/v5/documents-checked-4', function (req, res) {
 
 
     /*
@@ -142,7 +142,7 @@ router.post('/v4/documents-checked-4', function (req, res) {
         res.redirect('documents-checked-10')
     } */
 
-    res.redirect('documents-checked-10')
+    res.redirect('keep-records')
 
 }) 
 

@@ -25,12 +25,12 @@
 
         <p class="govuk-body">If they have an email address, we can send the user ID by email. If not, we will need to send it to their home address, which will take longer. We can only send the user ID to the person it belongs to.</p>
 
-        <div class="govuk-form-group govuk-!-margin-top-6">
+        <!-- <div class="govuk-form-group govuk-!-margin-top-6">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-fieldset__heading">
                 Does {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} have an email address?
-              </h1>
+              </h2>
             </legend>
             <div id="contact-hint" class="govuk-hint">
               Select one option.
@@ -57,9 +57,39 @@
                 </label>
               </div>
               </div>
-            </div>
-          </fieldset>
+              </fieldset>
+            </div> -->
 
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="email">
+                {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}  email address
+              </label>
+              <div id="email-hint" class="govuk-hint">
+                We’ll use this to send them their Companies House user ID
+              </div>
+              <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-font-weight-bold" for="telephone-number">
+                {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}  UK mobile phone number
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
+            </div>
+
+            {{ govukCheckboxes({
+              name: "waste",
+              fieldset: {
+               
+              },
+
+              items: [
+                {
+                  value: "no-UK-mobile",
+                  text: "I do not have a UK mobile number"
+                }
+              ]
+            }) }}
           <button class="govuk-button" data-module="govuk-button">Continue</button>
         </div>
       </form>
