@@ -100,222 +100,230 @@
           </ul>
       <p>At least one of the documents must show their current address.</p>
 
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h4 class="govuk-heading-s">
-        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
-          Group 1
-        </span>
-      </h4>
-      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
-        Primary identity documents
+      <!-- Accordian -->
+
+      <!-- Group 1 primary documents -->
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Group 1
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Primary documents
+            </div>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            
+            <!-- Group 1 table -->
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Notes</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Passport</td>
+                  <td class="govuk-table__cell">Any current and valid passport</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Biometric residence permit</td>
+                  <td class="govuk-table__cell">UK</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional)</td>
+                  <td class="govuk-table__cell">UK, Isle of Man, Channel Islands and EU</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Birth certificate - issued within 12 months of birth</td>
+                  <td class="govuk-table__cell">UK (including those issued by UK authorities overseas), Isle of Man, and Channel Islands</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Adoption certificate	</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                </tr>
+              </tbody>
+            </table>
+    
+
+          </div>
+        </div>
+
+        <!-- Group 2 trusted government documents-->
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Group 2 
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+              Trusted government documents
+            </div>
+          </div>
+
+           <!-- Group 2 table -->
+
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Notes</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Current photo driving licence photocard (full or provisional)	</td>
+                  <td class="govuk-table__cell">All countries outside the UK (excluding Isle of Man and Channel Islands)</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional), or paper driving licence issued before 1998</td>
+                  <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Birth certificate issued after time of birth</td>
+                  <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Marriage/civil partnership certificate</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Immigration document, visa, or work permit	</td>
+                  <td class="govuk-table__cell">Issued by a country outside the UK</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">HM Forces ID card	</td>
+                  <td class="govuk-table__cell">UK</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Firearms licence</td>
+                  <td class="govuk-table__cell">UK, Isle of Man and Channel Islands</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+
+        <!-- Group 3 -->
+
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                Group 3
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+              Financial and social history documents
+            </div>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            
+            
+            <!-- Group 3 table-->
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Document</th>
+                  <th scope="col" class="govuk-table__header">Notes</th>
+                    <th scope="col" class="govuk-table__header">Issue date and validity</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Mortgage statement</td>
+                  <td class="govuk-table__cell">UK</td>
+                  <td class="govuk-table__cell">Issued in last 12 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
+                  <td class="govuk-table__cell">Countries outside the UK</td>
+                  <td class="govuk-table__cell">Issued in last 3 months - branch must be in the country where the person lives and works</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Bank or building society account opening confirmation letter</td>
+                  <td class="govuk-table__cell">UK</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Credit card statement</td>
+                  <td class="govuk-table__cell">UK</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Financial statement, for example pension or endowment</td>
+                  <td class="govuk-table__cell">UK</td>
+                  <td class="govuk-table__cell">Issued in last 12 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">P45 or P60 statement</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                  <td class="govuk-table__cell">Issued in last 12 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Council Tax statement</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                  <td class="govuk-table__cell">Issued in last 12 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Utility bill</td>
+                  <td class="govuk-table__cell">UK - not mobile telephone bill</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Benefit statement, for example Child Benefit, pension</td>
+                  <td class="govuk-table__cell">UK</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Central or local government, government agency, or local council document giving entitlement, for example from the Department for Work and Pensions, the Employment Service, HMRC</td>
+                  <td class="govuk-table__cell">UK and Channel Islands</td>
+                  <td class="govuk-table__cell">Issued in last 3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">EEA National ID card</td>
+                  <td class="govuk-table__cell"> </td>
+                  <td class="govuk-table__cell">Must still be valid</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Irish Passport Card</td>
+                  <td class="govuk-table__cell"> </td>
+                  <td class="govuk-table__cell">Must still be valid</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">Cards carrying the PASS accreditation logo</td>
+                  <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands </td>
+                  <td class="govuk-table__cell">Must still be valid</td>
+                </tr>
+            
+              </tbody>
+            </table>
+
+            
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
-      <p>Table showing group1 docs</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h4 class="govuk-heading-s">
-        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
-          Group 2
-        </span>
-      </h4>
-      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
-        Trusted government documents
-      </div>
-    </div>
-    <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
-      <p>Table with group 2 docs</p>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h4 class="govuk-heading-s">
-        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
-          Group 3
-        </span>
-      </h4>
-      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
-        Financial and social history documents
-      </div>
-    </div>
-    <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
-      <p>Table with group 3 documents</p>
-    </div>
-  </div>
-  
-</div>
 
 
-      <h3 class="govuk-heading-s">
-        Group 1: Primary identity documents
-        </h3>
-
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Document</th>
-      <th scope="col" class="govuk-table__header">Notes</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Passport</td>
-      <td class="govuk-table__cell">Any current and valid passport</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Biometric residence permit</td>
-      <td class="govuk-table__cell">UK</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional)</td>
-      <td class="govuk-table__cell">UK, Isle of Man, Channel Islands and EU</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Birth certificate - issued within 12 months of birth</td>
-      <td class="govuk-table__cell">UK (including those issued by UK authorities overseas), Isle of Man, and Channel Islands</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Adoption certificate	</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-    </tr>
-  </tbody>
-</table>
-
-
-      <h3 class="govuk-heading-s">
-        Group 2: Trusted government documents
-        </h3>
-
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Document</th>
-      <th scope="col" class="govuk-table__header">Notes</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Current photo driving licence photocard (full or provisional)	</td>
-      <td class="govuk-table__cell">All countries outside the UK (excluding Isle of Man and Channel Islands)</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional), or paper driving licence issued before 1998</td>
-      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Birth certificate issued after time of birth</td>
-      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Marriage/civil partnership certificate</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Immigration document, visa, or work permit	</td>
-      <td class="govuk-table__cell">Issued by a country outside the UK</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">HM Forces ID card	</td>
-      <td class="govuk-table__cell">UK</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Firearms licence</td>
-      <td class="govuk-table__cell">UK, Isle of Man and Channel Islands</td>
-    </tr>
-  </tbody>
-</table>
-
-      <h3 class="govuk-heading-s">
-        Group 3: Financial and social history documents 
-        </h3>
-
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Document</th>
-      <th scope="col" class="govuk-table__header">Notes</th>
-            <th scope="col" class="govuk-table__header">Issue date and validity</th>
-
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Mortgage statement</td>
-      <td class="govuk-table__cell">UK</td>
-      <td class="govuk-table__cell">Issued in last 12 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Bank or building society statement</td>
-      <td class="govuk-table__cell">Countries outside the UK</td>
-      <td class="govuk-table__cell">Issued in last 3 months - branch must be in the country where the person lives and works</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Bank or building society account opening confirmation letter</td>
-      <td class="govuk-table__cell">UK</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Credit card statement</td>
-      <td class="govuk-table__cell">UK</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Financial statement, for example pension or endowment</td>
-      <td class="govuk-table__cell">UK</td>
-      <td class="govuk-table__cell">Issued in last 12 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">P45 or P60 statement</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-      <td class="govuk-table__cell">Issued in last 12 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Council Tax statement</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-      <td class="govuk-table__cell">Issued in last 12 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Utility bill</td>
-      <td class="govuk-table__cell">UK - not mobile telephone bill</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Benefit statement, for example Child Benefit, pension</td>
-      <td class="govuk-table__cell">UK</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Central or local government, government agency, or local council document giving entitlement, for example from the Department for Work and Pensions, the Employment Service, HMRC</td>
-      <td class="govuk-table__cell">UK and Channel Islands</td>
-      <td class="govuk-table__cell">Issued in last 3 months</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">EEA National ID card</td>
-      <td class="govuk-table__cell"> </td>
-      <td class="govuk-table__cell">Must still be valid</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Irish Passport Card</td>
-      <td class="govuk-table__cell"> </td>
-      <td class="govuk-table__cell">Must still be valid</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Cards carrying the PASS accreditation logo</td>
-      <td class="govuk-table__cell">UK, Isle of Man, and Channel Islands </td>
-      <td class="govuk-table__cell">Must still be valid</td>
-    </tr>
-
-  </tbody>
-</table>
+      <!-- End of accordian -->
 
       <h3 class="govuk-heading-m">2. Check their identity documents</h3>
 
