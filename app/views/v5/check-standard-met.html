@@ -1,0 +1,42 @@
+{% extends "layouts/main.html" %}
+{% block pageTitle %}
+    What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+    
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+      
+{% endblock %}
+      
+{% block content %}
+      
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+      
+            <form class="form" action="name" method="post">
+
+              <h1 class="govuk-heading-l">
+               Identity verification checks 
+              </h1>
+              
+              <p class="govuk-body govuk-!-padding-bottom-5 ">
+                The identity verification checks that have been carried out meet the <a href="guidance" class="govuk-link" rel="noreferrer noopener" target="_blank">Companies House identity verification standard (opens in new tab)</a>.
+              </p>
+        
+        
+              
+        
+              {{ govukButton({
+                text: "Confirm and continue"
+              }) }}
+        
+        
+            </form>
+      
+          </div>
+        </div>
+      
+      {% endblock %}
+      
+      
+      
