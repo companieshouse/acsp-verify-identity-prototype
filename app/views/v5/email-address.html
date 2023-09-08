@@ -23,9 +23,10 @@
 
         <p class="govuk-body">We can only send the code to the person it belongs to. They must keep the code secure and only share it with people who they want to file on their behalf.</p>
 
-        <p class="govuk-body">We can send the personal code by email or text message if they have their own email address or mobile phone number. They will have the option to share the code with you immediately.</p>
+        <p class="govuk-body">It is fastest for us to send the code by email if they have their own email address. They will be able to share the code with you immediately.</p> 
+        <p>If not, we can send it by text message if they have a UK mobile phone number. </p>
 
-        <p>If not, we will need to send the code to their home address.</p>
+     <!--   <p>Otherwise, we will need to send the code to their home address.</p> -->
 
 
         <!--<div class="govuk-form-group govuk-!-margin-top-6">
@@ -81,13 +82,13 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    How would you like to be contacted?
-                  </h1>
+                  <h2 class="govuk-fieldset__heading">
+                    How should we send their personal code?
+                  </h2>
                 </legend>
-                <div id="contact-hint" class="govuk-hint">
-                  Select all options that are relevant to you.
-                </div>
+                <!--<div id="contact-hint" class="govuk-hint">
+                  You should enter an email address if they have one.
+                </div> -->
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
@@ -111,7 +112,7 @@
                   <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-text">
-                        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}  mobile phone number
+                        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} UK mobile phone number
                       </label>
                       <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
                     </div>
@@ -123,6 +124,9 @@
                     <label class="govuk-label govuk-checkboxes__label" for="countries-5">
                       None of these
                     </label>
+                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          We will need to send the code to their home address.
+        </div>
                   </div>
 
 
