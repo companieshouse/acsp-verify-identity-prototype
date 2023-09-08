@@ -44,11 +44,17 @@
             fieldset: {
               legend: {
                 text: "What is their role?",
-                isPageHeading: false,
                 classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
               }
             },
             items: [
+              {
+                value: "super-admin",
+                text: "Super admin",
+                hint: {
+                  text: "Can changes to the authorised agent (e.g. AML supervisory body, RO etc.). Access services for authorised agents and manage its members."
+                }
+              },
               {
                 value: "admin",
                 text: "Admin",
@@ -66,23 +72,52 @@
             ]
           }) }}
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      What services can members access?
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>Members of an authorised agent can:</p>
+         <!--- <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                What services can members access?
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>Members of an authorised agent can:</p>
+          
+          <ul class="govuk-list govuk-list--bullet">
+            <li>form companies and registrable partnerships for clients </li>
+            <li>file on behalf of clients </li>
+            <li>verify someone’s identity </li>
+          </ul>
+            <p>They will only be able to add or remove other members if you add them as an admin. </p>
+            </div>
+          </details> -->
 
-<ul class="govuk-list govuk-list--bullet">
-  <li>form companies and registrable partnerships for clients </li>
-  <li>file on behalf of clients </li>
-  <li>verify someone’s identity </li>
-</ul>
-  <p>They will only be able to add or remove other members if you add them as an admin. </p>
-  </div>
-</details>
+
+          <!-- form companies and registrable partnerships for clients -->
+          {{ govukCheckboxes({
+            name: "service-access",
+            fieldset: {
+              legend: {
+                text: "What services can members access?",
+                classes: "govuk-fieldset__legend--m govuk-!-static-padding-top-3"
+              }
+            },
+            hint: {
+              text: "Select all that apply."
+            },
+            items: [
+              {
+                value: "filings",
+                text: "file on behalf of clients"
+              },
+              {
+                value: "farm",
+                text: "verify someone’s identity"
+              }
+            ]
+          }) }}
+
+
+
+
 
            {{ govukButton({
               text: "Continue",

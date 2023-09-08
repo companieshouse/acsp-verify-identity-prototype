@@ -142,7 +142,7 @@ router.post('/v5/documents-checked-4', function (req, res) {
         res.redirect('documents-checked-10')
     } */
 
-    res.redirect('keep-records')
+    res.redirect('documents-checked-8')
 
 }) 
 
