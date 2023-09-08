@@ -26,6 +26,13 @@
         <p class="govuk-body">It is fastest for us to send the code by email if they have their own email address. They will be able to share the code with you immediately.</p> 
         <p>If not, we can send it by text message if they have a UK mobile phone number. </p>
 
+
+        {{ govukWarningText({
+          text: "If an email address or mobile phone number is not entered it will be sent by post which will take a few days. ",
+          iconFallbackText: "Warning"
+        }) }}
+
+
      <!--   <p>Otherwise, we will need to send the code to their home address.</p> -->
 
 
@@ -64,31 +71,32 @@
               </fieldset>
             </div> -->
 
-      <!--       <div class="govuk-form-group">
-              <label class="govuk-label govuk-!-font-weight-bold" for="email">
-                {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}  email address
+            <h2 class="govuk-heading-m">
+              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s contact details
+            </h2>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label " for="email">
+               Email address
               </label>
               
               <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
             </div>
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-!-font-weight-bold" for="telephone-number">
-                {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}  UK mobile phone number
+              <label class="govuk-label " for="telephone-number">
+                 Mobile phone number
               </label>
               <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
-            </div> -->
+            </div> 
 
-            <div class="govuk-form-group">
+          <!--  <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h2 class="govuk-fieldset__heading">
                     How should we send their personal code?
                   </h2>
                 </legend>
-                <!--<div id="contact-hint" class="govuk-hint">
-                  You should enter an email address if they have one.
-                </div> -->
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
@@ -98,7 +106,7 @@
                   <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-email">
-                        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} email address
+                        Email address
                       </label>
                       <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
                     </div>
@@ -112,7 +120,7 @@
                   <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="contact-by-text">
-                        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} UK mobile phone number
+                        UK mobile phone number
                       </label>
                       <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
                     </div>
@@ -132,7 +140,7 @@
 
                 </div>
               </fieldset>
-            </div>
+            </div>--> 
 
 
 
