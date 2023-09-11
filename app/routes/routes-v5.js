@@ -7,6 +7,19 @@ const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
 /*
+ * Email and mobile number for sending personal code
+ */
+router.post('/v5/email-address', function (req, res) {
+
+    res.redirect('date-identity-checks')
+    
+})
+
+
+
+
+
+/*
  * Date checks
  */
 router.post('/v5/date-identity-checks', function (req, res) {
