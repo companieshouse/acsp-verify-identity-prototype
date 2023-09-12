@@ -13,4 +13,6 @@ router.use('/', require('./routes/routes-v4.js'))
 
 router.use('/', require('./routes/routes-v5.js'))
 
+router.use('/', require('./routes/routes-v6.js'))
+
 module.exports = router

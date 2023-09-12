@@ -1,0 +1,170 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="email-address" method="post">
+
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s  Companies House personal code</h1>
+
+        <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we will send them a Companies House personal code.</p>
+
+        <p class="govuk-body">We can only send the code to the person it belongs to. They must keep the code secure and only share it with people who they want to file on their behalf.</p>
+
+        <p class="govuk-body">If you can give an email address for the person, we can send their code by email. This is the fastest way for us to send the personal code.</p> 
+        <p>If not, we can send it by text message if they have a UK mobile phone number. </p>
+
+
+        {{ govukWarningText({
+          text: "If they do not have an email address or mobile phone number we will need to send the code by post. This usually takes around 5 working days.",
+          iconFallbackText: "Warning"
+        }) }}
+
+
+     <!--   <p>Otherwise, we will need to send the code to their home address.</p> -->
+
+
+        <!--<div class="govuk-form-group govuk-!-margin-top-6">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Does {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} have an email address?
+              </h2>
+            </legend>
+            <div id="contact-hint" class="govuk-hint">
+              Select one option.
+            </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact" name="how-to-send-code" type="radio" value="emailcode" data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="code-by-email">
+                    What is their email address?
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="address" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  No
+                </label>
+              </div>
+              </div>
+              </fieldset>
+            </div> -->
+
+            <h2 class="govuk-heading-m">
+              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s contact details
+            </h2>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label " for="email">
+               Email address
+              </label>
+              
+              <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label " for="telephone-number">
+                 Mobile phone number
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
+            </div> 
+
+          <!--  <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-fieldset__heading">
+                    How should we send their personal code?
+                  </h2>
+                </legend>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      Email address</label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-email">
+                        Email address
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                      Text message
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-text">
+                        UK mobile phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+                    </div>
+                  </div>
+
+                  <div class="govuk-checkboxes__divider">or</div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" checked data-behaviour="exclusive">
+                    <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+                      None of these
+                    </label>
+                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+          We will need to send the code to their home address.
+        </div>
+                  </div>
+
+
+                </div>
+              </fieldset>
+            </div>--> 
+
+
+
+           <!-- {{ govukCheckboxes({
+              name: "waste",
+              fieldset: {
+               
+              },
+
+              items: [
+                {
+                  value: "no-UK-mobile",
+                  text: "I do not have a UK mobile number"
+                }
+              ]
+            }) }} -->
+            
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
