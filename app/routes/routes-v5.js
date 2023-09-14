@@ -6,6 +6,20 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+
+/*
+ * Confirm home address
+ */
+router.post('/v5/address-confirm', function (req, res) {
+
+    res.redirect('email-address')
+    
+})
+
+
+
+
+
 /*
  * Email and mobile number for sending personal code
  */
