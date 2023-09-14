@@ -6,6 +6,48 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
+/*
+ * llokup  address
+ */
+router.post('/v5/check-standard-met', function (req, res) {
+
+    res.redirect('name')
+    
+})
+
+
+/*
+ * llokup  address
+ */
+router.post('/v5/name', function (req, res) {
+
+    res.redirect('dob')
+    
+})
+
+/*
+ * llokup  address
+ */
+router.post('/v5/dob', function (req, res) {
+
+    res.redirect('address-lookup')
+    
+})
+
+
+
+
+/*
+ * llokup  address
+ */
+router.post('/v5/address-lookup', function (req, res) {
+
+    res.redirect('address-confirm')
+    
+})
+
+
+
 
 /*
  * Confirm home address
