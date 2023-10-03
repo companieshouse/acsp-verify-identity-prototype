@@ -5,6 +5,9 @@
   Your companies
 {% endblock %}
 
+{% set serviceName %}
+ 
+{% endset %}
 
 {% block content %}
 
@@ -59,6 +62,16 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    key: {
+                      text: "Services they can access"
+                    },
+                    value: {
+                      html: "file on behalf of clients<br>verify someone’s identity"
+                    }
+                  
+                    
                   }
                 ]
               }) }}
@@ -103,6 +116,24 @@
                     value: {
                       html: "k.williams@example.com"
                     },
+                    actions: {
+                      items: [
+                        {
+                          href: "#",
+                          text: "Change",
+                          visuallyHiddenText: "Change email address"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    key: {
+                      text: "Services they can access"
+                    },
+                    value: {
+                      html: "file on behalf of clients<br>verify someone’s identity"
+                    },
+                  
                     actions: {
                       items: [
                         {

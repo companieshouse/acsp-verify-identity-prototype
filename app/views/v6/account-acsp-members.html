@@ -2,12 +2,15 @@
 <!-- {% extends "layouts/layout-account-signout-your-companies-jill.html" %}
 {% extends "layouts/main.html" %} --> 
 
-{% extends "layouts/layout-chs-signed-out.html" %}
+
 
 {% block pageTitle %}
-  Your companies
+ Manage members 
 {% endblock %}
 
+{% set serviceName %}
+ 
+{% endset %}
 
 {% block content %}
 
@@ -62,6 +65,15 @@
                       }
                     ]
                   }
+                },
+                {
+                  key: {
+                    text: "Services they can access"
+                  },
+                  value: {
+                    html: "file on behalf of clients<br>verify someone’s identity"
+                  }
+                
                 }
               ]
             }) }}

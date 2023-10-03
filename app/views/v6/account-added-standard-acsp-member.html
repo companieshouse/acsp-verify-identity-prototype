@@ -5,6 +5,9 @@
   Your companies
 {% endblock %}
 
+{% set serviceName %}
+ 
+{% endset %}
 
 {% block content %}
 
@@ -43,6 +46,15 @@
                     value: {
                       html: "james.morris@example.com"
                     }
+                  },
+                  {
+                    key: {
+                      text: "Services they can access"
+                    },
+                    value: {
+                      html: "file on behalf of clients<br>verify someone’s identity"
+                    }
+                  
                   }
                 ]
               }) }}
@@ -69,6 +81,15 @@
                     value: {
                       html: "k.williams@example.com"
                     }
+                  },
+                  {
+                    key: {
+                      text: "Services they can access"
+                    },
+                    value: {
+                      html: "file on behalf of clients<br>verify someone’s identity"
+                    }
+                  
                   }
                 ]
               }) }}
