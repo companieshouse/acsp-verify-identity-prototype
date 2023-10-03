@@ -80,7 +80,7 @@ router.post('/v6/email-address', function (req, res) {
  */
 router.post('/v6/date-identity-checks', function (req, res) {
 
-    res.redirect('documents-checked-1')
+    res.redirect('documents-checked-2')
     
 })
 
@@ -88,12 +88,12 @@ router.post('/v6/date-identity-checks', function (req, res) {
 
 /*
  * UK national 
- */
+
 router.post('/v6/documents-checked-1', function (req, res) {
 
     res.redirect('documents-checked-2')
     
-}) 
+})  */
 
 /*
  * Group 1
