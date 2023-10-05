@@ -116,16 +116,16 @@ Find and update company information
   <p class="govuk-body">Company number <strong>10987888</strong></p>
 
 
-<div class="govuk-grid-row">
+<!-- <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
    <div class="govuk-warning-text corporate-annotations-text govuk-!-margin-bottom-2">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <span class="govuk-warning-text__assistive">Important</span>
     <p class="govuk-warning-text__text">This company has some directors that have not verified their identity  </p>
-</div>
+</div> 
 
   </div>
-</div>
+</div>-->
 
 
 
@@ -161,9 +161,10 @@ Find and update company information
    
 
 <h2 class="govuk-body">
-<a href="#" class="govuk-heading-m govuk-!-margin-bottom-0 govuk-!-margin-top-7 govuk-link">JONES, Eleanor Mae</a>
+<a href="#" class="govuk-heading-m govuk-!-margin-bottom-0 govuk-link">JONES, Eleanor Mae <strong class="govuk-tag govuk-tag--green govuk-!-margin-left-2">
+  Identity verified
+</strong></a>
 </h2>
-
 
 <p class"govuk-body">Correspondence address<br>
 <strong>C/O Moore Chartered Accountants 2nd Floor, Southern House, 76-80 College Road, Harrow, Middlesex, United Kingdom, HA1 4BW 
@@ -175,7 +176,7 @@ Find and update company information
   <div class="govuk-grid-column-full">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
-        <p class"govuk-body">Role <strong class="govuk-tag green-tag">
+        <p class = "govuk-body" stylegovuk-!-padding-right-9">Role <strong class="govuk-tag green-tag">
  ACTIVE
 </strong>
  
@@ -214,17 +215,28 @@ Find and update company information
   </div>
 </div>
 
-<p class"govuk-body">Identity verification</p>
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
 
-<p class="govuk-body">I confirm that JAMES ACCOUNTING LTD has carried out identity verification checks for this person on <span class="govuk-!-font-weight-bold"> {{data['checked-day']}} {{data['checked-month']}} {{data['checked-year']}}</span> that meet Companies House identity verification standard. 
-    <p class="govuk-body">The person provided the following documents to prove their identity:</p>
+    Identity verification details
+    
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body">JAMES ACCOUNTING LTD has carried out identity verification checks for this person on 2 March 2023 that meet Companies House identity verification standard.
+
+
+  <p class="govuk-body">The person provided the following documents to prove their identity:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>passport</li>
       <li>photo driving licence</li>
       <li>bank or building society statement</li>
     </ul>
+    <p class="govuk-body">JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes. </p>
+</div>
+</details>
+ 
 
-<p class="govuk-body">JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes. </p>
+
 </div>
 
 <h2 class="govuk-body">
