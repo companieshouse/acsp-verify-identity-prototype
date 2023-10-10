@@ -42,7 +42,16 @@ router.post('/v5/dob', function (req, res) {
  */
 router.post('/v5/address-lookup', function (req, res) {
 
-    res.redirect('address-confirm')
+      //if house number is empty
+      if (req.session.data['house-number'] === '') {
+
+        res.redirect('address-list')
+
+      } else {
+        // go to the confirm address page
+        res.redirect('address-confirm')
+    
+      }
     
 })
 
