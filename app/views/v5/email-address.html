@@ -17,7 +17,20 @@
 
       <form class="form" action="email-address" method="post">
 
+
+        {% if (data['firstName'] == "") and (data['lastName'] == "") %}
+
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"> Hannah Salt's Companies House personal code</h1>
+
+       
+        {% else %}
+
         <h1 class="govuk-heading-l govuk-!-margin-bottom-1">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s  Companies House personal code</h1>
+
+        {% endif %}
+
+
+     
 
         <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we will send them a Companies House personal code.</p>
 
