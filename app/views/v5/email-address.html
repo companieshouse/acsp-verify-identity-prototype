@@ -17,7 +17,7 @@
 
       <form class="form" action="email-address" method="post">
 
-
+        <fieldset class="govuk-fieldset">
         {% if (data['firstName'] == "") and (data['lastName'] == "") %}
 
         <h1 class="govuk-heading-l govuk-!-margin-bottom-1"> Hannah Salt's Companies House personal code</h1>
@@ -85,7 +85,17 @@
             </div> -->
 
             <h2 class="govuk-heading-m">
+              {% if (data['firstName'] == "") and (data['lastName'] == "") %}
+
+              Hannah Salt's contact details
+
+              {% else %}
+
               {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s contact details
+
+              {% endif %}
+
+
             </h2>
 
             <div class="govuk-form-group">
@@ -103,76 +113,9 @@
               <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
             </div> 
 
-          <!--  <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-fieldset__heading">
-                    How should we send their personal code?
-                  </h2>
-                </legend>
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      Email address</label>
-                  </div>
-                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-email">
-                        Email address
-                      </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
-                    </div>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
-                    <label class="govuk-label govuk-checkboxes__label" for="contact-3">
-                      Text message
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-text">
-                        UK mobile phone number
-                      </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
-                    </div>
-                  </div>
-
-                  <div class="govuk-checkboxes__divider">or</div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" checked data-behaviour="exclusive">
-                    <label class="govuk-label govuk-checkboxes__label" for="countries-5">
-                      None of these
-                    </label>
-                    <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-          We will need to send the code to their home address.
-        </div>
-                  </div>
-
-
-                </div>
-              </fieldset>
-            </div>--> 
-
-
-
-           <!-- {{ govukCheckboxes({
-              name: "waste",
-              fieldset: {
-               
-              },
-
-              items: [
-                {
-                  value: "no-UK-mobile",
-                  text: "I do not have a UK mobile number"
-                }
-              ]
-            }) }} -->
+          </fieldset>
             
           <button class="govuk-button" data-module="govuk-button">Continue</button>
-        </div>
       </form>
 
     </div>
