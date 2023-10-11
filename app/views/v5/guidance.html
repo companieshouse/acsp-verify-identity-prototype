@@ -10,6 +10,17 @@ Verifying someone's identity for Companies House
 {% endblock %}
 
 {% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Alpha"
+  },
+  html: 'We\'re testing a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+
+
+
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
