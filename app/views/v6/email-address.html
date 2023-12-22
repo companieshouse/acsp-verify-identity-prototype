@@ -24,7 +24,7 @@
        
         {% else %}
 
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"> Hannah Salt's <span> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</span></h1>
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"><span> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s personal code</span></h1>
 
         {% endif %}
 
@@ -32,16 +32,8 @@
 
         <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we will send them a Companies House personal code.</p>
 
-        <p class="govuk-body">We can only send the code to the person it belongs to. They must keep the code secure and only share it with people who they want to file on their behalf.</p>
+        <p class="govuk-body">The code will be needed to connect their verified identity to our records.</p>
 
-        <p class="govuk-body">If you can give an email address for the person, we can send their code by email. This is the fastest way for us to send the personal code.</p> 
-        <p>If not, we can send it by text message if they have a UK mobile phone number. </p>
-
-
-        {{ govukWarningText({
-          text: "If they do not have an email address or mobile phone number we will need to send the code by post. This usually takes around 5 working days.",
-          iconFallbackText: "Warning"
-        }) }}
 
 
      <!--   <p>Otherwise, we will need to send the code to their home address.</p> -->
@@ -83,23 +75,29 @@
             </div> -->
 
             <h2 class="govuk-heading-m">
-              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s contact details
+              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s email address
             </h2>
 
+            <p class="govuk-body">This is optional. If they have an email address, we will send their personal code by email. If they do not, we will send the code by post. This usually takes around 5 working days.
+
             <div class="govuk-form-group">
-              <label class="govuk-label " for="email">
-               Email address
+              <label class="govuk-label govuk-label--s" for="email">
+               What is their email address?
               </label>
-              
+                <div id="changedName-hint" class="govuk-hint">
+      This must belong to the person and cannot be an email address for a shared inbox.
+    </div>
               <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
             </div>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label " for="telephone-number">
-                 Mobile phone number
-              </label>
-              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
-            </div> 
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    It is offence to give an email address for anyone other than the person whose identity you are verifying.
+  </strong>
+</div>
 
           <!--  <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
