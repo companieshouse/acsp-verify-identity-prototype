@@ -36,7 +36,7 @@
         Companies House identity verification standard
       </h1>
 
-<p class="govuk-body-m">What authorised agents must do to meet the identity verification standard when they verify someone’s identity for Companies House.</p>
+<p class="govuk-body-m">Companies House identity verification standard outlines what authorised agents must do to verify someone’s identity to the level required by the Companies Act.</p>
 
       <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
         <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
@@ -147,12 +147,14 @@
 
         <p>The person will need to show you identity documents to prove this information so you can verify their identity.</p>
      
-        <p>You must keep a copy of any documents you use to check a person’s identity while you have a working relationship and for 5 years after.</p>
+     {{ govukInsetText({
+  text: "You must keep a copy of the documents you use to check a person’s identity while you have a working relationship and for 5 years after."
+}) }}  
 
         <h3 class="govuk-heading-m">Documents you can use as evidence </h2>
 
   <p>Depending on what documents the person can provide, there are 3 routes to verify someone’s identity. </p>
-  <p>Documents must only be included once in the document count. For example, 2 banks statements from the same bank will not count as 2 separate documents. </p>
+
   <p>If the person is a resident outside of the UK, the documents they provide must include a government issued photographic identity document. </p>
 
 
@@ -191,10 +193,11 @@
 
     <h3 class="govuk-heading-m">Valid identity documents</h3>
 
+      <p>Documents must only be included once in the document count. For example, 2 banks statements from the same bank will not count as 2 separate documents. </p>
     <h4 class="govuk-heading-s">Group A – biometric identity documents</h4>
 
 
-    <table class="govuk-table">
+    <table class="govuk-table govuk-!-margin-bottom-9" >
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
@@ -209,9 +212,9 @@
       <td class="govuk-table__cell">Must be current and meet the <a href="">International Civil Aviation Organization (ICAO) specifications for e-passports</a>. </td>
     </tr>
         <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Current photo driving licence (full or provisional)</td>
-      <td class="govuk-table__cell">From an EU or EEA country that follow (EC) No. 2252/2004 standards </td>
-      <td class="govuk-table__cell">Must contain biometric information</td>
+      <td scope="row" class="govuk-table__cell">Biometric identity Card</td>
+      <td class="govuk-table__cell">From an EU or EEA country that follow <a href="">(EC) No. 2252/2004 standards</a> </td>
+      <td class="govuk-table__cell">Must include biometric information</td>
     </tr>
     <tr class="govuk-table__row">
       <td scope="row" class="govuk-table__cell">Biometric residence permit</td>
@@ -225,7 +228,7 @@
     <h4 class="govuk-heading-s">Group B – photographic identity documents </h4>
 
 
-    <table class="govuk-table">
+    <table class="govuk-table govuk-!-margin-bottom-9">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
@@ -248,7 +251,7 @@
     </tr>
     <tr class="govuk-table__row">
       <td scope="row" class="govuk-table__cell">Photo identity card</td>
-      <td class="govuk-table__cell">From a country listed on the <a href="">Public Register of Authentic travel and identity Documents Online (PRADO)</a> </td>
+      <td class="govuk-table__cell">From a country listed on the Public Register of Authentic travel and identity Documents Online (PRADO) </td>
       <td class="govuk-table__cell">Must be current and listed on the <a href="">Public Register of Authentic travel and identity Documents Online (PRADO)</a> </td>
     </tr>
     <tr class="govuk-table__row">
@@ -289,7 +292,7 @@
     <h4 class="govuk-heading-s">Group C – Trusted government documents </h4>
 
 
-    <table class="govuk-table">
+    <table class="govuk-table govuk-!-margin-bottom-9">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
@@ -337,10 +340,10 @@
 </table>
 
 
-    <h4 class="govuk-heading-s">Group D – Financial history documents</h4>
+    <h4 class="govuk-heading-s ">Group D – Financial history documents</h4>
 
 
-    <table class="govuk-table">
+    <table class="govuk-table govuk-!-margin-bottom-9">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
@@ -370,10 +373,10 @@ For non-UK residents, the statement must be from a bank or building society in t
 </table>
 
 
-  <h4 class="govuk-heading-s">Group E (UK residents only) - financial and social history documents </h4>
+  <h4 class="govuk-heading-s ">Group E (UK residents only) - financial and social history documents </h4>
 
 
-    <table class="govuk-table">
+    <table class="govuk-table govuk-!-margin-bottom-9">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
