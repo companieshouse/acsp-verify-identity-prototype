@@ -1,0 +1,659 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start - Verify your identity 
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for this page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Section</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Subsection</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-l">Statutory guidance</span>
+      <h1 class="govuk-heading-xl">
+        Companies House identity verification standard
+      </h1>
+
+<p class="govuk-body-m">Companies House identity verification standard outlines what authorised agents must do to verify someone’s identity to the level of assurance required by the Companies Act.</p>
+
+      <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+        <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
+          <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+            Contents
+          </h2>
+          <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-1">
+              1.	Get evidence of the claimed identity 
+              </a>
+            </li>
+            
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-2">
+                2.	Check the evidence is genuine 
+              </a>
+            </li>   
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-3">
+                3.	Check the claimed identity has existed over time
+              </a>
+            </li>   
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-4">
+                4.	Check if the claimed identity is at high risk of identity fraud
+              </a>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-5">
+                5.	Check the identity belongs to the person who’s claiming it
+              </a>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#step-6">
+                6.	Tell Companies House you have verified someone’s identity
+              </a>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#other">
+                Other ways to verify someone’s identity
+              </a>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#cannot">
+                What to do if you cannot verify someone’s identity
+              </a>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#guidance">
+                Further guidance on checking identity documents
+              </a>
+            </li>              
+          </ol>
+        </nav>
+      </aside>
+
+    </div>
+
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+
+   <!--     <h2 class="govuk-heading-m" id="who">Who needs to verify their identity</h2>
+
+        <p>Your clients will need to verify their identity for Companies House if they are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a person with significant control (PSC)</li>
+              <li>a director</li>
+              <li>the equivalent of a director - this includes members, general partners and managing officers</li>
+            </ul>
+
+        <h2 class="govuk-heading-m" id="how">How to verify someone's identity</h2>
+        
+        <p>Your clients can:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="https://prove-your-identity-prototype.herokuapp.com/v5/pre-one-login/start">verify their identity with Companies House</a></li>
+              <li>ask you or another authorised agent to verify their identity</li>
+            </ul> -->
+
+    <!--  <p>Your clients will need to verify their identity for Companies House if they are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a person with significant control (PSC)</li>
+              <li>a director</li>
+              <li>the equivalent of a director - this includes members, general partners and managing officers</li>
+            </ul>   -->
+
+
+    
+        <h2 class="govuk-heading-l" id="step-1">1.	Get evidence of the claimed identity </h2>
+
+
+    <p>You’ll need to know a combination of information about the person whose identity you are checking. This is known as their claimed identity. </p>
+
+    <p>As a minimum, you must know their: </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>name</li>
+              <li>date of birth</li>
+              <li>home address</lil>
+              <li>nationality</li>
+            </ul>
+
+
+
+        <p>The person will need to show you identity documents to prove this information so you can verify their identity.</p>
+     
+     {{ govukInsetText({
+  text: "You must keep a copy of the documents you use to check a person’s identity while you have a working relationship and for 5 years after."
+}) }}  
+
+        <h3 class="govuk-heading-m">Documents you can use as evidence </h2>
+
+  <p>Depending on what documents the person can provide, there are 3 routes to verify someone’s identity. </p>
+
+  <p>If the person is a resident outside of the UK, the documents they provide must include a government issued photographic identity document. </p>
+
+
+
+     
+      <h4 class="govuk-heading-s" >Route 1</h2>
+      
+      <p>The person must provide <strong>one document</strong> from group A. </p>
+      <p>You must use this route if the person can provide one of these documents. </p>
+
+
+      <h4 class="govuk-heading-s" >Route 2</h2>
+      
+      <p>You can only use this if the person cannot provide a document from group A. </p>
+      <p>The person must show you <strong>2 different documents in total</strong>. These must include: </p>
+
+       <ul class="govuk-list govuk-list--bullet">
+        <li>one document from group B </li>
+        <li>a different document from group B, C or D</li>
+      </ul>
+
+
+    <h4 class="govuk-heading-s">Route 3</h3>
+
+    <p>You can only use this if the person is a resident of the UK and does not have documents from groups A or B. </p>
+    <p>The person must be able to show <strong>3 different documents in total</strong>. These must include:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>one document from group C</li>
+              <li>a different document from group D</li>
+              <li>a different document from group E </li>
+            </ul>
+
+    <p>You’ll also need to take a photograph of the person. If you cannot take a photograph, you must ask for a photograph and do a likeness check.</p>
+
+    <p>We are more likely to contact you for information if you have checked someone’s identity using this route. It provides a lower level of assurance, so you may need to reverify the person’s identity. </p>
+
+    <h3 class="govuk-heading-m">Valid identity documents</h3>
+
+      <p>Documents must only be included once in the document count. For example, 2 banks statements from the same bank will not count as 2 separate documents. </p>
+    <h4 class="govuk-heading-s">Group A – biometric identity documents</h4>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9" >
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issuing country</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issue date and validity </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Biometric passport</td>
+      <td class="govuk-table__cell">From any country</td>
+      <td class="govuk-table__cell">Must be current and meet the <a href="">International Civil Aviation Organization (ICAO) specifications for e-passports</a>. </td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Biometric identity Card</td>
+      <td class="govuk-table__cell">From an EU or EEA country that follow <a href="">(EC) No. 2252/2004 standards</a> </td>
+      <td class="govuk-table__cell">Must include biometric information</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Biometric residence permit</td>
+      <td class="govuk-table__cell">UK only (these are being phased out)</td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <h4 class="govuk-heading-s">Group B – photographic identity documents </h4>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document</th>
+      <th scope="col" class="govuk-table__header  govuk-!-width-one-third">Issuing country</th>
+      <th scope="col" class="govuk-table__header  govuk-!-width-one-third">Issue date and validity </th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Non-biometric passport</td>
+      <td class="govuk-table__cell">From any country</td>
+      <td class="govuk-table__cell">Must be current and meet the <a href="">International Civil Aviation Organization (ICAO) specifications for machine-readable travel documents</a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Photo driving licence</td>
+      <td class="govuk-table__cell">From the UK, Isle of Man, Channel Islands or EU </td>
+      <td class="govuk-table__cell">Must be a current driving licence</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Photo identity card</td>
+      <td class="govuk-table__cell">From a country listed on the Public Register of Authentic travel and identity Documents Online (PRADO) </td>
+      <td class="govuk-table__cell">Must be current and listed on the <a href="">Public Register of Authentic travel and identity Documents Online (PRADO)</a> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Irish Passport Card</td>
+      <td class="govuk-table__cell">From Ireland </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">HM Forces ID card </td>
+      <td class="govuk-table__cell">From the UK </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Firearms licence  </td>
+      <td class="govuk-table__cell">From the UK, Isle of Man or Channel Islands </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Photo immigration document </td>
+      <td class="govuk-table__cell">From any country</td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Photo visa </td>
+      <td class="govuk-table__cell">From any country</td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+
+        <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Photo work permit (government issued) </td>
+      <td class="govuk-table__cell">From any country</td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <h4 class="govuk-heading-s">Group C – Trusted government documents </h4>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issuing country</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issue date and validity </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Birth certificate</td>
+      <td class="govuk-table__cell">From the UK (including those issued by UK authorities overseas), Isle of Man, Channel Islands or Ireland </td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Adoption certificate </td>
+      <td class="govuk-table__cell">UK, Channel Islands and Ireland only</td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Marriage certificate  </td>
+      <td class="govuk-table__cell">UK, Channel Islands and Ireland only</td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Civil partnership certificate</td>
+      <td class="govuk-table__cell">UK, Channel Islands and Ireland only</td>
+      <td class="govuk-table__cell"> </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Immigration document</td>
+      <td class="govuk-table__cell">From any country </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Visa</td>
+      <td class="govuk-table__cell">From any country </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Work permit</td>
+      <td class="govuk-table__cell">From any country </td>
+      <td class="govuk-table__cell">Must be current </td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <h4 class="govuk-heading-s ">Group D – Financial history documents</h4>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issuing country</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issue date and validity </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Mortgage statement </td>
+      <td class="govuk-table__cell">From the UK
+</td>
+      <td class="govuk-table__cell">Issued in last 12 months </td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Bank or building society statement </td>
+      <td class="govuk-table__cell">From any country. <br>
+For non-UK residents, the statement must be from a bank or building society in the country where the person lives and works </td>
+      <td class="govuk-table__cell">Issued in last 3 months </td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Bank or building society account opening confirmation letter </td>
+      <td class="govuk-table__cell">From the UK</td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  <h4 class="govuk-heading-s">Group E (UK residents only) - financial and social history documents </h4>
+
+
+    <table class="govuk-table govuk-!-margin-bottom-9">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Document</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issuing country</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-third">Issue date and validity </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Credit card statement</td>
+      <td class="govuk-table__cell">From the UK
+</td>
+      <td class="govuk-table__cell">Issued in last 3 months </td>
+    </tr>
+        <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Financial statement, for example pension or endowment</td>
+      <td class="govuk-table__cell">From the UK  </td>
+      <td class="govuk-table__cell">Issued in last 12 months </td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">P45 or P60 statement </td>
+      <td class="govuk-table__cell">From the UK or Channel Islands </td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Council Tax statement </td>
+      <td class="govuk-table__cell">From the UK or Channel Islands </td>
+      <td class="govuk-table__cell">Issued in last 12 months</td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Utility bill  </td>
+      <td class="govuk-table__cell">From the UK - cannot be a mobile telephone bill  </td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Central or local government, government agency, or local council document giving entitlement, for example from the Department for Work and Pensions, the Employment Service, HMRC  </td>
+      <td class="govuk-table__cell">From the UK and Channel Islands   </td>
+      <td class="govuk-table__cell">Issued in last 3 months</td>
+    </tr>
+            <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Cards carrying the PASS accreditation logo</td>
+      <td class="govuk-table__cell">From the UK, Isle of Man, and Channel Islands</td>
+      <td class="govuk-table__cell">Must still be valid</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+      <h2 class="govuk-heading-l" id="step-2">2. Check the evidence is genuine and valid </h2>
+
+      <p>If you want to prove someone’s identity using information that’s based on physical evidence, you must check it is genuine. This means that the evidence is unlikely to be forged or counterfeit.</p>
+
+      <p>You must check that documents: </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>are valid – this means you can find records that show the document has been issued </li>
+              <li>have not been reported as lost or stolen </li>
+              <li>have not expired </li>
+              <li>are in the person’s name</li>
+              <li>confirm the person’s date of birth and home address </li>
+            </ul>
+
+
+      <p>You should always check identity documents for signs of tampering. You must query if there are any signs of damage to a document. This is particularly important if the damage is in an area where personal details are shown, such as the name or photograph. </p>
+
+      <p><a href="https://www.gov.uk/government/publications/recognising-fraudulent-identity-documents">Read the National Document Fraud Unit (NDFU) guidance on examining identity documents</a> for more information on how you can detect basic forgeries. </p>
+
+      <h3 class="govuk-heading-m">Checking digital documents </h2>
+
+      <p>Digital documents often provide a lower level of assurance than physical documents. This is because physical documents that have been posted to a person’s address shows that the person has access to the address. </p>
+      <p>You can accept printed versions of digital documents as evidence, but you should consider the lower level of assurance they provide. </p>
+
+      <h3 class="govuk-heading-m">Checking documents issued by a country outside of the UK </h2>
+
+      <p>If you are concerned a document form outside the UK may not be genuine, you should check it by either: </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>contacting the relevant embassy or consulate </li>
+              <li>using the <a href="https://www.consilium.europa.eu/prado/en/prado-start-page.html">Public Register of Authentic identity and travel Documents Online (PRADO)</a></li>
+            </ul>
+
+      <p>If documents are in a foreign language, you must check they provide evidence of the customer’s identity. The registrar may require certified translations of your identity verification records.</p>
+
+      <h2 class="govuk-heading-l" id="step-3">3.	Check the claimed identity has existed over time</h2>
+      <p>This is also known as an ‘active history’ check. It lowers the risk of you accepting: </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+              <li>a synthetic identity </li>
+              <li>an identity that belongs to someone who has died </li>
+            </ul>
+
+
+      <p>You should be aware that some parts of a person’s identity may change over time, for example their name or gender. This can be for legitimate reasons so is not always a sign of higher risk.  </p>
+
+     <h3 class="govuk-heading-m">Check their address history </h2>
+     <p>The person will need to give you their address history for the last 5 years. Where possible, you should ask to see documentation to confirm the address history. </p>
+
+     <h3 class="govuk-heading-m">Check if they have changed their name </h2>
+     <p>You must ask the person about any previous name changes. You should ask them to show you documentation to support any changes of name. </p>
+     <p>If they cannot show you proof of the name change, you should find out why and consider whether to verify their identity. </p>
+     <p>You can usually accept documents which show the person’s name as a synonym. For example, a document might say the person’s name is Samantha on their passport, but Sam on their bank card.</p>
+
+     <h3 class="govuk-heading-m">Check if they have regularly interacted with other organisations or people</h2>
+     <p>You can check the person’s interactions by asking to see evidence of their: </p>
+           <ul class="govuk-list govuk-list--bullet">
+              <li>credit card activity </li>
+              <li>gas or electric account payments </li>
+              <li>online bank or retail account activity</li>
+              <li>travel to another country</li>
+              <li>health records </li>
+              <li>employment records, for example payslips</li>
+              <li>school records</li>
+
+            </ul>
+
+
+
+
+
+      <h2 class="govuk-heading-l" id="step-4" >4.	Check if the claimed identity is at high risk of fraud </h2>
+
+     <p>You must keep records to show you have attempted to make sure the person’s identity is not:</p>
+           <ul class="govuk-list govuk-list--bullet">
+            <li>at a higher risk of identity fraud than usual</li>
+            <li>a synthetic identity</li>
+            <li>stolen, or reported as stolen</li>
+          </ul>
+      <p>To do this, you can check the details of the claimed identity with counter-fraud data sources, such as a national fraud database. </p>
+
+      <p>You can also use counter-fraud data sources to check if the identity:</p>
+       <ul class="govuk-list govuk-list--bullet">
+        <li>belongs to someone who is alive </li>
+        <li>is known by an organisation that should have a record of that person (for example an Electoral Registration Office in a local authority)</li>
+        <li>is at a higher risk of being impersonated, for example if they are a politically exposed person like a politician or judge</li>
+    </ul>
+      <h2 class="govuk-heading-l" id="step-5">5.	Check that the identity belongs to the person who’s claiming it</h2>
+
+      <p>If possible, you should ask for biometric or photographic identity documents (or both). This is so you can compare the document with the person to check that the person: </p>
+             <ul class="govuk-list govuk-list--bullet">
+                <li>physically matches the photo on (or related to) the document </li>
+                <li>matches the biometric information shown on the document or a trusted data source</li>
+              </ul>
+        <p><a href="">Read more about how you can make sure someone matches biometric information</a> in the government guidance on proving and verifying someone’s identity.  </p>
+
+        <p>You will need to check the:</p>
+                     <ul class="govuk-list govuk-list--bullet">
+
+                        <li>documents are real</li>
+                        <li>person is a real person – this is also known as a ‘liveness’ check</li>
+                        <li>person is the same person as in the document photograph (also known as a ‘likeness’ check)</li>
+                      </ul>
+
+      <h2 class="govuk-heading-l" id="step-6" >6.	Tell Companies House you have verified someone’s identity</h2>
+      
+      <p>When you have completed checks to verify someone’s identity, you will need to send a verification statement to the registrar.</p>
+      <p> To do this, you can use our online service to <a href="guidance-ACSPs">Tell Companies House you have verified someone’s identity</a>. </p>
+
+      <p>You'll need to tell us the: </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>person’s name </li>
+            <li>person’s date of birth </li>
+            <li>person’s home address</li>
+            <li>date you completed the identity checks </li>
+            <li>documents you used as evidence to verify their identity</li>
+          </ul>
+
+          <p>You’ll also need to complete a declaration to confirm that the person is who they claim to be. </p>
+
+          <p>If your checks meet the Companies House standard of identity verification, we will send the person their Companies House personal code. </p>
+          <p>They will need this to prove their verified status to (do any of the following):  </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>file with Companies House </li>
+            <li>be a director </li>
+            <li>be a Person of Significant Control (PSC)</li>
+          </ul>
+
+         <h2 class="govuk-heading-l" id="other">Other ways to verify someone’s identity</h2>
+
+         <p>You can use a digital identity platform or commercial provider to verify someone’s identity.</p>
+
+         <p>If you do this, you must: </p>
+                   <ul class="govuk-list govuk-list--bullet">
+                      <li>ensure the checks are carried out correctly and meet Companies House identity verification standard</li>
+                      <li>keep copies of documents and any other evidence</li>
+                    </ul>
+
+         <h2 class="govuk-heading-l" id="cannot">What to do if you cannot verify someone’s identity</h2>
+        <p>The person will need to get documents to be able to verify their identity for Companies House. </p>
+        <p>If you cannot file annual accounts because you need more time to verify someone’s identity, you can <a href="">apply to extend the accounts filing deadline</a>. </p>
+        <p>You must do this before the normal filing deadline.</p>
+
+                 <h2 class="govuk-heading-l" id="guidance">Further guidance on checking identity documents</h2>
+
+
+{{ govukInsetText({
+  text: "The following guidance gives advice on how you can check certain identity documents. It is not a requirement to meet the Companies House identity verification standard."
+}) }}
+
+      <h3 class="govuk-heading-m">Checking a driving licence</h3>
+      <p>English, Welsh and Scottish driving licence numbers contain information about the applicant’s name, sex, and date of birth. This information is written in a special format but can be taken and matched against the information provided by the person.</p>
+      <p>The date of birth on English, Welsh, and Scottish driving licences, issued before 1977, is not recorded as a separate entry on the licence. The date of birth from the driving licence number can be checked against the date of birth the person has told you.</p>
+      <p>For example, the format of the number for Christine Josephine Robinson, born 2 July 1975:</p>
+      <p>R O B I N 7 5 7 0 2 5 C J 9 9 9 0 1</p>
+      <p>N N N N N Y M M D D Y I I C C C C C</p>
+      <p>N = 1st five letters of the surname (if the surname begins MAC or MC it is treated as MC for all)</p>
+      <p>Y = Year of birth</p>
+      <p>M = Month of birth (In the case of a female, the number represented by the first M will have the value 5 added to the first digit, for example, a female born in November (i.e. 11) would display ‘61’ in the MM boxes or if born in February (i.e. 02) would display ‘52’</p>
+      <p>D = Day of month of birth</p>
+      <p>I = Initial letter of the first two forenames - if only one, then 9 will replace the second letter; if the licence indicates that the applicant has a middle name, ensure that one has been provided in section A</p>
+      <p>C = Computer generated</p>
+      <p>For Northern Ireland, Isle of Man, and Jersey driving licences the licence number is in a different format. The licence number is unique to the driver and the ‘name’ or ‘date of birth’ validation, as shown above, cannot be used.</p>
+      <p><strong>Checking a photo driving licence</strong></p>
+      <p>Examine the licence for evidence of photo tampering or any amendment of the printed details.</p>
+      <p><strong>Checking an old style driving licence (no photograph)</strong></p>
+      <p>Remove the document from the plastic wallet and check that it is printed on both sides.</p>
+      <p>It should have a watermark visible by holding the licence up to the light and there should be no punctuation marks in the name or address.</p>
+      <p>The ‘Valid To’ date should be the day before the bearer’s 70th birthday (unless the bearer is already over 70). The ‘Valid To’ date can therefore be cross-referenced with the applicant’s date of birth detailed in section A.</p>
+      
+       <h3 class="govuk-heading-m">Checking a passport</h3>
+       <p>Check the general quality and condition of the passport. Treat it with suspicion if it is excessively damaged; accidental damage is often used to cover tampering.</p>
+       <p>Photographs should be examined closely for signs of damage to the laminate or for excessive glue or slitting of the laminate. These signs would indicate photo substitution. If the photograph appears excessively large, this might be an attempt to hide another photograph underneath. There should also be an embossed strip embedded into the laminate, which will catch a portion of the photograph.</p>
+       <p>Check there is no damage to this area. If the passport is from a foreign national, you can still follow the same procedures as above.</p>
+       <p><a href="">HM Passport Office has produced a guide</a> to be used when checking passports for identification.</p>
+
+        <h3 class="govuk-heading-m">Checking a birth certificate</h3>
+        <p>Birth certificates are not evidence of identity, and can be easy to get. Certificates issued at the time of birth may give more confidence that it belongs to the person. Recently issued certificates will not show if any information has been corrected or superseded by a new registration.</p>
+        <p>Check the quality of paper used. Genuine certificates use a high grade. There should be a watermark visible when the document is held up to the light. Any signs of smoothness on the surface would indicate that original text might have been washed or rubbed away. There should be no signs of tampering, changes using liquid paper, overwriting or spelling mistakes.</p>
+        <p>The following may help to identify whether the certificate details have been falsified. You can check if:</p>
+
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>the certificate format used is appropriate for the year of registration</li>
+                      <li>the surname is in upper case (not the forename(s))</li>
+                      <li>the dates of birth is shown with the day and month in words and the year in figures</li>
+                      </ul>
+          <p>The following information might indicate that the certificate has been altered:</p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>spacing between falsely added particulars might be irregular compared to original information. ‘Thick’ or ‘thin’ spacing might infer particulars have been added</li>
+                      <li>false particulars might not have been aligned with other words</li>
+                      <li>characters may not be of the same size or shape with the rest of the particulars</li>
+                      <li>movement of handwriting may look mechanical and does not flow with the rest of the particulars</li>
+                      <li>changes might not be consistent, for example parents’ surnames might be altered, but not the signatures</li>
+                      <li>the area around falsely added or removed particulars may appear thinner where the paper fibres have been disturbed by abrasion, or it may react differently under an ultra violet light - for example, it may show signs of staining</li>
+                      </ul>
+            <p>For more information on checking birth certificates, please refer to HM Passport Office document General Register Office guide to birth certificates.</p>
+
+                    <h3 class="govuk-heading-m">Checking an EEA photo identity card</h3>
+                    <p>Examine the card for evidence of photo tampering or any amendment of the printed details.</p>
+
+
+              <h3 class="govuk-heading-m">Checking an HM Forces ID card</h3>
+              <p>Examine the card for evidence of photo tampering or any amendment of the printed details.</p>
+
+              <h3 class="govuk-heading-m">Checking a firearms licence</h3>
+
+              <p>Check the licence is printed on blue security paper with a Royal crest watermark and a faint pattern stating the words ‘Home Office’.</p>
+              <p>Examine the licence for evidence of photo tampering or any amendment of the printed details, which should include home address and date of birth.</p>
+              <p>The licence should be signed by the holder and bear the authorising signature of the chief of police for the area in which they live, or normally a person to whom his authority has been delegated.</p>
+
+              <h3 class="govuk-heading-m">Checking online evidence of immigration status</h3>
+              <p>Ensure that evidence is always taken from a .gov.uk web address.</p>
+              <p>Further information on how to view evidence of immigration and right to work status can be found here: View a job applicant’s right to work details - GOV.UK</p>
+
+        <h3 class="govuk-heading-m">Checking a biometric residence permit</h3>
+        <p>View the features of a permit and how to check a job applicant’s biometric residence permit to see if they have a right to work in the UK.</p>
+
+                <h3 class="govuk-heading-m">Other types of ID</h3>
+                <p>Ensure all letters and statements are recent, i.e. within a three month period. Do not accept documentation printed from the internet.</p>
+                <p>Check letter headed paper is used, bank headers are correct and all documentation looks genuine. The address should be cross-referenced with that provided by the applicant.</p>
+
+            
+
+
+
+
+
+
+
+{% endblock %}
