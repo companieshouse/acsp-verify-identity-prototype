@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
@@ -27,12 +28,15 @@
 
 {% block content %}
 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">Guidance</span>
-      <h1 class="govuk-heading-l">
-        Tell Companies House you have verified someone's identity
+      <h1 class="govuk-heading-xl">
+        Tell Companies House you have verified someone's identity 
       </h1>
+
+<p class="govuk-body-l">Guidance for authorised agents who want to verify people's identity for Companies House.</p>
 
       <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
         <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide" role="navigation">
@@ -40,31 +44,40 @@
             Contents
           </h2>
           <ol class="govuk-prototype-kit-common-templates-contents-list__list">
-            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
-              <a href="#what"> 
-               What this service is for
+            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#what">
+              What this service is for
               </a>
             </li>
+            
             <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
               <a href="#who">
-                Who can use this service
+              Who can use this service
               </a>
-            </li>
-            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
-              <a href="#verify">
-                How to verify someone’s identity 
-              </a>
-            </li>
+            </li>   
             <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
-              <a href="#information">
-                What information you need to submit
+              <a href="#what-you-need">
+               What you’ll need to tell us you have verified someone’s identity 
               </a>
-            </li>
-            <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
-              <a href="#after">
-                What happens after you verify someone’s identity
+            </li>   
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#how">
+               How you can meet the identity verification standard
               </a>
-            </li>
+            </li>  
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#alt-routes">
+                Other ways to verify someone’s identity
+              </a>
+            </li>  
+
+
+                        <li class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+              <a href="#cannot-verify">
+               What to do if you cannot verify someone’s identity
+              </a>
+            </li>  
+
           </ol>
         </nav>
       </aside>
@@ -73,135 +86,134 @@
 
   </div>
 
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
-      
-      <h2 id="what" class="govuk-heading-m">What this service is for</h2>
 
-      <p>From XX DATE, people will need to verify their identity for Companies House if they are (any of the following):  </p>
+   <!--     <h2 class="govuk-heading-m" id="who">Who needs to verify their identity</h2>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>a person with significant control (PSC)</li>
-        <li>a director</li>
-        <li>the equivalent of a director – this includes members, general partners and managing officers</li>
-        <li>someone who files for a company</li>
+        <p>Your clients will need to verify their identity for Companies House if they are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a person with significant control (PSC)</li>
+              <li>a director</li>
+              <li>the equivalent of a director - this includes members, general partners and managing officers</li>
+            </ul>
+
+        <h2 class="govuk-heading-m" id="how">How to verify someone's identity</h2>
+        
+        <p>Your clients can:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="https://prove-your-identity-prototype.herokuapp.com/v5/pre-one-login/start">verify their identity with Companies House</a></li>
+              <li>ask you or another authorised agent to verify their identity</li>
+            </ul> -->
+
+    <!--  <p>Your clients will need to verify their identity for Companies House if they are:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a person with significant control (PSC)</li>
+              <li>a director</li>
+              <li>the equivalent of a director - this includes members, general partners and managing officers</li>
+            </ul>   -->
+
+
+    
+        <h2 class="govuk-heading-l" id="what">What this service is for </h2>
+
+
+    <p>This service is for Companies House authorised agents to tell us when they have verified someone’s identity. </p>
+
+    <p>The checks you do to verify someone’s identity must meet <a href="">Companies House identity verification standard</a>. You must read the standard to make sure your identity checks reach the required level of assurance before you use this service.</p>
+
+
+
+
+
+
+      <h2 class="govuk-heading-l" id="who">Who can use this service</h2>
+
+      <p>You, or the business you work for, must <a href="">register as a Companies House authorised agent</a> before you can use this service. </p>
+
+
+
+
+
+      <h2 class="govuk-heading-l" id="what-you-need">What you’ll need to tell us you have verified someone’s identity </h2>
+
+      <p>When you have completed checks to verify someone’s identity, you will need to 
+use this service to tell us the:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>person’s name</li>
+              <li>person’s date of birth</li>
+              <li>person’s home address</li>
+              <li>date you completed the identity checks</li>
+              <li>documents you used as evidence to verify their identity</li>
+            </ul>
+
+
+      <p>You’ll also need to complete a declaration to confirm that the person is who they claim to be. </p>
+
+      <p>If your checks meet the Companies House standard of identity verification, we will send the person their Companies House personal code. </p>
+
+
+    {{ govukDetails({
+  summaryText: "What a Companies House personal code is",
+  text: "PLACEHOLDER CONTENT."
+}) }}
+
+
+      <h2 class="govuk-heading-l" id="how">How you can meet the identity verification standard.  </h2>
+
+
+<p>You can use the following steps to meet the Companies House identity verification standard when you check someone’s identity.<p>
+<p>These are guidance and you can choose to <a href="">verify someone’s identity another way</a>. However, you must make sure the checks you do meet the identity verification standard. </p>
+
+
+            <ul class="steps">
+
+
+      <h3 class="govuk-heading-m">Ask for information about the person</h3>
+
+      <h3 class="govuk-heading-m">Get evidence to verify the person’s identity information </h3>
+
+      <h3 class="govuk-heading-m">Check the personal information belongs to the person claiming it </h3>
+      <h3 class="govuk-heading-m">Check the evidence is real</h3>
+      <h3 class="govuk-heading-m">Check the person’s identity has existed over time</h3>
       </ul>
 
-      <p>Use this service to tell Companies House you have verified someone’s identity. </p>
 
-      <h2 id="who" class="govuk-heading-m">Who can use this service </h2>
-      <p>You must be a Companies House authorised agent to use this service. This is also known as an Authorised Corporate Service Provider (ACSP). </p>  
-
-      <p>Individuals or organisations, such as accountants or solicitors, that are registered with an Anti-Money Laundering (AML) supervisory body can <a href="">apply to register as an authorised agent</a>.  </p>
-
-      <h2 id="verify" class="govuk-heading-m">How to verify someone’s identity </h2>
-
-      <p>There are 2 ways someone can verify their identity for Companies House. They can: </p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>verify their identity with Companies House using GOV.UK One Login</li>
-        <li>ask an authorised agent to verify their identity</li>
-      </ul>
-
-      <p>If you're verifying someone’s identity for Companies House, you must complete checks that meet the <a href="guidance">identity verification standard</a>.  </p>
-
-      <h2 id="information" class="govuk-heading-m">What information you need to submit</h2>
-
-      <p>You'll need to enter the person's details as they are shown on the documents you used to check their identity. You’ll need to tell us their:  </p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>name </li>
-        <li>date of birth</li>
-        <li>home address </li>
-      </ul>
-
-      <p>You do not need to upload copies of the documents. However, you must keep a copy of any documents you use to check a person’s identity while you have a working relationship and for 5 years after. </p>
-
-      <p>You’ll also need to tell us the date you completed the identity checks.</p>
-
-      <p>You should provide an email address for the person if they have one. This must belong to the person and cannot be an email address for a shared inbox.</p>
+                   <h2 class="govuk-heading-l" id="alt-routes">   Other ways to verify someone’s identity </h2>
 
 
 
-      <h2 id="after" class="govuk-heading-m">What happens after you verify someone’s identity</h2>
 
-    <p>  When you have successfully verified someone’s identity, we’ll send the person their Companies House personal code. This is a code that connects a person’s verified identity to their Companies House records.</p>
-    <p>If you give an email address for the person, we can send their code by email. If not, we will send the code to their home address by post.</p>
+      <p>You can use a digital identity platform or commercial provider to verify someone’s identity. </p>
+      <p>If you do this, you must:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>ensure the checks are carried out correctly and meet Companies House identity verification standard</li>
+              <li>keep copies of documents and any other evidence</li>
+            </ul>
 
 
-      <h3 class="govuk-heading-s">What we’ll show on the public register</h3>
+                   <h2 class="govuk-heading-l" id="cannot-verify">What to do if you cannot verify someone’s identity</h2>
 
-      <p>We will show that you have verified the person’s identity as part of any records about them on the public register. </p>
+      <p>The person will need to get documents to be able to verify their identity for Companies House.</p>
+      <p>They will need to verify their identity to do any of the following:</p>
 
-      <p>We'll show:</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the name of the authorised agent</li>
-        <li>the date you verified their identity</li>
-        <li>the names of all supervisory bodies your business is registered with</li>
-      </ul>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>file with Companies House</li>
+              <li>be a director</li>
+              <li>be a Person of Significant Control (PSC)</li>
+              <li>apply to register as a Companies House authorised agent </li>
+            </ul>
 
 
 
 
 
 
-      {{ govukButton({
-        text: "Tell Companies House you have verified someone's identity",
-        href:"start-page"
-      }) }}
 
-
-      
-
-
-
-
-
-      <p>
-        <a href="#">
-          View a printable version of the whole guide
-        </a>
-      </p>
-
-    </div>
-
-    <div class="govuk-grid-column-one-third">
-
-      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
-        <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
-        </h2>
-        <nav role="navigation" aria-labelledby="subsection-title">
-          <ul class="govuk-list govuk-!-font-size-16">
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Related link
-              </a>
-            </li>
-            <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-
-    </div>
-
-  </main>
-</div>
-
-
-
-
-
-    </div>
-  </div>
 
 {% endblock %}
