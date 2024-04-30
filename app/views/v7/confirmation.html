@@ -24,6 +24,96 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
       <h2 class="govuk-heading-m">What happens next</h2>
       <p>We'll email director@email.com with their Companies House personal code. This may be needed to make a filing with Companies House for this person.</p>
 
+
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Identity verification details submitted</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+          </dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+         
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
+            
+          </dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobile phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['telephoneNumber']}} 
+          </dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date identity checks were completed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+          </dd>
+         
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address from the past 5 years were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity documents that were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Current signed passport <br> 
+            Photo driving licence<br>
+            Bank or building society statement
+
+           
+          </dd>
+          
+        </div>
+
+
+
+
+
+
 <!--
       <h2 class="govuk-heading-m">If the person you've verified is a director (or equivalent)</h2>
 
