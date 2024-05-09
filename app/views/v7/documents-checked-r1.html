@@ -13,62 +13,74 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="documents-checked-2" method="post">
+      <form class="form" action="documents-checked-1" method="post">
 
         <span class="govuk-caption-l">
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
         </span> 
+      
 
-        <h1 class="govuk-heading-l">Which documents from group 1 did you check to verify their identity?</h1>
-  
+        <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
+
+
+  <!-- Is an irish passport card crypographic? -->
 
 
           {{ govukCheckboxes({
-            name: "group-1",
+            name: "documents",
             fieldset: {
               legend: {
-                text: "Group 1: Primary identity documents",
+                text: "Cryptographic documents",
                 isPageHeading: false,
                 classes: "govuk-fieldset__legend--m"
               }
             },
 
             items: [
+              
               {
-                value: "passport",
-                text: "Passport", 
+                value: "cry-passport",
+                text: "Biometric or Machine-Readable Passport or Irish Passport Card",
                 hint: {
-                  text: "Any current and valid passport."
-                }
-              },
-              {
-                value: "brp",
-                text: "Biometric residence permit (BRP) ",
-                hint: {
-                  text: "From the UK only."
+                  text: ""
                 }
               },
               {
                 value: "",
-                text: "Current photo driving licence (full or provisional)",
+                text: "UK, Channel Islands, Isle of Man and EU photocard driving licence",
                 hint: {
-                  text: "From the UK, Isle of Man, Channel Islands or EU."
+                  text: ""
                 }
               },
               {
                 value: "",
-                text: "Birth certificate - issued within 12 months of birth",
+                text: "EU or EEA identity card, with biometric information",
                 hint: {
-                  text: "From the UK (including those issued by UK authorities overseas), Isle of Man, or Channel Islands. "
+                  text: ""
                 }
               },
               {
                 value: "",
-                text: "Adoption certificate",
+                text: "UK biometric residence permit",
                 hint: {
-                  text: "From the UK or Channel Islands."
+                  text: ""
                 }
               },
+              {
+                value: "",
+                text: "UK biometric residence card",
+                hint: {
+                  text: ""
+                }
+              },
+              {
+                value: "",
+                text: "UK Frontier Worker Permit",
+                hint: {
+                  text: ""
+                }
+              },
+             
               {
                 divider: "or"
               },
@@ -81,7 +93,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
             ]
           }) }}
 
-          <input type="hidden" name="selectedDocs" id="hiddenInput" />
+
 
           {{ govukButton({
             text: "Continue"

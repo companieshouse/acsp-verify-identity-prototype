@@ -74,9 +74,19 @@
               </fieldset>
             </div> -->
 
+            {% if (data['firstName'] == "") and (data['lastName'] == "") %}
+
+            <h2 class="govuk-heading-m">
+              Hannah Salt's email address
+            </h2>
+
+            {% else %}
+
             <h2 class="govuk-heading-m">
               {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s email address
             </h2>
+
+            {% endif %}
 
             <p class="govuk-body">This is optional. If they have an email address, we will send their personal code by email. If not, we will send the code to their home address by post. This usually takes around 5 working days.
 

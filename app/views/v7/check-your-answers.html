@@ -33,6 +33,23 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Date of birth
@@ -62,20 +79,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['email']}} 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
+       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Mobile phone number
@@ -104,9 +108,10 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Address from the past 5 years were checked
+            Checked the documents were valid and genuine using crypograpic security checks
           </dt>
           <dd class="govuk-summary-list__value">
             Yes
@@ -118,6 +123,9 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+
+
+       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Identity documents that were checked
@@ -126,8 +134,6 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Current signed passport <br> 
             Photo driving licence<br>
             Bank or building society statement
-
-           
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -136,6 +142,8 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+        
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Identity verification declaration
@@ -160,7 +168,31 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+
+
       </dl>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+             Declaration
+            </h2>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                I confirm ... 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
 
 
 
