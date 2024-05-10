@@ -87,7 +87,7 @@ router.post('/v7/address-confirm', function (req, res) {
  */
 router.post('/v7/date-identity-checks', function (req, res) {
 
-    res.redirect('format-of-documents-checked')
+    res.redirect('format-of-the-documents-checked')
     
 })
 
@@ -97,11 +97,65 @@ router.post('/v7/date-identity-checks', function (req, res) {
 /*
  * Format the documents were checked
  */
-router.post('/v7/date-identity-checks', function (req, res) {
+router.post('/v7/format-of-the-documents-checked', function (req, res) {
 
-    res.redirect('format-of-documents-checked')
+     //if house number is empty
+     if (req.session.data['security-check'] === 'yes') {
+
+        res.redirect('documents-checked-r1')
+
+      } else {
+        // go to the confirm address page
+        res.redirect('documents-checked-r2')
+    
+      }
+
+})
+
+
+
+/*
+ * Document group 1
+ */
+router.post('/v7/documents-checked-r1', function (req, res) {
+
+    res.redirect('id-check')
     
 })
+
+
+
+/*
+ * Document group 2
+ */
+router.post('/v7/documents-checked-r2', function (req, res) {
+
+    res.redirect('id-check')
+    
+})
+
+/*
+ * Declaration 
+ */
+router.post('/v7/id-check', function (req, res) {
+
+    res.redirect('check-your-answers')
+    
+})
+
+/*
+ * Check your answers before sending your application 
+ */
+router.post('/v7/check-your-answers', function (req, res) {
+
+    res.redirect('confirmation')
+    
+})
+
+
+
+
+
 
 
 
