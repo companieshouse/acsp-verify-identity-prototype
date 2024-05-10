@@ -46,15 +46,28 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           <dd class="govuk-summary-list__value">
             {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
           </dd>
-          
+
         </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+
+        </div>
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
-         
+          </dd>
+
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -64,26 +77,23 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             7 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
             
           </dd>
-          
+
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['email']}} 
-          </dd>
-          
-        </div>
-        <div class="govuk-summary-list__row">
+       
+        <!--<div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Mobile phone number
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['telephoneNumber']}} 
           </dd>
-          
-        </div>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> mobile phone number</span>
+            </a>
+          </dd>
+        </div> -->
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Date identity checks were completed
@@ -91,17 +101,21 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           <dd class="govuk-summary-list__value">
             {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
           </dd>
-         
+
         </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Address from the past 5 years were checked
+            Used technology to read the electronic chip in the documents
           </dt>
           <dd class="govuk-summary-list__value">
             Yes
           </dd>
-          
+      
         </div>
+
+
+       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Identity documents that were checked
@@ -110,14 +124,36 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             Current signed passport <br> 
             Photo driving licence<br>
             Bank or building society statement
+          </dd>
+          
+        </div>
+        
 
-           
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity verification declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>I confirm that JAMES ACCOUNTING LTD has carried out identity verification checks for on that meet the Companies House identity verification standard.</p>
+
+         <!--  <p>The person provided the following documents to prove their identity:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                    <li>passport</li>
+                    <li>photo driving licence</li>
+                    <li>bank or building society statement</li>
+                  </ul>--> 
+
+            <p>JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes.</p>
           </dd>
           
         </div>
 
 
+      </dl>
 
+
+      
 
 
 
