@@ -100,7 +100,7 @@ router.post('/v7/date-identity-checks', function (req, res) {
 router.post('/v7/format-of-the-documents-checked', function (req, res) {
 
      //if house number is empty
-     if (req.session.data['security-check'] === 'yes') {
+     if (req.session.data['security-check'] === 'Yes') {
 
         res.redirect('documents-checked-r1')
 

@@ -15,8 +15,6 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
       <form class="form" action="date-identity-checks" method="post">
 
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds-from-desktop">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <span class="govuk-caption-l">
@@ -29,7 +27,50 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
               <div id="dob-hint" class="govuk-hint">
                 For example, 27 3 2023. 
               </div>
+
               <div class="govuk-date-input" id="checked">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="checked-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2"  id="checked-day" name="checked-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label" for="checked-month">
+                      Choose month
+                    </label>
+                    <select class="govuk-select" id="checked-month" name="checked-month">
+                      <option value="Choose month" selected>Choose month</option>
+                      <option value="January">January</option>
+                      <option value="February">February</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                    </select>
+                  </div>
+                  </div>
+
+
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="checked-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="checked-year" name="checked-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+              
+            <!--  <div class="govuk-date-input" id="checked">
                 <div class="govuk-date-input__item">
                   <div class="govuk-form-group">
                     <label class="govuk-label govuk-date-input__label" for="checked-day">
@@ -52,7 +93,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                   <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="checked-year" name="checked-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
                 </div>
               </div>
-            </fieldset>
+            </fieldset>-->
 
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
