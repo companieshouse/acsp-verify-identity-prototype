@@ -28,9 +28,6 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
 
         }) %}
 
-        <div class="govuk-hint govuk-!-margin-bottom-6">
-          This must be the same as the address shown on the documents you used to check their identity.
-        </div>
 
         {{ govukInput({
           label: {
@@ -55,7 +52,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           text: "Find address"
         }) }}
         <p class="govuk-body">
-          <a href="" class="govuk-link govuk-link--no-visited-state">Enter address manually</a>
+          <a href="address-manual" class="govuk-link govuk-link--no-visited-state">Enter address manually</a>
         </p>
         
         {% endcall %}

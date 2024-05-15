@@ -23,20 +23,37 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Did you use technology to read the electronic chip in the documents?
+                How were their identity documents checked?
               </h1>
             </legend>
+            <div id="changedName-hint" class="govuk-hint">
+      This does not include additional documents the person may have provided, for example to confirm their address history.
+    </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
+<<<<<<< Updated upstream
                 <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="Yes">
+=======
+                <input class="govuk-radios__input" id="security-check-2" name="security-check" type="radio" value="no">
+>>>>>>> Stashed changes
                 <label class="govuk-label govuk-radios__label" for="security-check">
-                  Yes
+                  By a person
                 </label>
               </div>
               <div class="govuk-radios__item">
+<<<<<<< Updated upstream
                 <input class="govuk-radios__input" id="security-check-2" name="security-check" type="radio" value="No">
+=======
+                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="yes">
+>>>>>>> Stashed changes
                 <label class="govuk-label govuk-radios__label" for="security-check-2">
-                  No
+                  Using identity document validation technology (IDVT)
+                </label>
+              </div>
+                            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="security-check-2">
+                  Both
                 </label>
               </div>
             </div>
@@ -44,7 +61,24 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         </div>
 
 
-          
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What is identity document validation technology (IDVT)?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>This is technology that can help you to check the authenticity of documents when you're verifying someone's identity. For example, if you need to check:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>passports</li>
+      <li>biometric residence permits</li>
+      <li>driving licences</li>
+      <li>identity cards</li>
+      </ul>
+    <p>For more information, <a target="_blank" href="https://www.gov.uk/government/publications/identity-document-validation-technology/identification-document-validation-technology">read the guidance on identification document validation technology (opens in a new tab)</a>.</p>
+  </div>
+</details>
+        
           {{ govukButton({
             text: "Continue"
           }) }}

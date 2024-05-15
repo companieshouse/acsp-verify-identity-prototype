@@ -30,9 +30,27 @@
 
       
 
-        <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we'll send their Companies House personal code by email. They must be able to access communications sent to the email address you provide.</p>
+        <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we'll send their Companies House personal code to the email address you provide. They'll need to use this to connect their verified identity to our records.</p>
 
-        <p class="govuk-body">You should provide an email address that is personal to them if you can. It could be a security risk if other people have access to their personal code. </p>
+        <p>We'll let them know they can share the personal code with people they trust to file on their behalf.</p>
+          
+          
+
+        <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      When they'll need their personal code
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>They'll need to provide their personal code for various reasons, including:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>as part of some company filings, such as the confirmation statement</li>
+                          <li>if they are appointed as a director</li>
+                          <li>if they become a person with significant control (PSC)</li>
+                          </ul>
+  </div>
+</details>
 
 
 
@@ -77,7 +95,7 @@
             {% if (data['firstName'] == "") and (data['lastName'] == "") %}
 
             <h2 class="govuk-heading-m">
-              Hannah Salt's email address
+              What is Hannah Salt's email address?
             </h2>
 
             {% else %}
@@ -93,7 +111,7 @@
             <div class="govuk-form-group">
      
                 <div id="email-hint" class="govuk-hint">
-      You cannot use an email address that has already been used by someone verifying their identity for Companies House.
+      They must be able to access emails sent to this address.
     </div>
               <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
             </div>
