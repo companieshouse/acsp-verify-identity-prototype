@@ -17,14 +17,20 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
 
         <span class="govuk-caption-l">
           {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
-        </span>      
-        
-        {% call govukFieldset({
+        </span>     
+
+
+
+     {% call govukFieldset({
           legend: {
             text: "What is their home address?",
             classes: "govuk-fieldset__legend--l",
             isPageHeading: true
-          }
+          },
+            hint: {
+    text: "Select all that apply."
+  } 
+
 
         }) %}
 
@@ -33,6 +39,9 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           label: {
             text: "UK postcode"
           },
+        hint: {
+          text: "You'll need to enter the address manually if it's not in the UK."
+        },
           id: "postcode",
           classes: "govuk-input--width-10",
           name: "postcode"
