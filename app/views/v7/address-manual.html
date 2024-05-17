@@ -32,7 +32,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
             text: "Property name or number"
           },
           hint: {
-            text: "For example, 'The Mill', '116' or 'Flat 37a'"
+            text: "For example, 'Saron House', '116' or 'Unit 37a'"
           },
           id: "propertyName",
           name: "propertyName"
@@ -80,18 +80,10 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           name: "postcode"
         }) }}
 
-        {{ govukButton({
-          text: "Find address"
-        }) }}
-        <p class="govuk-body">
-          <a href="address-manual-postal" class="govuk-link govuk-link--no-visited-state">Enter address manually</a>
-        </p>
         
         {% endcall %}
 
-        {{ govukInsetText({
-          html: "<p>***PLACEHOLDER CONTENT*** We'll use this to send the unique ACSP reference.</p>"
-        }) }}
+
 
       
         <button class="govuk-button" data-module="govuk-button">Continue</button>
