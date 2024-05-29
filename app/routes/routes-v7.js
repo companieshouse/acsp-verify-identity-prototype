@@ -24,6 +24,15 @@ router.post('/v7/start-page', function (req, res) {
  */
 router.post('/v7/name', function (req, res) {
 
+    res.redirect('personal-code')
+    
+})
+
+/*
+ * Personal code
+ */
+router.post('/v7/personal-code', function (req, res) {
+
     res.redirect('email-address')
     
 })

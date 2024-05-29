@@ -17,95 +17,22 @@
 
       <form class="form" action="email-address" method="post">
 
-        {% if (data['firstName'] == "") and (data['lastName'] == "") %}
-
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"> Hannah Salt's Companies House personal code</h1>
-
-       
-        {% else %}
-
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"><span> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s personal code</span></h1>
-
-        {% endif %}
-
       
+      <h1 class="govuk-heading-l">  
+        
+      {% if (data['firstName'] == "") and (data['lastName'] == "") %}
 
-        <p class="govuk-body govuk-!-padding-top-5">Once you've verified {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s identity, we'll send their Companies House personal code to the email address you provide. They'll need to use this to connect their verified identity to our records.</p>
+        Hannah Salt's
 
-        <p>We'll let them know they can share the personal code with people they trust to file on their behalf.</p>
-          
-          
+      {% else %}
 
-        <details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      When they'll need their personal code
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>They may need to provide their personal code for various reasons, including:</p>
-                        <ul class="govuk-list govuk-list--bullet">
-                          <li>as part of some company filings, such as the confirmation statement</li>
-                          <li>if they are appointed as a director</li>
-                          <li>if they become a person with significant control (PSC)</li>
-                          </ul>
-  </div>
-</details>
+       {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s
 
+      {% endif %}
+       
+      email address?</h1>
 
-
-     <!--   <p>Otherwise, we will need to send the code to their home address.</p> -->
-
-
-        <!--<div class="govuk-form-group govuk-!-margin-top-6">
-          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">
-                Does {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} have an email address?
-              </h2>
-            </legend>
-            <div id="contact-hint" class="govuk-hint">
-              Select one option.
-            </div>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact" name="how-to-send-code" type="radio" value="emailcode" data-aria-controls="conditional-contact">
-                <label class="govuk-label govuk-radios__label" for="contact">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="code-by-email">
-                    What is their email address?
-                  </label>
-                  <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email">
-                </div>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="address" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="contact-2">
-                  No
-                </label>
-              </div>
-              </div>
-              </fieldset>
-            </div> -->
-
-            {% if (data['firstName'] == "") and (data['lastName'] == "") %}
-
-            <h2 class="govuk-heading-m">
-              What is Hannah Salt's email address?
-            </h2>
-
-            {% else %}
-
-            <h2 class="govuk-heading-m">
-              What is {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s email address?
-            </h2>
-
-            {% endif %}
-
+    
 
 
             <div class="govuk-form-group">
