@@ -131,9 +131,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Identity documents that were checked
           </dt>
           <dd class="govuk-summary-list__value">
-            Current signed passport <br> 
-            Photo driving licence<br>
-            Bank or building society statement
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Current signed passport</li> 
+              <li>Photo driving licence</li>
+              <li>Bank or building society statement</li>
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -149,7 +151,8 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Identity verification declaration
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>I confirm that JAMES ACCOUNTING LTD has carried out identity verification checks for on that meet the Companies House identity verification standard.</p>
+            <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+            <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
 
          <!--  <p>The person provided the following documents to prove their identity:</p>
 
@@ -159,7 +162,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
                     <li>bank or building society statement</li>
                   </ul>--> 
 
-            <p>JAMES ACCOUNTING LTD is registered with Association of Chartered Certified Accountants for Anti-Money Laundering (AML) purposes.</p>
+          
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
