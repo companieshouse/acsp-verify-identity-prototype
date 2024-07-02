@@ -23,31 +23,31 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                How were their identity documents checked?
+                Which option from the identity verification standard did you use to verify their identity?
               </h1>
             </legend>
             <div id="changedName-hint" class="govuk-hint">
-      This does not include additional documents the person may have provided, for example to confirm their address history.
-    </div>
+You must have used one of the 2 options for checking identity documents from Companies House identity verification standard.    </div>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="security-check-2" name="security-check" type="radio" value="no">
+                <input class="govuk-radios__input" id="security-check-2" name="security-check" type="radio" value="Yes">
                 <label class="govuk-label govuk-radios__label" for="security-check">
-                  By a person
+                  Option 1
                 </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Their identity documents were checked using identity document validation technology (IDVT).
+        </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="Yes">
+                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="security-check-2">
-                  Using identity document validation technology (IDVT)
+                  Option 2
                 </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Their identity documents were checked by a person.
+        </div>
               </div>
-                            <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="Yes">
-                <label class="govuk-label govuk-radios__label" for="security-check-2">
-                  Both
-                </label>
-              </div>
+
             </div>
           </fieldset>
         </div>
@@ -56,12 +56,12 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      What is identity document validation technology (IDVT)?
+      What is Companies House identity verification standard?
     </span>
   </summary>
   <div class="govuk-details__text">
-    <p>This is technology that can help you to check the authenticity of documents when you're verifying someone's identity.</p>
-    <p>For more information, <a target="_blank" href="https://www.gov.uk/government/publications/identity-document-validation-technology/identification-document-validation-technology">read the guidance on identification document validation technology (opens in a new tab)</a>.</p>
+    <p>The identity verification standard outlines the checks you must do to verify someone's identity for Comapnies House.</p>
+    <p>Read the <a href="">guidance on how to meet the identity verification standard</a>.
   </div>
 </details>
         
