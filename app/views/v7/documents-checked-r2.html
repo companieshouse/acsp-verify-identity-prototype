@@ -4,6 +4,9 @@
 What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
 
 {% block content %}
 
@@ -20,15 +23,10 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
         <h1 class="govuk-heading-l">Which documents did you check to verify their identity?</h1>
 
 
-        <p class="govuk-body govuk-!-padding-bottom-4">
-          You need to check two or more documents to verify their identity. Either two documents from Group A or one document from Group A and one document from Group B.
-        </p>
+  <!-- Is an irish passport card crypographic? -->
 
 
-       <!--  <div class="govuk-inset-text">
-          You need to check two or more documents to verify their identity. Either two documents from Group A or one document from Group A and one document from Group B.
-        </div> -->
-
+        
 
 
           {{ govukCheckboxes({
@@ -36,6 +34,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
             fieldset: {
               legend: {
                 text: "Group A",
+                isPageHeading: false,
                 classes: "govuk-fieldset__legend--m"
               }
             },
@@ -145,7 +144,17 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
                 hint: {
                   text: "Such as a National Identity Card (Pakistan), crew member certificate (South Africa), or Permanent Resident Card (USA)."
                 }
+              },
+             
+              {
+                divider: "or"
+              },
+              {
+                value: "none",
+                text: "None of these",
+                behaviour: "exclusive"
               }
+ 
             ]
           }) }}
 
@@ -155,6 +164,7 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
             fieldset: {
               legend: {
                 text: "Group B",
+                isPageHeading: false,
                 classes: "govuk-fieldset__legend--m"
               }
             },
@@ -231,6 +241,15 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
                 hint: {
                   text: ""
                 }
+              },
+
+              {
+                divider: "or"
+              },
+              {
+                value: "none",
+                text: "None of these",
+                behaviour: "exclusive"
               }
  
             ]

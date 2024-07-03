@@ -5,56 +5,38 @@
 
 // Add extra styles here
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-@import "accessible-autocomplete";
 
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+
+// Patterns that aren't in Frontend
+
+//@import "patterns/mainstream-guide";
+//@import "patterns/pagination";
+//@import "patterns/related-items";
+//@import "patterns/task-list";
+
+//Defining new account menu style
+@import "components/account-menu";
+
+//Defining new cards style
+@import "components/cards";
 
 //Defining new language toggle style
-@import "govuk-language-select";
+@import "components/govuk-language-select";
 
 
-/* Changes made tag  */
-.changes-made {
-  position: relative;
-  
-  margin: 0 0 0 1em;
 
-  p {
-    margin: 0.5em 0 1em 0;
-  }
-}
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-.highlight-box {
-    background-color: #f9f9f8;
-    border-style: solid;
-    border-width: thin;
-    border-color: #bfc1c3;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 15px;
-  }
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+@import "custom";
 
 
-  //Style for the start page - sole trader identity verification info panel
-
-.ch-info-panel {
-  background-color: #F3F2F1;
-	text-align: left;
-  margin: 1em 0;
-  padding: 2em;
-	.govuk-panel__title {
-		font-size: 1.7em;
-	}
-	.govuk-inset-text {
-		margin-bottom: 0;
-	}
-  img {
-    margin-right: 5px;
-    position:relative;
-    top:15px;
-  }
-}
+// CH NOTIFICATION BANNER
+// The banner takes the form of a container div which in-turn is made of two separate divs. These being:
+// 1. title and (button) link
+// 2. content (the messaging)
 
 //Styles for user bar
 
@@ -75,64 +57,257 @@ ul#navigation {
   }
 }
 
-// Card background
-.one-filing {
-  margin-bottom: 2em;
-  background-color: #f8f8f8;
-  padding: 1em;
-  clear: both;
-}
-
-// Links under header
-.js-toggle-nav {
-  text-align: right;
-  font-size: 16px;
-  font-family: 'proxima_nova', Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  z-index: 60;
-  clear: none;
-  background: transparent;
-  border-bottom: 1px solid #bfc1c3;
-  vertical-align: middle;
-  padding-bottom: 20px;
-}
-
-.js-signout {
-  text-align: right;
-  font-size: 16px;
-  font-family: 'proxima_nova', Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  z-index: 60;
-  clear: none;
-  background: transparent;
-  border-bottom: 1px solid #bfc1c3;
-  vertical-align: middle;
-  padding-bottom: 20px;
-}
-
-.user {
-  display: inline;
-  font-size: 16px;
-}
-
-.content {
-  display: inline;
-}
-
-.content-email {
-  display: inline;
-  padding-right: 20px;
-}
-
-.nav-spacing {
+.highlight-box {
+  background-color: #f9f9f8;
+  border-style: solid;
+  border-width: thin;
+  border-color: #bfc1c3;
+  padding-top: 20px;
   padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
 }
 
-.text-description {
+
+.ch-notification-banner { // Banner container
+  background-color:#1d70b8;
+  color: #fff !important;
+  margin-bottom: 30px;
+}
+
+.ch-notification-title { // Banner tite and button element container
+  background-color:#1d70b8;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 10px 25px;
+}
+
+.ch-notification-content { // Banner content container
+  background-color:#ffffff;
+  color: #0b0c0c;
+  border:#1d70b8 5px;
+  border-style: none solid solid solid;
+}
+
+.ch-show-hide-button { // Banner show/hide button styled as a link
+  background-color: transparent;
   font-size: 16px;
+  float: right;
+  border: none;
+  color: white;
+  text-align: right;
+  text-decoration: underline solid white;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer; 
+}
+
+.ch-show-hide-button:hover { // Banner show/hide button hover state styling
+  text-decoration: underline solid white 3px;
+}
+
+.ch-show-hide-button:focus { // Banner show/hide button focus state styling
+  color: #0b0c0c;
+  text-decoration: underline solid #0b0c0c 3px;
+  background-color: #ffdd00;
+}
+
+// End of CH Notification Banner
+
+
+nav-menu{
+
+	display: inline-block;
+	float: right;
+
+}
+
+@media (min-width: 641px) {
+	.searchbutton{
+		margin-top: 80px;
+	}
 }
 
 
+.ch-account-summary-list__value {
+    width: 20%;
+    padding-left:30px;
+}
 
+.ch-account-summary-list__action {
+    width: 20%;
+}
+
+.ch-account-summary-list__key {
+    width: 60%;
+}
+
+
+//Pagination
+
+.ch-pagination-container {
+  margin-top: 30px;
+  margin-bottom: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ch-pagination__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.ch-pagination__link {
+  text-decoration: none;
+  padding: 5px;
+  min-width: 25px;
+}
+
+.ch-pagination__item--active {
+  color: govuk-colour("black");
+  font-weight: bold;
+  cursor: default;
+}
+
+.ch-pagination__item--active span {
+  padding: 5px;
+  min-width: 25px;
+}
+
+.ch-pagination-next:after,
+.ch-pagination-previous:before {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-style: solid;
+  color: govuk-colour("black");
+  background: transparent;
+  transform: rotate(-45deg);
+  content: '';
+}
+
+.ch-pagination-next:after {
+  border-width: 0 3px 3px 0;
+  margin-left: 5px;
+}
+
+.ch-pagination-previous:before {
+  border-width: 3px 0 0 3px;
+  margin-right: 5px;
+}
+
+.ch-pagination__summary {
+    width: 27%;
+    padding-top: 17px;
+
+}
+
+
+///info panel///
+
+.ch-info-panel {
+  background-color: #F3F2F1;
+	text-align: left;
+  margin: 1em 0;
+  padding: 2em;
+	.govuk-panel__title {
+		font-size: 1.7em;
+	}
+	.govuk-inset-text {
+		margin-bottom: 0;
+	}
+  img {
+    margin-right: 5px;
+    position:relative;
+    top:15px;
+  }
+}
+
+/// interruption card ///
+
+
+.interruption-card {
+  padding: 2em 3em;
+	background-color: govuk-colour("blue");
+	color: govuk-colour("white") !important;
+
+	.govuk-heading-l, p, li,	details,span, summary, a, .govuk-inset-text {
+		color: govuk-colour("white") !important;
+	}
+
+	.govuk-inset-text  {
+		border-color: govuk-colour("white") !important; 
+	}
+	.govuk-button {
+		background-color: govuk-colour("white");
+		color: govuk-colour("black");
+		&:hover {
+			background-color: govuk-colour("mid-grey");
+		}
+	}
+}
+
+/// Message counter ///
+.message-count {
+  top: -10px;
+  right: -10px;
+  padding: 3px 7px;
+  border-radius: 50%;
+  background: govuk-colour("red");
+  color: govuk-colour("white");
+}
+
+///steps///
+.steps>h3,.gem-c-govspeak .steps>h3 {
+  list-style-type: none;
+  margin-left: 0;
+  padding: .75em 0 .75em 2.5em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box
+}
+
+.steps>h3::before,.gem-c-govspeak .steps>h3::before {
+  background-color: #0b0c0c;
+  border-radius: 50%;
+  color: #fff;
+  float: left;
+  font-size: 80%;
+  height: 1.75em;
+  left: .3em;
+  line-height: 1.75em;
+  position: absolute;
+  text-align: center;
+  top: .9em;
+  width: 1.75em
+}
+
+.steps>h3:nth-child(1):before,.gem-c-govspeak .steps>h3:nth-child(1):before {
+  content: "1"
+}
+
+.steps>h3:nth-child(2):before,.gem-c-govspeak .steps>h3:nth-child(2):before {
+  content: "2"
+}
+
+.steps>h3:nth-child(3):before,.gem-c-govspeak .steps>h3:nth-child(3):before {
+  content: "3"
+}
+
+.steps>h3:nth-child(4):before,.gem-c-govspeak .steps>h3:nth-child(4):before {
+  content: "4"
+}
+
+.steps>h3:nth-child(5):before,.gem-c-govspeak .steps>h3:nth-child(5):before {
+  content: "5"
+}
+
+.steps>h3:nth-child(6):before,.gem-c-govspeak .steps>h3:nth-child(6):before {
+  content: "6"
+}
