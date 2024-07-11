@@ -1,0 +1,204 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Application complete – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'We\'re testing a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+
+
+}) }}
+
+<div class="govuk-width-container">
+
+  <nav class="govuk-language-select" aria-label="Choose a language">
+        <ul class="govuk-language-select__list">
+          <li class="govuk-language-select__list-item">
+            <span aria-current="true">English</span>
+          </li>
+          <li class="govuk-language-select__list-item">
+            <a href="#lang-cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg"><span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span><span aria-hidden="true">Cymraeg</span></a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="confirmation" method="post">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Identity verified successfully</h1>
+       <!-- <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div> -->
+      </div>
+
+      <p>
+        Your reference is HDJ2123F. This is not the Companies House personal code for the person you have verified.</p>
+      <p> We have sent a confirmation email to <strong>james@jamesaccounting.com</strong>.
+      </p>
+
+    
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We've emailed <strong>director@email.com</strong> to let them know you've verified their identity. Their Companies House personal code is included in the email. This may be needed to make a filing with Companies House for this person.</p>
+
+      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
+        Print this page
+      </button>
+
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Person's details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+          </dd>
+
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+          </dd>
+
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
+            
+          </dd>
+
+        </div>
+       
+        <!--<div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobile phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['telephoneNumber']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> mobile phone number</span>
+            </a>
+          </dd>
+        </div> -->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date identity checks were completed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+          </dd>
+
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+                       Option used to check identity documents
+
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Option 2 - the documents were checked by a person
+          </dd>
+      
+        </div>
+
+
+       
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity documents that were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Current signed passport <br> 
+            Photo driving licence<br>
+            Bank or building society statement
+          </dd>
+          
+        </div>
+        
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity verification declaration
+          </dt>
+          <dd class="govuk-summary-list__value">
+                        <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+            <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
+          </dd>
+          
+        </div>
+
+
+      </dl>
+
+
+      
+
+
+
+<!--
+      <h2 class="govuk-heading-m">If the person you've verified is a director (or equivalent)</h2>
+
+
+      <p>For existing directors, their user ID must be given when the next confirmation statement for their company is filed. We'll then update the Companies House register to show they have verified their identity.</p>
+
+      <p>For new directors, their user ID must be given when they are appointed as a director. </p>
+
+      <h2 class="govuk-heading-m">If the person you've verified is a person with significant control (PSC)</h2>
+
+    <p>Existing PSCs must file an update to give their user ID for each company they are a PSC for. They must do this no later than 14 days after the confirmation statement is due.</p> 
+    
+    <p>We'll then update the Companies House register to show they have verified their identity.</p>    
+
+    <p>When we are notified of a new PSC, we’ll send them a letter to tell them they need to verify their identity. The PSC will have 14 days to give their user ID after receiving this letter. </p> -->
+
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

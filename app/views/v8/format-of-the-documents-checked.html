@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="format-of-the-documents-checked" method="post">
+
+        <span class="govuk-caption-l">
+          {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+        </span> 
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Which option from the identity verification standard did you use to verify their identity?
+              </h1>
+            </legend>
+            <div id="changedName-hint" class="govuk-hint">
+You must have used one of the 2 options for checking identity documents from Companies House identity verification standard.    </div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="security-check-2" name="security-check" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="security-check">
+                  Option 1
+                </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Their identity documents were checked using identity document validation technology (IDVT).
+        </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="security-check-2">
+                  Option 2
+                </label>
+                        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Their identity documents were checked by a person.
+        </div>
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What is Companies House identity verification standard?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>Our <a href="guidance">identity verification standard</a> outlines the checks you must do to verify someone's identity for Companies House.</p>
+  </div>
+</details>
+        
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
