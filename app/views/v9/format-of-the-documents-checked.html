@@ -14,13 +14,19 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
            <h1 class="govuk-heading-l">
           Tell us about the identity checks you completed
         </h1>
-        <p class="govuk-body">
-         You must have completed the checks that are that are outlined in <a href="#" class="govuk-link">Companies House identity verification standard</a> to verify {% if (data['firstName'] == "") and (data['lastName'] == "") %}
+  <!--      <p class="govuk-body">
+         You must have followed the identity checking process in <a href="#" class="govuk-link">Companies House identity verification standard</a> to verify {% if (data['firstName'] == "") and (data['lastName'] == "") %}
 Hannah Salt{% else %}{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}{% endif %}'s identity.     
-        </p>
-        <p class="govuk-body">
+        </p> -->
+
+
+        <p>To verify someone's identity for Companies House, you must have completed checks that meet our <a href="#"><span class="govuk-visually-hidden">Companies House</span>identity verification standard</a>.</p>
+
+                <p class="govuk-body">
           There are 2 options for checking identity documents in the standard. You’ll need to tell us which option you used. 
         </p>
+
+
 
       <form class="form" action="format-of-the-documents-checked" method="post">
           <div class="govuk-form-group">
