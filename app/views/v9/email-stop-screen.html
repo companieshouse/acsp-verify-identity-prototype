@@ -31,24 +31,17 @@ You need to provide a different email address – {{ serviceName }} – GOV.UK P
 
 
 
-        <p class="govuk-body">You'll need to contact
+        <p class="govuk-body">You'll need to <a href="email-address">provide a different email address for
+
           {% if (data['firstName'] == "") and (data['lastName'] == "") %}
 
-           Hannah Salt
+           Hannah Salt{% else %}
   
-         
-          {% else %}
-  
-          {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
-  
-          {% endif %}
-          
-         to ask them for a different email address. </p>
+          {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}{% endif %}</a>.</p>
 
           
           
 
-        <p><a href="email-address">Provide a different email address</a>.</p>
       
 
 
