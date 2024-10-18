@@ -87,10 +87,31 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
         </div>
       </div>
+
+      
+
+      
 </fieldset>
 </div>
 
+<div class="govuk-form-group">
+<label class="govuk-label" for="location">
+  Choose country
+</label>
+<div id="location-hint" class="govuk-hint">
+  
+</div>
+<select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+  <option value="choose" selected>Choose country of issue</option>
+  <option value="eastmidlands">Not applicable</option>
+  <option value="eastmidlands">Country 1</option>
+  <option value="eastofengland">Country 2</option>
+  <option value="london">Country 2</option>
+  <option value="northeast">Country 3</option>
+  <option value="northwest">Country 4</option>
 
+  </select>
+</div>
 
 
 
