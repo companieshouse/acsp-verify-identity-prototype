@@ -116,13 +116,115 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
+<h2 class="govuk-heading-m">
+  PRADO document
+</h2>
+
+
+{{ govukInput({
+  label: {
+    text: "PRADO document name"
+  },
+  hint: {
+    text: "This is ..."
+  },
+  id: "passport-number",
+  name: "passportNumber"
+}) }}
+
+
+
+
+
+{{ govukInput({
+  label: {
+    text: "Reference number"
+  },
+  hint: {
+    text: "This is ..."
+  },
+  id: "prado-number",
+  name: "pradoNumber"
+}) }}
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" role="group" aria-describedby="prado-issued-hint">
+<legend class="govuk-fieldset__legend">
+      Expiry date
+</legend>
+<div id="prado-issued-hint" class="govuk-hint">
+  For example, 27 March 2007
+</div>
+<div class="govuk-date-input" id="dob">
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-day">
+        Day
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2"  id="dob-day" name="dob-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="dob-month">
+        Month
+      </label>
+      <select class="govuk-select" id="dob-month" name="dob-month">
+        <option value="Choose month" selected>Choose month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+    </div>
+    </div>
+
+
+<div class="govuk-date-input__item">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="dob-year">
+      Year
+    </label>
+    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+  </div>
+</div>
+
+
+
+
+</fieldset>
+</div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="prado-country">
+Choose country
+</label>
+<div id="prado-country-hint" class="govuk-hint">
+
+</div>
+<select class="govuk-select" id="location" name="prado-country" aria-describedby="prado-country-hint">
+<option value="choose" selected>Choose country of issue</option>
+<option value="eastmidlands">Not applicable</option>
+<option value="eastmidlands">Country 1</option>
+<option value="eastofengland">Country 2</option>
+<option value="london">Country 2</option>
+<option value="northeast">Country 3</option>
+<option value="northwest">Country 4</option>
+
+</select>
+</div>
+
+
     
 
-
-
-             
-
- 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 
     </form>

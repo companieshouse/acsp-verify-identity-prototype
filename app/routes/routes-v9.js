@@ -123,12 +123,13 @@ router.post('/v9/format-of-the-documents-checked', function (req, res) {
 
 
 
+
 /*
  * Document group 1
  */
 router.post('/v9/documents-checked-r1', function (req, res) {
 
-    res.redirect('id-check')
+    res.redirect('id-document-details')
     
 })
 
@@ -139,9 +140,21 @@ router.post('/v9/documents-checked-r1', function (req, res) {
  */
 router.post('/v9/documents-checked-r2', function (req, res) {
 
+    res.redirect('id-document-details')
+    
+})
+
+
+/*
+ * Document details used for IDV
+ */
+router.post('/v9/id-document-details', function (req, res) {
+
     res.redirect('id-check')
     
 })
+
+
 
 /*
  * Declaration 
