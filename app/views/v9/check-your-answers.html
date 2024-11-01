@@ -91,42 +91,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div> -->
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date identity checks were completed
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Option used to check identity documents
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-
-            <!-- person -->
-            Option 2 - the documents were checked by a person
-
-            <!-- used technology: Option 1 - the documents were checked using identity document validation technology (IDVT) -->
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
+    
 
 
        
@@ -149,6 +114,56 @@ Check your answers before sending your application – {{ serviceName }} – GOV
           </dd>
         </div>
         
+
+
+
+
+      </dl>
+
+
+
+      <h2 class="govuk-heading-m">Details about the identity checks</h2>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date identity checks were completed
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How the identity documents were checked
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+
+            <!-- person -->
+            The documents were checked by a person
+
+            <!-- used technology: Option 1 - the documents were checked using identity document validation technology (IDVT) -->
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -175,9 +190,68 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+    
+        </dl>
 
 
-      </dl>
+      <h2 class="govuk-heading-m">Passport details</h2>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Passport number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            55241683 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Expiry date
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+          1 November 2030
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Country of issue
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>United Kingdom</p>
+          
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+    
+        </dl>
+
 
 
       <div class="govuk-form-group">

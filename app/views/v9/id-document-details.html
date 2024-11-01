@@ -31,7 +31,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
           text: "Passport number"
         },
         hint: {
-          text: "This is the 9 digit number in the top right hand corner of the photo page in your passport"
+          text: "This is a 9 character reference. It is usually shown in the top right hand corner of the photo page in the passport."
         },
         classes: "govuk-input--width-10",
         id: "passport-number",
@@ -44,7 +44,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
             Expiry date
       </legend>
       <div id="passport-issued-hint" class="govuk-hint">
-        For example, 27 March 2007
+        For example, 27 March 2035.
       </div>
       <div class="govuk-date-input" id="dob">
         <div class="govuk-date-input__item">
@@ -96,13 +96,13 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-form-group">
 <label class="govuk-label" for="location">
-  Choose country
+  Country of issue
 </label>
 <div id="location-hint" class="govuk-hint">
-  
+  This is usually shown on the first page of the passport.
 </div>
 <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
-  <option value="choose" selected>Choose country of issue</option>
+  <option value="choose" selected>Choose a country</option>
   <option value="eastmidlands">Not applicable</option>
   <option value="eastmidlands">Country 1</option>
   <option value="eastofengland">Country 2</option>
@@ -121,6 +121,8 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 </h2>
 
 
+<!--
+
 {{ govukInput({
   label: {
     text: "PRADO document name"
@@ -130,7 +132,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
   },
   id: "passport-number",
   name: "passportNumber"
-}) }}
+}) }} -->
 
 
 
@@ -138,10 +140,10 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 {{ govukInput({
   label: {
-    text: "Reference number"
+    text: "Document reference number"
   },
   hint: {
-    text: "This is ..."
+    text: "This needs to be a unique reference or number that is shown on the document."
   },
   id: "prado-number",
   name: "pradoNumber"
@@ -153,7 +155,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
       Expiry date
 </legend>
 <div id="prado-issued-hint" class="govuk-hint">
-  For example, 27 March 2007
+  Enter an expiry date, if the document has one. For example, 27 March 2030.
 </div>
 <div class="govuk-date-input" id="dob">
   <div class="govuk-date-input__item">
@@ -205,13 +207,13 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 <div class="govuk-form-group">
 <label class="govuk-label" for="prado-country">
-Choose country
+Country of issue
 </label>
 <div id="prado-country-hint" class="govuk-hint">
-
+Choose the country of issue from the list, if the document has one. 
 </div>
 <select class="govuk-select" id="location" name="prado-country" aria-describedby="prado-country-hint">
-<option value="choose" selected>Choose country of issue</option>
+<option value="choose" selected>Choose country</option>
 <option value="eastmidlands">Not applicable</option>
 <option value="eastmidlands">Country 1</option>
 <option value="eastofengland">Country 2</option>
