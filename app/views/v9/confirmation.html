@@ -59,33 +59,15 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
       <h2 class="govuk-heading-m">What happens next</h2>
       <p>We've emailed <strong>director@email.com</strong> to let them know you've verified their identity. Their Companies House personal code is included in the email. This may be needed to make a filing with Companies House for this person.</p>
 
-      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
-        Print identity verifications details 
-      </button>
-
-
-
-
-    
-      <h2 class="govuk-heading-m govuk-!-padding-top-4">What do you want to do next?</h2>
-
-      <p class="govuk-body">
-         <a href="#" class="govuk-link">Tell Companies House about another identity you have verified
-      </p>
-
-      <p class="govuk-body">
-        <a href="#" class="govuk-link">View authorised agent account</a>
-      </p>
-
-      <!-- <h2 class="govuk-heading-m govuk-!-padding-top-4">Feedback</h2> -->
-      <p class="govuk-body">
-        This is a new service. <a href="#" class="govuk-link">Complete our quick survey (opens in a new tab)</a> to help us improve it.
-      </p>
-
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-      <h2 class="govuk-heading-m">Details for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</h2>
+      <h2 class="govuk-heading-m">Identity verification details for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</h2>
+
+      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
+        Print this page 
+      </button>
+
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -127,13 +109,11 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
 
         </div>
-</dl>
 
       
-        <h2 class="govuk-heading-m">Details about the identity checks</h2>
+       <!--  <h2 class="govuk-heading-m">Details about the identity checks</h2>
+ -->
 
-
-        <dl class="govuk-summary-list ">
   
   
       <div class="govuk-summary-list__row">
@@ -183,13 +163,13 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </dd>
           </div>
       
-          </dl>
-      <h2 class="govuk-heading-m">Passport details</h2>
+
+     <!--  <h2 class="govuk-heading-m">Passport details</h2>
 
 
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
+ -->
 
     <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -203,7 +183,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Expiry date
+            Passport expiry date
           </dt>
           <dd class="govuk-summary-list__value">
 
@@ -215,7 +195,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Country of issue
+            Passport country of issue
           </dt>
           <dd class="govuk-summary-list__value">
             <p>United Kingdom</p>
@@ -227,27 +207,21 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
         </dl>
 
 
-      
 
+        <h2 class="govuk-heading-m govuk-!-padding-top-4">What do you want to do next?</h2>
 
-
-<!--
-      <h2 class="govuk-heading-m">If the person you've verified is a director (or equivalent)</h2>
-
-
-      <p>For existing directors, their user ID must be given when the next confirmation statement for their company is filed. We'll then update the Companies House register to show they have verified their identity.</p>
-
-      <p>For new directors, their user ID must be given when they are appointed as a director. </p>
-
-      <h2 class="govuk-heading-m">If the person you've verified is a person with significant control (PSC)</h2>
-
-    <p>Existing PSCs must file an update to give their user ID for each company they are a PSC for. They must do this no later than 14 days after the confirmation statement is due.</p> 
-    
-    <p>We'll then update the Companies House register to show they have verified their identity.</p>    
-
-    <p>When we are notified of a new PSC, we’ll send them a letter to tell them they need to verify their identity. The PSC will have 14 days to give their user ID after receiving this letter. </p> -->
-
-
+        <p class="govuk-body">
+           <a href="#" class="govuk-link">Tell Companies House about another identity you have verified
+        </p>
+  
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">View authorised agent account</a>
+        </p>
+  
+        <!-- <h2 class="govuk-heading-m govuk-!-padding-top-4">Feedback</h2> -->
+        <p class="govuk-body">
+          This is a new service. <a href="#" class="govuk-link">Complete our quick survey (opens in a new tab)</a> to help us improve it.
+        </p>
 </form>
     </div>
   </div>
