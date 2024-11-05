@@ -60,16 +60,33 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
       <p>We've emailed <strong>director@email.com</strong> to let them know you've verified their identity. Their Companies House personal code is included in the email. This may be needed to make a filing with Companies House for this person.</p>
 
       <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
-        Print this page
+        Print identity verifications details 
       </button>
 
+
+
+
+    
+      <h2 class="govuk-heading-m govuk-!-padding-top-4">What do you want to do next?</h2>
+
+      <p class="govuk-body">
+         <a href="#" class="govuk-link">Tell Companies House about another identity you have verified
+      </p>
+
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">View authorised agent account</a>
+      </p>
+
+      <!-- <h2 class="govuk-heading-m govuk-!-padding-top-4">Feedback</h2> -->
+      <p class="govuk-body">
+        This is a new service. <a href="#" class="govuk-link">Complete our quick survey (opens in a new tab)</a> to help us improve it.
+      </p>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-      <h2 class="govuk-heading-m">Person's details</h2>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-m">Details for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</h2>
+      <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Name
@@ -110,70 +127,104 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
 
         </div>
-       
-        <!--<div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Mobile phone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['telephoneNumber']}} 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> mobile phone number</span>
-            </a>
-          </dd>
-        </div> -->
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date identity checks were completed
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
-          </dd>
+</dl>
 
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-                       Option used to check identity documents
-
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Option 2 - the documents were checked by a person
-          </dd>
       
-        </div>
+        <h2 class="govuk-heading-m">Details about the identity checks</h2>
 
 
-       
-        <div class="govuk-summary-list__row">
+        <dl class="govuk-summary-list ">
+  
+  
+      <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date identity checks were completed
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}} 
+            </dd>
+            
+          </div>
+  
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              How the identity documents were checked
+            </dt>
+            <dd class="govuk-summary-list__value">
+  
+  
+  
+              <!-- person -->
+              The documents were checked by a person
+  
+              <!-- used technology: Option 1 - the documents were checked using identity document validation technology (IDVT) -->
+  
+            </dd>
+            
+          </div>
+  
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Identity verification declaration
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+              <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
+  
+           <!--  <p>The person provided the following documents to prove their identity:</p>
+  
+              <ul class="govuk-list govuk-list--bullet">
+                      <li>passport</li>
+                      <li>photo driving licence</li>
+                      <li>bank or building society statement</li>
+                    </ul>--> 
+  
+            
+            </dd>
+          </div>
+      
+          </dl>
+      <h2 class="govuk-heading-m">Passport details</h2>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+    <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Identity documents that were checked
+            Passport number
           </dt>
           <dd class="govuk-summary-list__value">
-            Current signed passport <br> 
-            Photo driving licence<br>
-            Bank or building society statement
+            55241683 
           </dd>
           
         </div>
-        
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Identity verification declaration
+            Expiry date
           </dt>
           <dd class="govuk-summary-list__value">
-                        <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
-            <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
+
+          1 November 2030
+
           </dd>
           
         </div>
 
-
-      </dl>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Country of issue
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>United Kingdom</p>
+          
+          </dd>
+         
+        </div>
+    
+        </dl>
 
 
       
