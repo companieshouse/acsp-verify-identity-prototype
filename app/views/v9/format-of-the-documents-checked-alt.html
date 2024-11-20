@@ -12,7 +12,8 @@ What is the ACSPs registered address? – {{ serviceName }} – GOV.UK Prototype
     <div class="govuk-grid-column-two-thirds">
 
            <h1 class="govuk-heading-l">
-          Tell us about the identity checks you completed
+                         How were the identity documents checked?
+
         </h1>
   <!--      <p class="govuk-body">
          You must have followed the identity checking process in <a href="#" class="govuk-link">Companies House identity verification standard</a> to verify {% if (data['firstName'] == "") and (data['lastName'] == "") %}
@@ -31,7 +32,7 @@ Hannah Salt{% else %}{{data['firstName']}} {{data['middleName']}} {{data['lastNa
     If you have not met our identity verification standard, we could suspend or stop your business from acting as an authorised agent. 
   </strong>
 </div> -->
-
+<!--
 
                 <p class="govuk-body">You'll need to tell us:</p>
 
@@ -51,16 +52,14 @@ Hannah Salt{% else %}{{data['firstName']}} {{data['middleName']}} {{data['lastNa
   <div class="govuk-details__text">
   <p>You must check how they verified the person's identity to the required standard.</p><p> You will also need to keep copies of the documents the person used to prove their identity. You'll need to keep these for 7 years from the date the identity checks were completed.</p>
   </div>
-</details>
+</details> -->
 
 
 
       <form class="form" action="format-of-the-documents-checked" method="post">
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                How were the identitiy documents checked?
-              </legend>
+
               <div class="govuk-radios" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="security-check" name="security-check" type="radio" value="Yes">
