@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What is the name of your business? – {{ serviceName }} 
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="name-on-register" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What name do you want to appear on the register?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registerName" name="registerName" type="radio" value="doc">
+                <label class="govuk-label govuk-radios__label" for="registerName">
+                  {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registerName-2" name="registerName" type="radio" value="different">
+                <label class="govuk-label govuk-radios__label" for="registerName-2">
+                  A different name
+                </label>
+              </div>
+              
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-inset-text">
+          <p>We’ll show the xxx name on the register.  </p>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -16,13 +16,45 @@ router.post('/v9/start-page', function (req, res) {
     
 })
 
+/*
+ * Public name, on the register
+ */
+router.post('/v9/name', function (req, res) {
+
+    res.redirect('name-on-register')
+    
+})
+
+/*
+ * Public name, on the register
+ */
+router.post('/v9/name-on-register', function (req, res) {
+
+
+     //Name preference 
+
+     if (req.session.data['registerName'] === 'doc') {
+
+        res.redirect('personal-code')
+
+      } else {
+        // go to the confirm address page
+        res.redirect('name-for-the-register')
+    
+      }
+
+
+
+
+    
+})
 
 
 
 /*
  * Name
  */
-router.post('/v9/name', function (req, res) {
+router.post('/v9/name-for-the-register', function (req, res) {
 
     res.redirect('personal-code')
     
