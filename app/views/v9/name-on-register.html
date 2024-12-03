@@ -19,29 +19,29 @@ What is the name of your business? – {{ serviceName }}
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                What name do you want to appear on the register?
+                Can we use the name {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} on the public register?
               </h1>
             </legend>
+
+          <p>If you select 'yes', we'll include this name in the identity verification declaration for this person on the online Companies House register.</p>
+
+
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="registerName" name="registerName" type="radio" value="doc">
                 <label class="govuk-label govuk-radios__label" for="registerName">
-                  {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+                  Yes 
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="registerName-2" name="registerName" type="radio" value="different">
                 <label class="govuk-label govuk-radios__label" for="registerName-2">
-                  A different name
+                  No, this name cannot be shown on the public register
                 </label>
               </div>
               
             </div>
           </fieldset>
-        </div>
-
-        <div class="govuk-inset-text">
-          <p>We’ll show the xxx name on the register.  </p>
         </div>
 
 

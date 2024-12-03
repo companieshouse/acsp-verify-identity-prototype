@@ -12,10 +12,13 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
       <form class="form" action="name-for-the-register" method="post">
 
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">What is the person's name (public register)?</h1>
-            <div class="govuk-hint govuk-!-margin-bottom-6">
-      This name will be ...
-    </div>
+      <span class="govuk-caption-l">
+        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+      </span>
+      
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3">What name can we use for this person on the public register?</h1>
+
+          <p>We'll use this name in the identity verification declaration that's displayed as part of this person's records on the online Companies House register.</p>
 
         <div class="govuk-form-group">
 
@@ -62,7 +65,6 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
             name: "lastName"
           }) }}
         </div>
-
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
