@@ -25,6 +25,9 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                 <div id="dob-hint" class="govuk-hint">
                   For example, 27 April 1995. 
                 </div>
+
+                {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -40,7 +43,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                         Month
                       </label>
                       <select class="govuk-select" id="dob-month" name="dob-month">
-                        <option value="Choose month" selected>Choose month</option>
+                        <option value="" selected>Choose month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
