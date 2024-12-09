@@ -204,7 +204,17 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             Identity verification statement
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+            <p>I confirm that JAMES ACCOUNTING LTD verified the identity of  {% if ((data['registerName'] === "doc")) %}
+
+              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} 
+
+                    {% else %}
+
+                    {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
+              
+                     
+                    {% endif %}
+               to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
             <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
 
          <!--  <p>The person provided the following documents to prove their identity:</p>
