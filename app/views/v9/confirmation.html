@@ -68,7 +68,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
         Print identity verification details 
       </button>
 
-      <dl class="govuk-summary-list">
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Name
@@ -76,18 +76,31 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           <dd class="govuk-summary-list__value">
             {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
           </dd>
-
+          
         </div>
 
-     <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Name to use on the public register
+            Can we use this name in the identity verification statement for this person? 
           </dt>
           <dd class="govuk-summary-list__value">
-            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+            No
           </dd>
-
+          
         </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What name can we use for the identity verification statement? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
+          </dd>
+        
+        </div>
+
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -155,10 +168,20 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
   
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Identity verification declaration
+              Identity verification statement
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>I confirm that JAMES ACCOUNTING LTD verified the identity of {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+              <p>I confirm that JAMES ACCOUNTING LTD verified the identity of  {% if ((data['registerName'] === "doc")) %}
+
+                {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} 
+
+                      {% else %}
+
+                      {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
+                
+                       
+                      {% endif %}
+                 to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
               <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
   
            <!--  <p>The person provided the following documents to prove their identity:</p>

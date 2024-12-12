@@ -19,11 +19,10 @@ What is the name of your business? – {{ serviceName }}
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Can we use the name {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} on the public register?
+                Can we use this name in the identity verification statement for this person?
               </h1>
             </legend>
 
-          <p>If you select 'yes', we'll include this name in the identity verification declaration for this person on the online Companies House register.</p>
 
 
             <div class="govuk-radios" data-module="govuk-radios">
@@ -43,6 +42,25 @@ What is the name of your business? – {{ serviceName }}
             </div>
           </fieldset>
         </div>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              What is the identity verification statement? 
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">Later in this service, you'll be asked to confirm a statement that you:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>are satisfied that this person is who they claim to be </li>
+                <li>have completed identity checks that meet the Companies House identity verification standard</li>
+              </ul>
+
+              <p class="govuk-body">This statement will include the person’s name, and will be shown on the Companies House public register if they connect their verified identity to our records.</p>
+          </div>
+        </details>
+
+
 
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
