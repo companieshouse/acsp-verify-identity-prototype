@@ -15,6 +15,9 @@ What is the name of your business? – {{ serviceName }}
 
       <form action="name-on-register" method="post">
 
+                  <span class="govuk-caption-l">
+                    {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+                  </span>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -24,7 +27,7 @@ What is the name of your business? – {{ serviceName }}
             </legend>
 
   <div id="event-name-hint" class="govuk-hint">
-They may want to use another, for example if they're usually known by a different name.</div>
+You can provide a different name if, for example, it’s not the one they’re usually known by. </div>
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -39,6 +42,7 @@ They may want to use another, for example if they're usually known by a differen
                 <label class="govuk-label govuk-radios__label" for="registerName-2">
                   No, I need to provide a different name
                 </label>
+                
               </div>
               
             </div>
