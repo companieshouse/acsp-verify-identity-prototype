@@ -22,5 +22,6 @@ router.use('/', require('./routes/routes-v8.js'))
 
 router.use('/', require('./routes/routes-v9.js'))
 
+router.use('/', require('./routes/routes-v10.js'))
 
 module.exports = router
