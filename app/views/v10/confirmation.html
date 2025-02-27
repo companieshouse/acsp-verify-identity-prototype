@@ -51,12 +51,23 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
       <p>
         Your reference is HDJ2123F. This is not the Companies House personal code for the person you have verified.</p>
-      <p> We have sent a confirmation email to <strong>james@jamesaccounting.com</strong>.
+
+        <h2 class="govuk-heading-m">Print or save the verification details</h2>
+
+      <p>We will not include the verification details you've submitted on the confirmation email. 
       </p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          To keep a record of what you've submitted, you need to print or save the details on this page.        </strong>
+      </div>
+      
+      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
+        Print identity verification details 
+      </button>
 
-    
-
-      <h2 class="govuk-heading-m">What happens next</h2>
+      <h2 class="govuk-!-padding-top-5 govuk-heading-m">What happens next</h2>
       <p>We've emailed <strong>director@email.com</strong> to let them know you've verified their identity. Their Companies House personal code is included in the email. This may be needed to make a filing with Companies House for this person.</p>
 
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
@@ -64,9 +75,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
       <h2 class="govuk-heading-m">Identity verification details for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</h2>
 
-      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
-        Print identity verification details 
-      </button>
+      
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -247,7 +256,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
         <h2 class="govuk-heading-m govuk-!-padding-top-4">What do you want to do next?</h2>
 
         <p class="govuk-body">
-           <a href="#" class="govuk-link">Tell Companies House about another identity you have verified
+           <a href="#" class="govuk-link">Tell Companies House about another identity you have verified</a>
         </p>
   
         <p class="govuk-body">
