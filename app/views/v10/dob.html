@@ -94,14 +94,14 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                     <strong class="govuk-warning-text__text">
                       <span class="govuk-visually-hidden">Warning</span>
-                      Entering the incorrect date of birth could cause filing rejections when using the personal code in future filings. 
+                      They will need to confirm this each time they use their personal code. If you provide an incorrect date of birth, they will not be able to confirm they have verified their identity. 
                     </strong>
                   </div>
                  
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
-                      <label class="govuk-label govuk-checkboxes__label" for="nationality">I can confirm {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} date of birth, <span class="govuk-!-font-weight-bold">12 January 1965</span> is correct.
+                      <label class="govuk-label govuk-checkboxes__label" for="nationality">I confirm {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s date of birth is <span class="govuk-!-font-weight-bold">12 January 1965</span>.
                       </label>
                  
                   </div>
