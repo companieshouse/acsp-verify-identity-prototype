@@ -29,15 +29,23 @@
        
       email address?</h1>
 
-
+<!--
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-visually-hidden">Warning</span>
-           You need to check and confirm this is the correct email address before you continue. The personal code will be sent to this email address, so it needs to be correct.</strong>
-      </div>
+          If you enter their email address incorrectly, they will not receive their personal code. Without this, they will not be able to confirm their identity has been verified. 
 
-    
+</strong>
+      </div>-->
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+
+      You must check the email address is correct. It is the only place we will send their personal code, which they need to confirm their identity has been verified. 
+    </strong>
+  </div>
 
     
             <div class="govuk-form-group">
@@ -54,7 +62,7 @@
 
             <div class="govuk-form-group">
               <label class="govuk-label govuk-label--s" for="email-2">
-               Confirm their email address
+               Re-enter their email address
               </label>
  
               <input class="govuk-input" id="email" name="email-2" type="email" spellcheck="false" aria-describedby="email-2-hint" autocomplete="email">
