@@ -13,6 +13,56 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
 
+
+      <h2 class="govuk-heading-m">Important verification details</h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+         They will not be able to confirm they have been verified if you've entered their email address or date of birth incorrectly. 
+        </strong>
+      </div>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+  
+  
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20 June 1980
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+  </dl>
+
+
+
+
       <h2 class="govuk-heading-m">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -84,50 +134,8 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
 
 
-      <h2 class="govuk-heading-m">Important details</h2>
-
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-visually-hidden">Warning</span>
-          Entering an incorrect details could later cause filings to be rejected. They may have issues when coming to verify their identity. 
-        </strong>
-      </div>
 
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Email address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{data['email']}} 
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> name</span>
-          </a>
-        </dd>
-      </div>
-
-
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Date of birth
-        </dt>
-        <dd class="govuk-summary-list__value">
-          20 June 1980
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a href="#">
-            Change
-            <span class="govuk-visually-hidden"> date of birth</span>
-          </a>
-        </dd>
-      </div>
-</dl>
 
 
       <h2 class="govuk-heading-m">Identity check details</h2>
