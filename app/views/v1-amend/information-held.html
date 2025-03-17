@@ -11,7 +11,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
       <form class="form" action="check-your-answers" method="post">
 
-      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+      <h1 class="govuk-heading-xl">Which of the details need to be changed</h1>
 
       <h2 class="govuk-heading-m">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s details</h2>
 
@@ -31,26 +31,11 @@ Check your answers before sending your application – {{ serviceName }} – GOV
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Can we use this name in the identity verification statement for this person? 
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
 
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            What name can we use for the identity verification statement? 
+            Name used on the identity verification statement 
           </dt>
           <dd class="govuk-summary-list__value">
             {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
@@ -110,6 +95,57 @@ Check your answers before sending your application – {{ serviceName }} – GOV
             </a>
           </dd>
         </div>
+<br>
+        <h2 class="govuk-heading-m">Passport details</h2>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Passport number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        55241683 
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="#">
+          Change
+          <span class="govuk-visually-hidden"> passport number</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Expiry date
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+
+      1 November 2030
+
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="#">
+          Change
+          <span class="govuk-visually-hidden"> passport expiry date</span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Country of issue
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <p>United Kingdom</p>
+      
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="#">
+          Change
+          <span class="govuk-visually-hidden">country of issue</span>
+        </a>
+      </dd>
+    </div>
        
         <!--<div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -131,7 +167,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
        
 
 
-
+<!---
 
       </dl>
 
@@ -166,10 +202,10 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
 
 
-            <!-- person -->
+            person 
             The documents were checked by a person
 
-            <!-- used technology: Option 1 - the documents were checked using identity document validation technology (IDVT) -->
+            used technology: Option 1 - the documents were checked using identity document validation technology (IDVT) 
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -217,17 +253,17 @@ Check your answers before sending your application – {{ serviceName }} – GOV
                to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
             <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
 
-         <!--  <p>The person provided the following documents to prove their identity:</p>
+          <p>The person provided the following documents to prove their identity:</p>
 
             <ul class="govuk-list govuk-list--bullet">
                     <li>passport</li>
                     <li>photo driving licence</li>
                     <li>bank or building society statement</li>
-                  </ul>--> 
+                  </ul>
 
           
           </dd>
-          <!-- <dd class="govuk-summary-list__actions">
+          <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
               <span class="govuk-visually-hidden"> name</span>
@@ -238,73 +274,23 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         </dl>
 
 
-      <h2 class="govuk-heading-m">Passport details</h2>
-
-
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
 
-    <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Passport number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            55241683 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> passport number</span>
-            </a>
-          </dd>
-        </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Expiry date
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-          1 November 2030
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> passport expiry date</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Country of issue
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p>United Kingdom</p>
-          
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden">country of issue</span>
-            </a>
-          </dd>
-        </div>
     
         </dl>
 
 
-
+<!---
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-       <!--    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h2 class="govuk-fieldset__heading">
              Declaration
             </h2>
-          </legend> -->
+          </legend> 
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
@@ -317,7 +303,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
         </fieldset>
       </div>
 
-
+    -->
 
 
 

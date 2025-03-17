@@ -26,30 +26,29 @@
       <form class="form" action="start-page" method="post">
 
       <h1 class="govuk-heading-l">
-        Tell Companies House you want to amend details of someone's identity you  verified
+        Tell Companies House you want to amend details of someone's identity you verified
       </h1>
 
 
 
-      <p class="govuk-body">Use this service to tell us when you've verified someone's identity for Companies House.</p>
+      <p class="govuk-body">Use this service to tell us when you want to change details regarding someone you identity verified for Companies House.</p>
 
 
 
-      <h2 class="govuk-heading-m">What you'll need to tell us about the person</h2>  
+      <h2 class="govuk-heading-m">What information you will need to provide</h2>  
 
 
 
 
-      <p class="govuk-body">You’ll need to tell us their: </p>
+      <p class="govuk-body">You’ll need the following information to amend their record: </p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>full name</li>
-          <li>date of birth</li>
-          <li>home address</li>
-          <li>email address </li>
+          <li>Identity Verification Reference Number</li>
+          <li>Email address</li>
+          <li>Date of Birth (if you intend on amending the email address)</li>
+          <li>CH Personal code?</li>
         </ul>
-     
-<p>The email address you give can only be used once to verify someone’s identity. We'll use this to send their Companies House personal code.</p>
 
+    
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
@@ -63,7 +62,30 @@
   </div>
 </details>
 
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What is an Identity Verification Reference Number?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>This is ......</p>
 
+    <p>It can be used to .....</p>
+  </div>
+</details>
+
+
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Start now",
+    href:"verification-confirmation"
+  }) }}
+
+</div>
+
+<!--
    <h2 class="govuk-heading-m">What you'll need to tell us about the identity checks</h2>  
 
       <p class="govuk-body">The checks you complete must meet <a href="guidance">our identity verification standard</a>. This lists which documents the person needs to provide and the checks you need to do to verify their identity. </p><p>You'll need to tell us: </p>
@@ -124,7 +146,7 @@ When you verify someone’s identity, we'll ask you to confirm a statement to sa
 
 <p>Read the <a href="guidance-ACSPs">guidance about verifying someone's identity for Companies House</a> to find out what information the statement will include.</p>
 
-<!--
+
 <p>The statement will include the person’s name, as well as information about the authorised agent that has verified their identity.</p>
 <p>If we should not show the person's name on the public register, you can provide another name to use for the statement. For example, you may want to do this if the name that’s shown on their identity documents is not the name they are usually known by. </p>
 <p><a href="guidance-ACSPs">Read the guidance on verifying someone’s identity for Companies House</a> to find out what other details the statement will include.  </p> -->
