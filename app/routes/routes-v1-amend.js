@@ -12,9 +12,23 @@ const router = govukPrototypeKit.requests.setupRouter()
  */
 router.post('/v1-amend/start-page', function (req, res) {
 
+    res.redirect('')
+    
+})
+
+
+
+/*
+ * What do you want to change?
+ */
+router.post('/v1-amend/what-do-you-want-to-change', function (req, res) {
+
     res.redirect('name')
     
 })
+
+
+
 
 /*
  * Public name, on the register
@@ -35,7 +49,7 @@ router.post('/v1-amend/name-on-register', function (req, res) {
 
      if (req.session.data['registerName'] === 'doc') {
 
-        res.redirect('personal-code')
+        res.redirect('email-address')
 
       } else {
         // go to the confirm address page
@@ -56,7 +70,7 @@ router.post('/v1-amend/name-on-register', function (req, res) {
  */
 router.post('/v1-amend/name-for-the-register', function (req, res) {
 
-    res.redirect('personal-code')
+    res.redirect('email-address')
     
 })
 
@@ -117,7 +131,7 @@ router.post('/v1-amend/address-lookup', function (req, res) {
  */
 router.post('/v1-amend/address-confirm', function (req, res) {
 
-    res.redirect('date-identity-checks')
+    res.redirect('id-check')
     
 })
 

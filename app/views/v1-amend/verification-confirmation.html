@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Check your answers before sending your application – {{ serviceName }} – GOV.UK Prototype Kit
+ – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -9,64 +9,68 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <form class="form" action="check-your-answers" method="post">
+      <form class="form" action="verification-confirmation" method="post">
+        
 
-      <h1 class="govuk-heading-xl">Please confirm the following details</h1>
+      <h1 class="govuk-heading-xl">Enter the details of the verification record you want to ammend</h1>
 
       
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="event-name">
-            Verification Reference ID
+          <label class="govuk-label govuk-label--m" for="verification-ID">
+            Verification reference ID
           </label>
+          <div id="verification-ID-hint" class="govuk-hint">
+            This can be found ...
+          </div>
         </h1>
-        <input class="govuk-input" id="event-name" name="eventName" type="text">
+        <input class="govuk-input" id="verification-ID" name="verificationID" type="text">
       </div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--l" for="event-name">
-            Email Address
+          <label class="govuk-label govuk-label--m" for="email">
+            Email address
           </label>
-        <div id="email-hint" class="govuk-hint">
-          Any text?
-        </div>
+          <div id="email-hint" class="govuk-hint">
+            This is the email address of the person who was verified ...
+          </div>
         <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
       </div>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Date of Birth
+              What is your date of birth?
             </h1>
           </legend>
-          <div id="passport-issued-hint" class="govuk-hint">
-            For example, 27 3 1986
+          <div id="dob-hint" class="govuk-hint">
+            For example, 31 3 1980
           </div>
-          <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                <label class="govuk-label govuk-date-input__label" for="dob-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                <label class="govuk-label govuk-date-input__label" for="dob-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                <label class="govuk-label govuk-date-input__label" for="dob-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
               </div>
             </div>
           </div>
@@ -76,7 +80,7 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
       <div class="govuk-button-group">
         {{ govukButton({
-          text: "Submit",
+          text: "Continue",
           href:"what-do-you-want-to-change"
         }) }}
       
