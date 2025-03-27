@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
- – {{ serviceName }} – GOV.UK Prototype Kit
+Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 
@@ -18,7 +18,7 @@
       <fieldset class="govuk-fieldset"> 
           
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"> 
-          <h1 class="govuk-fieldset__heading"> What is  
+          <h1 class="govuk-fieldset__heading"> 
         
             {% if (data['firstName'] == "") and (data['lastName'] == "") %}
       
@@ -30,8 +30,11 @@
       
             {% endif %}
              
-            email address? </h1>
+            email address </h1>
         </legend>
+
+
+        <p class="govuk-body govuk-!-padding-top-2">The email address you give can only be used once to verify someone’s identity. You will not be able to use it for anyone else whose identity you have verified.</p>
 
 
       <div class="govuk-warning-text">
@@ -43,12 +46,10 @@
         </strong>
       </div>
 
- 
-
-    
+  
             <div class="govuk-form-group">
 
-              <label class="govuk-label govuk-label--s" for="email-2">
+              <label class="govuk-label govuk-label--s" for="email">
                 Enter their email address
                </label>
      
@@ -59,16 +60,16 @@
             </div>
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="email-2">
+              <label class="govuk-label govuk-label--s" for="confirm">
                Re-enter their email address
               </label>
  
-              <input class="govuk-input" id="email" name="email-2" type="email" spellcheck="false" aria-describedby="email-2-hint" autocomplete="email">
+              <input class="govuk-input" id="confirm" name="name" type="email" spellcheck="false" autocomplete="email">
             </div>
 
-            <div class="govuk-inset-text">
+       <!--      <div class="govuk-inset-text">
               The email address you give can only be used once to verify someone’s identity. You will not be able to use it for anyone else whose identity you have verified.
-            </div>
+            </div> -->
         
 
 
