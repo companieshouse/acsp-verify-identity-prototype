@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form class="form" action="verification-confirmation" method="post">
+        
+
+      <h1 class="govuk-heading-xl">Upload a document</h1>
+     
+      
+      <h1 class="govuk-heading-l" class="govuk-body govuk-!-margin-bottom-0">Evidence</h1>
+
+  
+     <p class="govuk-body-m">Where information is changed we may require evidence of the change. Upload any files you believe to be relevant below. </p>
+      <p class="govuk-body-m">Examples of documents that may required include:</p>
+      <ul class="govuk-list govuk-list--bullet">
+       <li>Official documentation proving change of name and/or address</li>
+       <li>Evidence of false information being provided by the verified individual</li>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">File upload</h2>
+    
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Click on button below to choose file. 
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
+     
+
+  
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href:"what-do-you-want-to-change"
+        }) }}
+      
+
+
+    </div>
+  </div>
+{% endblock %}
