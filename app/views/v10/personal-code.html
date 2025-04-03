@@ -12,16 +12,10 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
       <form class="form" action="personal-code" method="post">
 
 
-        {% if (data['firstName'] == "") and (data['lastName'] == "") %}
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-1">Where we'll send their Companies House personal code</h1>
 
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"> Hannah Salt's Companies House personal code</h1>
 
        
-        {% else %}
-
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-1"><span> {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s personal code</span></h1>
-
-        {% endif %}
 
       
 
