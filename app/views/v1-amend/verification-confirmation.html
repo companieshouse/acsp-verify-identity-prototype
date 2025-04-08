@@ -12,16 +12,29 @@
       <form class="form" action="verification-confirmation" method="post">
         
 
-      <h1 class="govuk-heading-xl">Enter the details of the verification record you want to ammend</h1>
+      <h1 class="govuk-heading-xl">Enter details from when you verified their identity</h1>
 
       
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="verification-ID">
-            Verification reference ID
+            Your verification reference 
           </label>
           <div id="verification-ID-hint" class="govuk-hint">
-            This can be found ...
+            This is the reference you received on the confirmation email when you verified them. 
+          </div>
+        </h1>
+        <input class="govuk-input" id="verification-ID" name="verificationID" type="text">
+      </div>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="verification-ID">
+            Their Companies House personal code
+          </label>
+          <div id="verification-ID-hint" class="govuk-hint">
+            We sent this to the email address you provided for them. 
           </div>
         </h1>
         <input class="govuk-input" id="verification-ID" name="verificationID" type="text">
@@ -30,10 +43,10 @@
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="email">
-            Email address
+            Their email address
           </label>
           <div id="email-hint" class="govuk-hint">
-            This is the email address of the person who was verified ...
+            It must be the same as the one you provided when you verified them. 
           </div>
         <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
       </div>
@@ -42,11 +55,11 @@
         <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              What is your date of birth?
+              What is the person's date of birth?
             </h1>
           </legend>
           <div id="dob-hint" class="govuk-hint">
-            For example, 31 3 1980
+            It must be the same as the email you provided when you verified them. For example, 31 3 1980.
           </div>
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">

@@ -26,29 +26,51 @@
       <form class="form" action="start-page" method="post">
 
       <h1 class="govuk-heading-l">
-        Tell Companies House you want to amend details of someone's identity you verified
+        Change the details for a person whose identity you have verified
       </h1>
 
 
 
-      <p class="govuk-body">Use this service to tell us when you want to change details regarding someone you identity verified for Companies House.</p>
+      <p class="govuk-body">Use this service if you need to make changes to details you submitted when you told us you verified someone's identity.</p>
+
+      <p>You can update the person's:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>name</li>
+        <li>email address</li>
+        <li>date of birth</li>
+        <li>home address</li>
+</ul>
+
+{{ govukWarningText({
+  text: "If you provided wrong email address for the person when you verified them, this could be a data breach.",
+  iconFallbackText: "Warning"
+}) }}
+
+      <h2 class="govuk-heading-m">What you'll need </h2>  
 
 
 
-      <h2 class="govuk-heading-m">What information you will need to provide</h2>  
 
-
-
-
-      <p class="govuk-body">You’ll need the following information to amend their record: </p>
+      <p class="govuk-body">You’ll need to give a reference for the identity verification you completed.  </p>
+      <p>This can be either:</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>Identity Verification Reference Number</li>
-          <li>Email address</li>
-          <li>Date of Birth (if you intend on amending the email address)</li>
-          <li>CH Personal code?</li>
+          <li>the reference you received when you used our service to tell us you had verified them – this will be on the confirmation or confirmation email</li>
+          <li>the person’s Companies House personal code – we sent this to the email address you provided for them when you verified their identity
+            </li>
         </ul>
 
-    
+        <p>You’ll also need to confirm at least one of the person’s details that you submitted when you verified them.</p>
+        <p>This can either be the person’s: </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>email address </li>
+          <li>date of birth
+            </li>
+            </ul>
+
+
+        <!--
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
@@ -73,7 +95,7 @@
 
     <p>It can be used to .....</p>
   </div>
-</details>
+</details>  -->
 
 
 
