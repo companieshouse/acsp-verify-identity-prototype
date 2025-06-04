@@ -38,60 +38,24 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <form class="form" action="check-your-answers" method="post">
+    <form class="form" action="check-your-answers" method="post">
 
-      <h1 class="govuk-heading-xl">Check your answers before sending</h1>
-
-
+    <h1 class="govuk-heading-xl">Check your answers before sending</h1>
 
 
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} will not be able to connect their verified identity to the information we hold if you've entered their email address or date of birth incorrectly. 
+      </strong>
+    </div>
 
 
-  <div class="govuk-warning-text">
-    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-    <strong class="govuk-warning-text__text">
-      <span class="govuk-visually-hidden">Warning</span>
-      {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} will not be able to connect their verified identity to the information we hold if you've entered their email address or date of birth incorrectly. 
-    </strong>
-  </div>
-
-
-
-
-
-      
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Email address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['email']}} 
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-  
-  
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="govuk-summary-list__value">
-            20 June 1980
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
+      <!-- Name -->
+      {% if (data['data-to-change'].includes("name"))%}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -108,22 +72,10 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Can we use this name in the identity verification statement for this person? 
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
+      {% endif %}
 
-
+      <!-- Name for statement -->
+      {% if (data['data-to-change'].includes("statement"))%}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -140,8 +92,38 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
+      {% endif %}
 
+
+
+     <!-- Date of birth -->
+      {% if (data['data-to-change'].includes("dob"))%}
+             
         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            20 June 1980
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+
+      {% endif %}
+
+
+
+
+      <!-- Home address -->
+
+         {% if (data['data-to-change'].includes("home-address"))%}
+             
+         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Home address
           </dt>
@@ -156,22 +138,38 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
-
-      </dl>
-
+         {% endif %}
 
 
+      <!-- Email address -->
 
-<!--
+      {% if (data['data-to-change'].includes("email"))%}
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+  
 
 
-      <h2 class="govuk-heading-m">Identity check details</h2>
+      <!-- Dates identity checks were completed -->
 
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      {% if (data['data-to-change'].includes("date-checked-completed"))%}
 
-
-    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Date identity checks were completed
           </dt>
@@ -184,19 +182,22 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
               <span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
-        </div>
+     </div>
 
-        <div class="govuk-summary-list__row">
+      {% endif %}
+
+            
+
+      <!-- Identity documents that were checked -->
+      {% if (data['data-to-change'].includes("documents-checked"))%}
+
+      <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How the identity documents were checked
           </dt>
           <dd class="govuk-summary-list__value">
 
-
-
             The documents were checked by a person
-
-
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -224,43 +225,8 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
-         
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Identity verification statement
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p>I confirm that JAMES ACCOUNTING LTD verified the identity of  {% if ((data['registerName'] === "doc")) %}
-
-              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} 
-
-                    {% else %}
-
-                    {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
-              
-                     
-                    {% endif %}
-               to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
-            <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
-
-
-          
-          </dd>
-
-        </div>
-    
-        </dl> -->
-
-<!-- 
-      <h2 class="govuk-heading-m">Passport details</h2>
-
-
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-
-    <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Passport number
           </dt>
@@ -308,6 +274,66 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
+         
+
+
+
+
+      {% endif %}
+
+
+
+      </dl>
+
+
+
+
+<!--
+
+
+      <h2 class="govuk-heading-m">Identity check details</h2>
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Identity verification statement
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>I confirm that JAMES ACCOUNTING LTD verified the identity of  {% if ((data['registerName'] === "doc")) %}
+
+              {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} 
+
+                    {% else %}
+
+                    {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
+              
+                     
+                    {% endif %}
+               to the standard set by Companies House and is satisfied that the required personal information is true. The verification checks were completed {{data['checked-day']}}   {{data['checked-month']}}  {{data['checked-year']}}.</p> 
+            <p>JAMES ACCOUNTING LTD is supervised by Association of Chartered Certified Accountants.</p>
+
+
+          
+          </dd>
+
+        </div>
+    
+        </dl> -->
+
+<!-- 
+      <h2 class="govuk-heading-m">Passport details</h2>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+  
     
         </dl>
 
