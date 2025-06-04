@@ -1,0 +1,143 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Application complete – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'We\'re testing a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+
+
+}) }}
+
+<div class="govuk-width-container">
+
+  <nav class="govuk-language-select" aria-label="Choose a language">
+        <ul class="govuk-language-select__list">
+          <li class="govuk-language-select__list-item">
+            <span aria-current="true">English</span>
+          </li>
+          <li class="govuk-language-select__list-item">
+            <a href="#lang-cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg"><span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span><span aria-hidden="true">Cymraeg</span></a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="confirmation" method="post">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Identity verified details submitted</h1>
+       <!-- <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div> -->
+      </div>
+
+      <p>
+        Your reference is HDJ2123F. This is not the Companies House personal code for the person you have verified.</p>
+      <p> We have sent a confirmation email to <strong>james@jamesaccounting.com</strong>.
+      </p>
+
+    
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We've emailed <strong>director@email.com</strong> to let them know you've verified their identity. Their Companies House personal code is included in the email. This may be needed to make a filing with Companies House for this person. </p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      <h2 class="govuk-heading-m">Identity verification ammended details submitted {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}</h2>
+
+      <button type="submit" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button" >
+        Print identity verification details 
+      </button>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
+          </dd>
+          
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Can we use this name in the identity verification statement for this person? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            What name can we use for the identity verification statement? 
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
+          </dd>
+        
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['email']}} 
+          </dd>
+
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['dob-day']}}   {{data['dob-month']}}  {{data['dob-year']}} 
+          </dd>
+
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Home address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7 Wentloog Road<br>Rumney<br> Cardiff<br> Wales<br> CF3 3EA
+            
+          </dd>
+
+        </div>
+
+
+  
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

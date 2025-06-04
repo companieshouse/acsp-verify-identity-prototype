@@ -26,4 +26,6 @@ router.use('/', require('./routes/routes-v10.js'))
 
 router.use('/', require('./routes/routes-v1-amend.js'))
 
+router.use('/', require('./routes/routes-v2-amend.js'))
+
 module.exports = router
