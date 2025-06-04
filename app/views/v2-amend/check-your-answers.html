@@ -1,7 +1,36 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-Check your answers before sending your application – {{ serviceName }} – GOV.UK Prototype Kit
+Application complete – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "Prototype"
+  },
+  html: 'We\'re testing a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+
+
+}) }}
+
+<div class="govuk-width-container">
+
+  <nav class="govuk-language-select" aria-label="Choose a language">
+        <ul class="govuk-language-select__list">
+          <li class="govuk-language-select__list-item">
+            <span aria-current="true">English</span>
+          </li>
+          <li class="govuk-language-select__list-item">
+            <a href="#lang-cy" hreflang="cy" lang="cy" rel="alternate" class="govuk-link" data-journey-click="link - click:lang-select:Cymraeg"><span class="govuk-visually-hidden">Newid yr iaith ir Gymraeg</span><span aria-hidden="true">Cymraeg</span></a>
+          </li>
+        </ul>
+      </nav>
+</div>
+
+
 {% endblock %}
 
 
@@ -27,7 +56,8 @@ Check your answers before sending your application – {{ serviceName }} – GOV
   </div>
 
 
-      <h2 class="govuk-heading-m">{{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s details</h2>
+
+
 
       
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -284,12 +314,17 @@ Check your answers before sending your application – {{ serviceName }} – GOV
       -->
 
 
+      <h2 class="govuk-heading-m">What information we'll show on the public register</h2>
+          <p>We will show XXX if this person uses their personal code to connect their verified identity to our records. </p>
+
+
+
       {{ govukCheckboxes({
         name: "confirm-verification",
         fieldset: {
           legend: {
             text: "Change of verification details",
-            classes: "govuk-fieldset__legend--s"
+            classes: "govuk-fieldset__legend--m"
           }
         },
         items: [
@@ -304,42 +339,17 @@ Check your answers before sending your application – {{ serviceName }} – GOV
 
 
 
-
-
-
-
-  <div class="govuk-inset-text">
-      <h2 class="govuk-heading-m">What information we'll show on the public register</h2>
-          <p>We will show XXX if this person uses their personal code to connect their verified identity to our records. </p>
-  </div>
-
-
-
-
-     <!-- <p class="govuk-body"><a href="/verify-using-an-acsp/name" class="govuk-link">Add another person whose identity you’ve verified </a></p> -->
-
-   <!--   {{ govukInsetText({
-        text: 'We will not show any information you provide on the public register.'
-      }) }}-->
-
-      <div class="govuk-button-group">
         {{ govukButton({
           text: "Confirm and send"
         }) }}
-      
-      <!--  {{ govukButton({
-          text: "Add another person",
-          classes: "govuk-button--secondary",
-          href:"name"
-        }) }} -->
-      </div>
+
 
   
 
 
 
-     
+     </form>
 
     </div>
   </div>
-{% endblock %}
+  {% endblock %}
