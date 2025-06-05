@@ -17,26 +17,24 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
         name: "data-to-change",
         fieldset: {
           legend: {
-            text: "Select the person's details you need to change",
+            text: "Select the person's details that you need to change or report",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "Select all that apply"
-        },
+
         items: [
           {
             value: "name",
-            text: "Name",
-            hint: {
-              text: "that appears on the identity documents"
-            }
+            text: "Name"
+
           },
           {
             value: "statement",
             text: "Name that's shown on the identity verification statement"
+
           },
+
           {
             value: "dob",
             text: "Date of birth"
