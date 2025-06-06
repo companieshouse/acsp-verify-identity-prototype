@@ -14,23 +14,21 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 
 
-        <h1 class="govuk-heading-l">Reason for the change</h1>
+        <h1 class="govuk-heading-l">Tell us why you need to report or change the details</h1>
 
         {{ govukCheckboxes({
           name: "reason-for-the-change",
           classes: "govuk-!-padding-bottom-4",
           fieldset: {
             legend: {
-              text: " Select the reason you need to change their details"
+              html: " <strong>Select the reason you need to report or change their details:</strong>"
             }
           },
-          hint: {
-            text: "Select all that apply"
-          },
+
           items: [
             {
               value: "change-1",
-              text: "I entered the details incorrectly"
+              text: "Their details were entered incorrectly"
             },
             {
               value: "change-2",
@@ -38,7 +36,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
             },
             {
               value: "change-3",
-              text: "I think they gave me false details"
+              text: "I think they gave false details"
             }
           ]
         }) }}  
@@ -51,10 +49,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
             id: "more-detail",
             rows: "8",
             label: {
-              text: "Can you provide more detail?"
-            },
-            hint: {
-              text: "Do not include personal or financial information, like your National Insurance number or credit card details"
+              html: "<strong>Can you provide more detail?</strong>"
             }
           }) }}
 
