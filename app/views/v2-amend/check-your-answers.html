@@ -40,16 +40,16 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
     <form class="form" action="check-your-answers" method="post">
 
-    <h1 class="govuk-heading-xl">Check your answers before sending</h1>
+    <h1 class="govuk-heading-xl">Check your answers before submitting</h1>
 
-
+<!--
     <div class="govuk-warning-text">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
         <span class="govuk-visually-hidden">Warning</span>
         {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} will not be able to connect their verified identity to the information we hold if you've entered their email address or date of birth incorrectly. 
       </strong>
-    </div>
+    </div> -->
 
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -79,11 +79,11 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            What name can we use for the identity verification statement? 
+            Name to be shown on the public identity verification statement     
           </dt>
           <dd class="govuk-summary-list__value">
-            {{data['firstNameRegister']}} {{data['middleNameRegister']}} {{data['lastNameRegister']}}
-                    
+            Joe Smith 
+
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -337,11 +337,11 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
     
         </dl>
 
-      -->
+      
 
 
       <h2 class="govuk-heading-m">What information we'll show on the public register</h2>
-          <p>If the change is accepted, we'll include the name you have provided in the public verification statement for this person. This is shown on the Companies House register if this person connects their verified identity to our records. </p>
+          <p>If the change is accepted, we'll include the name you have provided in the public verification statement for this person. This is shown on the Companies House register if this person connects their verified identity to our records. </p> -->
 
 
 
@@ -366,7 +366,7 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
 
         {{ govukButton({
-          text: "Confirm and send"
+          text: "Confirm and submit"
         }) }}
 
 
