@@ -13,18 +13,17 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
       <form class="form" action="reason-for-change" method="post">
 
 
+<!-- Select the reason you need to report or change their details: -->
 
-        <h1 class="govuk-heading-l">Tell us why you need to change or report the details</h1>
-
-        {{ govukCheckboxes({
+        {{ govukRadios({
           name: "reason-for-the-change",
-          classes: "govuk-!-padding-bottom-4",
           fieldset: {
             legend: {
-              html: " <strong>Select the reason you need to report or change their details:</strong>"
+              text: "Tell us why you need to change or report the details",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
             }
           },
-
           items: [
             {
               value: "change-1",
@@ -40,22 +39,6 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
             }
           ]
         }) }}  
-
-
-
-
-        {{ govukTextarea({
-            name: "moreDetail",
-            id: "more-detail",
-            rows: "8",
-            label: {
-              html: "<strong>Can you provide more detail?</strong>"
-            }
-          }) }}
-
-
-
-
 
           {{ govukButton({
             text: "Continue"

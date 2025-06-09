@@ -54,6 +54,68 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
+        <!-- Reference details -->
+         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Verification reference
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['verificationID']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <!-- Reason for reporting-->
+
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             Why you need to change or report the details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Their details were entered incorrectly
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <!-- Reason for reporting-->
+
+          <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Details that you need to change or report
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Name</li>
+              <li>Date of Birth</li>
+              <li>Home address</li>
+              <li>Email address</li>
+              <li>Dates identity checks were complete</li>
+              <li>Identity documents that were checked</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+   
+
+
+
       <!-- Name -->
       {% if (data['data-to-change'].includes("name"))%}
 
@@ -274,12 +336,25 @@ Application complete – {{ serviceName }} – GOV.UK Prototype Kit
             </a>
           </dd>
         </div>
-         
-
-
-
+        
 
       {% endif %}
+
+
+      <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            More details
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['moreDetail']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+     </div>
 
 
 

@@ -12,9 +12,30 @@ const router = govukPrototypeKit.requests.setupRouter()
  */
 router.post('/v2-amend/start-page', function (req, res) {
 
-    res.redirect('')
+    res.redirect('verification-confirmation')
     
 })
+
+/*
+ * Verification confirmation 
+ */
+router.post('/v2-amend/verification-confirmation', function (req, res) {
+
+    res.redirect('reason-for-change')
+    
+})
+
+
+/*
+ * Reason for the change
+ */
+router.post('/v2-amend/reason-for-change', function (req, res){
+
+    res.redirect('what-do-you-want-to-change')
+    
+})
+
+
 
 
 
@@ -62,7 +83,7 @@ router.post('/v2-amend/what-do-you-want-to-change', function (req, res) {
     else {
         
         // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
         
     
     }
@@ -80,11 +101,26 @@ router.post('/v2-amend/what-do-you-want-to-change', function (req, res) {
  */
 router.post('/v2-amend/name', function (req, res) {
 
-    if (req.session.data['data-to-change'].includes("statement")) {
+    res.redirect('name-on-register')
 
-        res.redirect('name-for-the-register')
+})
 
-    }
+/*
+ * Public name, on the register  
+ */
+ router.post('/v2-amend/name-on-register', function (req, res) {
+
+
+    // No, I need to provide a different name for the statement
+
+    if (req.session.data['registerName'] === 'different') {
+
+    res.redirect('name-for-the-register')
+
+    } 
+
+    // We have captured all name information, so loop through the remaining information 
+
     else if (req.session.data['data-to-change'].includes("dob")){
 
         res.redirect('dob')
@@ -112,31 +148,11 @@ router.post('/v2-amend/name', function (req, res) {
     }
     else {
         // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
     }
-    
-})
-
-/*
- * Public name, on the register - Not needed for this service 
- */
-/* router.post('/v2-amend/name-on-register', function (req, res) {
-
-
-     //Name preference 
-
-     if (req.session.data['registerName'] === 'doc') {
-
-        res.redirect('email-address')
-
-      } else {
-        // go to the confirm address page
-        res.redirect('name-for-the-register')
-    
-      }
 
     
-}) */
+}) 
 
 
 /*
@@ -171,7 +187,7 @@ router.post('/v2-amend/name-for-the-register', function (req, res) {
     }
     else {
         // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
     }
 })
 
@@ -212,7 +228,7 @@ router.post('/v2-amend/dob', function (req, res) {
     }
     else {
        // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
     }
     
 })
@@ -266,7 +282,7 @@ router.post('/v2-amend/address-confirm', function (req, res) {
     }
     else {
         // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
     }
 
 
@@ -297,7 +313,7 @@ router.post('/v2-amend/email-address', function (req, res) {
     }
     else {
         // reason for the change
-        res.redirect('reason-for-change')
+        res.redirect('reason-for-change-more-detail')
     }
     
 })
@@ -366,7 +382,7 @@ router.post('/v2-amend/documents-checked-r2', function (req, res) {
  */
 router.post('/v2-amend/id-document-details', function (req, res) {
 
-    res.redirect('reason-for-change')
+    res.redirect('reason-for-change-more-detail')
     
 })
 
@@ -378,7 +394,7 @@ router.post('/v2-amend/id-document-details', function (req, res) {
 router.post('/v2-amend/id-check', function (req, res) {
 
     // reason for the change
-    res.redirect('reason-for-change')
+    res.redirect('reason-for-change-more-detail')
     
 })
 
@@ -387,7 +403,7 @@ router.post('/v2-amend/id-check', function (req, res) {
 /*
  * Reason for change
  */
-router.post('/v2-amend/reason-for-change', function (req, res) {
+router.post('/v2-amend/reason-for-change-more-detail', function (req, res) {
 
     // reason for the change
     res.redirect('check-your-answers')

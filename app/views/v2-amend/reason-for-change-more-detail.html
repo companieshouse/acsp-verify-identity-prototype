@@ -12,24 +12,27 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form class="form" action="reason-for-change-more-detail" method="post">
 
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="more-detail">
-              Can you provide more detail?
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-          For example, 'I made a mistake when I entered their details'. 
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-        </div>
-      </form>
+       {{ govukTextarea({
+          name: "moreDetail",
+          id: "more-detail",
+          rows: "10",
+          label: {
+            text: "Can you provide more detail?",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: ""
+          }
+        }) }}
+
+      
       
         {{ govukButton({
           text: "Continue"
         }) }}
 
-      
+      </form>
 
 
     </div>
