@@ -31,7 +31,21 @@ router.post('/v2-amend/verification-confirmation', function (req, res) {
  */
 router.post('/v2-amend/reason-for-change', function (req, res){
 
-    res.redirect('what-do-you-want-to-change')
+
+     //if house number is empty
+          if (req.session.data['reason-for-the-change'] === 'change-3') {
+
+        res.redirect('reason-for-change-more-detail')
+           
+    
+        } else {
+            
+            res.redirect('what-do-you-want-to-change')
+
+          }
+
+
+
     
 })
 
