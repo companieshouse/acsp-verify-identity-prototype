@@ -28,4 +28,6 @@ router.use('/', require('./routes/routes-v1-amend.js'))
 
 router.use('/', require('./routes/routes-v2-amend.js'))
 
+router.use('/', require('./routes/routes-v1-reverify.js'))
+
 module.exports = router
