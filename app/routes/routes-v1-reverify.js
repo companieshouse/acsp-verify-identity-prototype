@@ -12,6 +12,26 @@ const router = govukPrototypeKit.requests.setupRouter()
  */
 router.post('/v1-reverify/start-page', function (req, res) {
 
+    res.redirect('personal-code')
+    
+})
+
+
+/*
+ * Personal code
+ */
+router.post('/v1-reverify/personal-code', function (req, res) {
+
+    res.redirect('email-address')
+    
+})
+
+
+/*
+ * Email address
+ */
+router.post('/v1-reverify/email-address', function (req, res) {
+
     res.redirect('name')
     
 })
@@ -35,7 +55,7 @@ router.post('/v1-reverify/name-on-register', function (req, res) {
 
      if (req.session.data['registerName'] === 'doc') {
 
-        res.redirect('personal-code')
+        res.redirect('dob')
 
       } else {
         // go to the confirm address page
@@ -56,27 +76,13 @@ router.post('/v1-reverify/name-on-register', function (req, res) {
  */
 router.post('/v1-reverify/name-for-the-register', function (req, res) {
 
-    res.redirect('personal-code')
-    
-})
-
-/*
- * Personal code
- */
-router.post('/v1-reverify/personal-code', function (req, res) {
-
-    res.redirect('email-address')
-    
-})
-
-/*
- * Email address
- */
-router.post('/v1-reverify/email-address', function (req, res) {
-
     res.redirect('dob')
     
 })
+
+
+
+
 
 
 
