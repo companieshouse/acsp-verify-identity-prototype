@@ -18,16 +18,20 @@ What is the name of your business? – {{ serviceName }}
                   <span class="govuk-caption-l">
                     {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}
                   </span>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Can we use this name in the identity verification statement for this person?
-              </h1>
-            </legend>
+<h1 class="govuk-heading-l">What we’ll show on the public register</h1>
 
-  <div id="event-name-hint" class="govuk-hint">
-You can provide a different name if, for example, they use a different name professionally. </div>
+            <p>Later in this service, we'll ask you to confirm a statement to say you are satisfied {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} is who they claim to be. </p>
+            <p>If the person connects their verified identity to their Companies House record as a director or person with significant control (PSC), we’ll show the statement on the public register to confirm they are verified. The statement will include their name.</p>
+            <p>If they're usually known by a different name, we can use it for the statement instead. For example, you may want to do this if they use a different name professionally to the one that's shown on their identity documents.</p>
+            
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    Can we use this name on the public register? 
+                  </h2>
+                </legend>
+    
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -49,18 +53,7 @@ You can provide a different name if, for example, they use a different name prof
           </fieldset>
         </div>
 
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              What is the identity verification statement? 
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <p class="govuk-body">Later in this service, you'll be asked to confirm a statement that you are satisfied this person is who they claim to be. The statement will include this person’s name. </p>
-            <p>If the person connects their verified identity to their Companies House record as a director or person with significant control (PSC), we’ll show the statement on the public register to confirm they are verified. 
-</p>
-          </div>
-        </details>
+
 
 
 
