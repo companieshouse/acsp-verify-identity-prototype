@@ -180,7 +180,7 @@ router.post('/v11/documents-checked-r2', function (req, res) {
 /*
  * Document details used for IDV
  */
-router.post('/v10/id-document-details', function (req, res) {
+router.post('/v11/id-document-details', function (req, res) {
 
     res.redirect('id-check')
     
