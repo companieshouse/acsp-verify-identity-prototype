@@ -10,7 +10,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 /*
  * Start page
  */
-router.post('/v11/start-page', function (req, res) {
+router.post('/v12/start-page', function (req, res) {
 
     res.redirect('name')
     
@@ -19,7 +19,7 @@ router.post('/v11/start-page', function (req, res) {
 /*
  * Public name, on the register
  */
-router.post('/v11/name', function (req, res) {
+router.post('/v12/name', function (req, res) {
 
     res.redirect('name-on-register')
     
@@ -28,7 +28,7 @@ router.post('/v11/name', function (req, res) {
 /*
  * Public name, on the register
  */
-router.post('/v11/name-on-register', function (req, res) {
+router.post('/v12/name-on-register', function (req, res) {
 
 
      //Name preference 
@@ -54,7 +54,7 @@ router.post('/v11/name-on-register', function (req, res) {
 /*
  * Name
  */
-router.post('/v11/name-for-the-register', function (req, res) {
+router.post('/v12/name-for-the-register', function (req, res) {
 
     res.redirect('personal-code')
     
@@ -63,7 +63,7 @@ router.post('/v11/name-for-the-register', function (req, res) {
 /*
  * Personal code
  */
-router.post('/v11/personal-code', function (req, res) {
+router.post('/v12/personal-code', function (req, res) {
 
     res.redirect('email-address')
     
@@ -72,7 +72,7 @@ router.post('/v11/personal-code', function (req, res) {
 /*
  * Email address
  */
-router.post('/v11/email-address', function (req, res) {
+router.post('/v12/email-address', function (req, res) {
 
     res.redirect('dob')
     
@@ -83,7 +83,7 @@ router.post('/v11/email-address', function (req, res) {
 /*
  * Date of birth
  */
-router.post('/v11/dob', function (req, res) {
+router.post('/v12/dob', function (req, res) {
 
     res.redirect('address-lookup')
     
@@ -95,7 +95,7 @@ router.post('/v11/dob', function (req, res) {
 /*
  * lookup  address
  */
-router.post('/v11/address-lookup', function (req, res) {
+router.post('/v12/address-lookup', function (req, res) {
 
           //if house number is empty
           if (req.session.data['house-number'] === '') {
@@ -115,7 +115,7 @@ router.post('/v11/address-lookup', function (req, res) {
 /*
  * Confirm home address
  */
-router.post('/v11/address-confirm', function (req, res) {
+router.post('/v12/address-confirm', function (req, res) {
 
     res.redirect('date-identity-checks')
     
@@ -126,7 +126,7 @@ router.post('/v11/address-confirm', function (req, res) {
 /*
  * Date the documents were checked
  */
-router.post('/v11/date-identity-checks', function (req, res) {
+router.post('/v12/date-identity-checks', function (req, res) {
 
     res.redirect('format-of-the-documents-checked')
     
@@ -138,7 +138,7 @@ router.post('/v11/date-identity-checks', function (req, res) {
 /*
  * Format the documents were checked
  */
-router.post('/v11/format-of-the-documents-checked', function (req, res) {
+router.post('/v12/format-of-the-documents-checked', function (req, res) {
 
      //if house number is empty
      if (req.session.data['security-check'] === 'Yes') {
@@ -159,7 +159,7 @@ router.post('/v11/format-of-the-documents-checked', function (req, res) {
 /*
  * Document group 1
  */
-router.post('/v11/documents-checked-r1', function (req, res) {
+router.post('/v12/documents-checked-r1', function (req, res) {
 
     res.redirect('id-document-details')
     
@@ -170,7 +170,7 @@ router.post('/v11/documents-checked-r1', function (req, res) {
 /*
  * Document group 2
  */
-router.post('/v11/documents-checked-r2', function (req, res) {
+router.post('/v12/documents-checked-r2', function (req, res) {
 
     res.redirect('id-document-details')
     
@@ -180,7 +180,7 @@ router.post('/v11/documents-checked-r2', function (req, res) {
 /*
  * Document details used for IDV
  */
-router.post('/v11/id-document-details', function (req, res) {
+router.post('/v12/id-document-details', function (req, res) {
 
     res.redirect('id-check')
     
@@ -191,7 +191,7 @@ router.post('/v11/id-document-details', function (req, res) {
 /*
  * Declaration 
  */
-router.post('/v11/id-check', function (req, res) {
+router.post('/v12/id-check', function (req, res) {
 
     res.redirect('check-your-answers')
     
@@ -200,7 +200,7 @@ router.post('/v11/id-check', function (req, res) {
 /*
  * Check your answers before sending your application 
  */
-router.post('/v11/check-your-answers', function (req, res) {
+router.post('/v12/check-your-answers', function (req, res) {
 
     res.redirect('confirmation')
     
