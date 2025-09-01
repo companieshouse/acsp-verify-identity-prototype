@@ -22,8 +22,20 @@
   
   
   {% endblock %}
+
   
+  <!-- New GOV branding -->
+    {% set govukRebrand = true %}
+    {% block header %}
+    {{ govukHeader({
+      rebrand: true
+    }) }}
+    {{ govukServiceNavigation({
+      serviceName: serviceName,
+      serviceUrl: "/"
+    }) }}
   
+    {% endblock %}
   
   {% block footer %}
 

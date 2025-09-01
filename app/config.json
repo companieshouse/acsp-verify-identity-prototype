@@ -1,3 +1,8 @@
 {
-  "serviceName": "Tell Companies House you have verified someone’s identity"
+  "serviceName": "Tell Companies House you have verified someone’s identity",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
 }
