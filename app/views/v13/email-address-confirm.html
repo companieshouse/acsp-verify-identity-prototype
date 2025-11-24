@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="email-address" method="post">
+
+
+      <fieldset class="govuk-fieldset"> 
+          
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"> 
+          <h1 class="govuk-fieldset__heading"> 
+        
+            Confirm 's' email address</h1>
+                    </legend>
+            
+            
+                    <p class="govuk-body govuk-!-padding-top-2">The email address you have entered is <strong>correctemail@gmail.com</strong></p>
+            
+            
+                  <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-visually-hidden">Warning</span>
+            
+                      You must check the email address is correct. They will not recieve their personal code if the email address is incorrect. 
+                    </strong>
+                  </div>
+            
+              
+                       
+            
+                      
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+               
+
+                 
+                 
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                      <label class="govuk-label govuk-checkboxes__label" for="nationality">I confirm I have entered the correct email address for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}.
+                      </label>
+                 
+                  </div>
+                </fieldset>
+              </div>
+
+       <!--      <div class="govuk-inset-text">
+              The email address you give can only be used once to verify someone’s identity. You will not be able to use it for anyone else whose identity you have verified.
+            </div> -->
+        
+
+
+
+     
+    
+      </form>
+     
+      <p> <a href="email-address.html">Amend email address</a> </p>
+
+        
+      {{ govukButton({
+         text: "Confirm and continue",
+         href:"dob"
+       }) }}
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
