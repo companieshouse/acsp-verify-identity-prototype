@@ -20,21 +20,45 @@ Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l"> 
           <h1 class="govuk-fieldset__heading"> 
         
-            Confirm 's' email address</h1>
+            Confirm their email address</h1>
                     </legend>
             
+        <!--    <p>Check you've provided the correct email address. It is the only place we will send their personal code. </p>
+             <p class="govuk-body govuk-!-padding-top-2">The email address you have entered is <strong>correctemail@gmail.com</strong></p> -->
             
-                    <p class="govuk-body govuk-!-padding-top-2">The email address you have entered is <strong>correctemail@gmail.com</strong></p>
+
+                    <dl class="govuk-summary-list">
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          Email
+                        </dt>
+                        <dd class="govuk-summary-list__value">
+                          example@email-address.com
+                        </dd>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                        </dd>
+                      </div>
+                      </dl>
             
-            
+                      <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                          <span class="govuk-visually-hidden">Warning</span>
+                
+                          Check the email address is correct. They will not receive their personal code if you provide an incorrect email address. 
+                        </strong>
+                      </div> 
+                
+                      <!--
                   <div class="govuk-warning-text">
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                     <strong class="govuk-warning-text__text">
                       <span class="govuk-visually-hidden">Warning</span>
             
-                      You must check the email address is correct. They will not recieve their personal code if the email address is incorrect. 
+                      They will not receive their personal code if you provide an incorrect email address. 
                     </strong>
-                  </div>
+                  </div> -->
             
               
                        
@@ -67,7 +91,6 @@ Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
     
       </form>
      
-      <p> <a href="email-address.html">Amend email address</a> </p>
 
         
       {{ govukButton({
