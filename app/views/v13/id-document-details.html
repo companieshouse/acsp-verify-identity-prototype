@@ -72,13 +72,23 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
               </div>
         
-        
-
       
-
       
 </fieldset>
 </div>
+
+<fieldset class="govuk-fieldset">
+  <div class="govuk-form-group ">
+    <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
+
+    <p class="govuk-hint">Start typing a nationality, then choose from the list.</p>
+    <div id="country" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
+  </div>
+
+  
+</fieldset>
+
+
 
 <div class="govuk-form-group">
 <label class="govuk-label" for="location">
@@ -201,6 +211,11 @@ Choose the country of issue from the list.
 
   </div>
 </div>
+
+
+
+<script src="/public/javascripts/accessible-autocomplete.js"></script>
+<script src="/public/javascripts/country.js"></script>
 
 {% endblock %}
 

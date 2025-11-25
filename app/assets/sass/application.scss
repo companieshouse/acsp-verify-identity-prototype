@@ -24,7 +24,8 @@
 //Defining new language toggle style
 @import "components/govuk-language-select";
 
-
+// Import typeahead component
+@import "accessible-autocomplete";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
