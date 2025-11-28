@@ -23,7 +23,7 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
                   </h1>
                 </legend>
                 <div id="dob-hint" class="govuk-hint">
-                  For example, 27 April 1995. 
+                  For example, 27 4 1995. 
                 </div>
 
           
@@ -73,20 +73,23 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  Check and confirm the date of birth
-                    
-                  </legend>
 
-                  <div class="govuk-warning-text">
-                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-                    <strong class="govuk-warning-text__text">
-                      <span class="govuk-visually-hidden">Warning</span>
-                      If you provide an incorrect date of birth, they will not be able to connect their verified identity to the information we hold. 
-                    </strong>
-                  </div>
-                 
+
+
+
+                    <div class="govuk-warning-text">
+                      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                      <strong class="govuk-warning-text__text">
+                        <span class="govuk-visually-hidden">Warning</span>
+                        If you provide an incorrect date of birth, they will not be able to connect their verified identity to the information we hold. 
+                      </strong>
+                    </div>
+                      
+                  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    Check and confirm you've entered the correct date
+                      
+                    </legend>
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
