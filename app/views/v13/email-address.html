@@ -27,6 +27,7 @@ Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
                     <p class="govuk-body govuk-!-padding-top-2">The email address you provide for {{data['firstName']}} {{data['middleName']}} {{data['lastName']}} can only be used once to verify someone’s identity. You will not be able to use it for anyone else whose identity you have verified.</p>
 
             
+
             <!--
                     
                   <div class="govuk-warning-text">
@@ -45,9 +46,9 @@ Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
                             Enter {{data['firstName']}} {{data['middleName']}} {{data['lastName']}}'s email address
                            </label>
                  
-                            <div id="email-hint" class="govuk-hint">
+                         <!--   <div id="email-hint" class="govuk-hint">
                             They must be able to access emails sent to this address.  It is the only place we will send their personal code.
-                          </div>
+                          </div> -->
                           <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
                         </div>
             
@@ -58,6 +59,7 @@ Hannah Salt's email address – {{ serviceName }} – GOV.UK Prototype Kit
             </div> -->
         
 
+            <div class="govuk-inset-text">They must be able to access emails sent to this address.  It is the only place we will send their personal code.</div>
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>
         </div>
