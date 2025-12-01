@@ -81,33 +81,13 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-form-group ">
     <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
 
-    <p class="govuk-hint">Start typing a nationality, then choose from the list.</p>
+    <p class="govuk-hint">This is usually shown on the first page of the passport. Start typing a nationality, then choose from the list.</p>
     <div id="country" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
   </div>
 
   
 </fieldset>
 
-
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="location">
-  Country of issue
-</label>
-<div id="location-hint" class="govuk-hint">
-  This is usually shown on the first page of the passport.
-</div>
-<select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
-  <option value="choose" selected>Choose a country</option>
-  <option value="eastmidlands">Not applicable</option>
-  <option value="eastmidlands">Country 1</option>
-  <option value="eastofengland">Country 2</option>
-  <option value="london">Country 2</option>
-  <option value="northeast">Country 3</option>
-  <option value="northwest">Country 4</option>
-
-  </select>
-</div>
 
 
 
@@ -183,24 +163,17 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 </fieldset>
 </div>
 
-<div class="govuk-form-group">
-<label class="govuk-label" for="prado-country">
-Country of issue (if it has one)
-</label>
-<div id="prado-country-hint" class="govuk-hint">
-Choose the country of issue from the list. 
-</div>
-<select class="govuk-select" id="location" name="prado-country" aria-describedby="prado-country-hint">
-<option value="choose" selected>Choose country</option>
-<option value="eastmidlands">Not applicable</option>
-<option value="eastmidlands">Country 1</option>
-<option value="eastofengland">Country 2</option>
-<option value="london">Country 2</option>
-<option value="northeast">Country 3</option>
-<option value="northwest">Country 4</option>
+<fieldset class="govuk-fieldset">
+  <div class="govuk-form-group ">
+    <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
 
-</select>
-</div>
+    <p class="govuk-hint">Start typing a nationality, then choose from the list.</p>
+    <div id="country" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
+  </div>
+
+  
+</fieldset>
+
 
 
     
