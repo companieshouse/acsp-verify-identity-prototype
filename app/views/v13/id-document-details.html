@@ -22,10 +22,6 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
         Passport details
       </h2>
 
-
-
-
-
       {{ govukInput({
         label: {
           text: "Passport number"
@@ -163,24 +159,23 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 </fieldset>
 </div>
 
-<fieldset class="govuk-fieldset">
-  <div class="govuk-form-group ">
+<fieldset class="prado-country">
+  <div class="govuk-form-group">
     <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
 
     <p class="govuk-hint">Start typing a nationality, then choose from the list.</p>
-    <div id="country" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
+    <div id="pradoCountry" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
   </div>
 
   
 </fieldset>
 
 
-
     
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </form>
+  </form>
 
   </div>
 </div>
