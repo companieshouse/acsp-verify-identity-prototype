@@ -73,19 +73,24 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 </fieldset>
 </div>
 
-<fieldset class="govuk-fieldset">
-  <div class="govuk-form-group ">
-    <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
-
-    <p class="govuk-hint">This is usually shown on the first page of the passport. Start typing a nationality, then choose from the list.</p>
-    <div id="country" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
-  </div>
-
-  
-</fieldset>
 
 
 
+
+{{ govukInput({
+  label: {
+    text: "Country of issue"
+  },
+  hint: {
+    text: "This is usually shown on the first page of the passport."
+  },
+  id: "countryOfIssue",
+  name: "countryOfIssue"
+}) }}
+
+
+
+This is usually shown on the first page of the passport.
 
 
 <h2 class="govuk-heading-m">
@@ -161,9 +166,9 @@ What is the director's name? – {{ serviceName }} – GOV.UK Prototype Kit
 
 <fieldset class="prado-country">
   <div class="govuk-form-group">
-    <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label govuk-label--l">What is your nationality?</label></h1> 
+    <h1 class="govuk-label-wrapper"> <label for="autocomplete-default" class="govuk-label ">Country of issue (if it has one)</label></h1> 
 
-    <p class="govuk-hint">Start typing a nationality, then choose from the list.</p>
+    <p class="govuk-hint">Start typing a country, then choose from the list.</p>
     <div id="pradoCountry" class="autocomplete-wrapper govuk-!-width-two-thirds"></div>
   </div>
 
